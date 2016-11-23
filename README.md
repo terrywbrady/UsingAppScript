@@ -42,7 +42,21 @@ Google App Script is a server-side implementation of JavaScript with access to s
   - Make an edit
   - Send email
   - Publish to [Google Sites](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
+- [Code on GitHub](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript)
 - Try it yourself
   - Select "Make a Copy" to save an editable copy
   - Set up google sites if applicable
   - TBD: Make Google Sites more Accessible
+  - Create a trigger to call "sendRota" on a daily basis
+  
+***
+# Example 2: A Web Service to Upload a CSV to Google Sheets
+- Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
+- CSV files can be corrupted when shared between useers
+- [Sample Script Project](https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web)
+- Try it yourself
+  - Select "Make a Copy" to save an editable copy
+  - Click "Deploy as Webapp", set the run as parameters as appropriate to you
+  - Run the Web App to upload a CSV file
+  
+***
