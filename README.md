@@ -35,7 +35,7 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem
 
 ***
-# Examples
+# Complete App Examples
 - Extending Google Apps
 - Building a Web Service to Save to Google Drive
 ***
@@ -67,3 +67,19 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - [Sample Screen Shots](https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md)
   
 ***
+# Creating a Test Google Sheet
+- Create a new Google Sheet
+- Enter the following Data
+
+|ISBN|Google Books Lookup|
+|---|---|
+|9780141977263||
+|9780590328197||
+
+# Create a Script within the Sheet
+- Tools -> Script Editor
+- Add the following script code
+
+    function lookupStub(id) {
+      return "Sample Item " + id;
+    }
