@@ -79,9 +79,16 @@ Google App Script is a server-side implementation of JavaScript with access to s
 # Create a Script within the Sheet
 - Tools -> Script Editor
 - Add the following script code
-
 ```
-function lookupStub(id) {
-    return "Sample Item " + id;
+function isbnLookup(id) {
+    return "Sample ISBN Lookup " + id;
+}
+function test() {
+  var title = isbnLookup("9780141977263")
+  Logger.log(title);
 }
 ```
+- Save the Script Project, name it "Test Project"
+
+# Test the script
+- From the "Select function" drop down, select "test" and click the run button 
