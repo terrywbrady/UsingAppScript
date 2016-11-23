@@ -35,6 +35,9 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem
 
 ***
+# Examples
+-
+***
 # Example 1: Weekly Scheduling with Google Sheets
 - Volunteer assignment spreadsheet
 - Volunteer coordinators had limited computer literacy
@@ -57,6 +60,8 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - Try it yourself
   - Select "Make a Copy" to save an editable copy
   - Click "Deploy as Webapp", set the run as parameters as appropriate to you
+  - Get the current web app URL
   - Run the Web App to upload a CSV file
+- [Sample Screen Shots](https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md)
   
 ***
