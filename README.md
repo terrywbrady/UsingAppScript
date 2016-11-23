@@ -55,6 +55,13 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - [Sample Screen Shots](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md)
   
 ***
+# Example 1a: Scheduling a Time-Based Trigger
+You can set time-based processes to execute your scripts on a regular basis.
+![screenshot](screenshots/trigger1.jpg)
+![screenshot](screenshots/trigger2.jpg)
+![screenshot](screenshots/trigger3.jpg)
+
+***
 # Example 2: A Web Service to Upload a CSV to Google Sheets
 - Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
 - CSV files can be corrupted when shared between useers
@@ -76,6 +83,7 @@ Google App Script is a server-side implementation of JavaScript with access to s
 |9780141977263||
 |9780590328197||
 
+***
 # Create a Script within the Sheet
 - Tools -> Script Editor
 - This will open up the App Script Cloud IDE
@@ -91,18 +99,21 @@ function test() {
 ```
 - Save the Script Project, name it "Test Project"
 
+***
 # Test the script
 - From the "Select function" drop down, select "test" and click the "Run" or "Debug" button 
 ![screenshot](screenshots/screen1.jpg)
 - Click "View Logs" to confirm that the function ran.
 ![screenshot](screenshots/screen2.jpg)
 
+***
 # Use the script as a Spreadsheet formula
 - Modify cell B2 to contain the following formula `=isbnLookup(A2)`
 - Copy cell B2 into cell B3 to create the following formula `=isbnLookup(A3)`
 - Verify that the cell contents display the result of the function
 ![screenshot](screenshots/screen3.jpg)
 
+***
 # Enhance the script with an external service call
 - [Google Apps Script API Reference for UrlFetchApp](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app)
 - Update the isbnLookup function to use the [Google Books API](https://developers.google.com/books/docs/v1/using#web-applications) to lookup the isbn
@@ -121,10 +132,12 @@ function isbnLookup(id) {
   - The first time you run this, you will need to authorize Google Apps to send data to an external URL
 - Check the logs to verify that "Pride and Prejudice" was found
 
+***
 # Reload the Spreadsheet
 - The Google Books lookups should now be present
 ![screenshot](screenshots/screen4.jpg)
 
+***
 # Add Menu to Google Sheets
 - Add the following code
 ```
@@ -138,6 +151,7 @@ function onOpen(e) {
 - Reload the spreadsheet and note the new menu
 ![screenshot](screenshots/screen5.jpg)
 
+***
 # Add UI Confirmation to the test() function
 - Modify the test() function to access the [Spreadsheet UI](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi())
 ```
@@ -150,6 +164,13 @@ function test() {
 - Call the test function from the new menu
 ![screenshot](screenshots/screen6.jpg)
 
+***
+# Trigger Restrictions
+- When installing an onOpen() trigger or other special triggers some [restrictions](https://developers.google.com/apps-script/guides/triggers/) apply to what your script can do
+- You may need to simplify the actions performed with a trigger and defer them to a user-driven action
+- If you see unexpected behavior in your scripts, evaluate if one of these restrictions has applied
+
+***
 # Adding Custom HTML to Your Script
 - In the script IDE, create a new html file named "Sidebar.html"
 ```
@@ -165,6 +186,7 @@ function test() {
 ```
 ![screenshot](screenshots/screen7.jpg)
 
+***
 # Add a menu option to load the sidebar
 - Create a function showSidebar()
 ```
@@ -183,5 +205,10 @@ function onOpen(e) {
 }
 ![screenshot](screenshots/screen8.jpg)
 ![screenshot](screenshots/screen9.jpg)
-[Creating a Google Doc Add-On Example](https://developers.google.com/apps-script/quickstart/docs)
+
+***
+# Creating a UI in Google Apps Script
+- [Creating a Google Doc Add-On Example](https://developers.google.com/apps-script/quickstart/docs)
+- [Templated HTML](https://developers.google.com/apps-script/guides/html/templates)
+- [Calling Server Side Functions from Client JavaScript](https://developers.google.com/apps-script/guides/html/reference/run)
 
