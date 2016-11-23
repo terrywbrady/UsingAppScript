@@ -80,6 +80,8 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - Tools -> Script Editor
 - Add the following script code
 
-    function lookupStub(id) {
-      return "Sample Item " + id;
-    }
+```
+function lookupStub(id) {
+    return "Sample Item " + id;
+}
+```
