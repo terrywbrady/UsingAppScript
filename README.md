@@ -211,5 +211,5 @@ function onOpen(e) {
 - [Creating a Google Doc Add-On Example](https://developers.google.com/apps-script/quickstart/docs)
 - [Templated HTML](https://developers.google.com/apps-script/guides/html/templates)
 - [Calling Server Side Functions from Client JavaScript](https://developers.google.com/apps-script/guides/html/reference/run)
-- [Sample Application - Library Inventory Analysis](https://github.com/Georgetown-University-Libraries/BarcodeInventory/blob/master/PostInventoryAnalysis.md)
+- [Sample Library Application - Georgetown Library Inventory Analysis Add-On Screenshots](https://github.com/Georgetown-University-Libraries/BarcodeInventory/blob/master/PostInventoryAnalysis.md)
 
