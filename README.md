@@ -103,11 +103,14 @@ function test() {
 - Verify that the cell contents display the result of the function
 ![screenshot](screenshots/screen3.jpg)
 
-# Enhance the script
+# Enhance the script with an external service call
+- [Google Apps Script API Reference for UrlFetchApp](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app)
 - Update the isbnLookup function to use the [Google Books API](https://developers.google.com/books/docs/v1/using#web-applications) to lookup the isbn
 ```
 function isbnLookup(id) {
-  var resp = UrlFetchApp.fetch("https://www.googleapis.com/books/v1/volumes?country=US&q=isbn:"+id, {contentType : "application/json"});
+  var url = "https://www.googleapis.com/books/v1/volumes?country=US&q=isbn:"+id;
+  var options = {contentType : "application/json"};
+  var resp = UrlFetchApp.fetch(url, options);
   if (resp == null || resp == "") return "N/A";
   var respdata = JSON.parse(resp.getContentText());
   if (respdata["items"].length == 0) return "Not found";
@@ -121,3 +124,64 @@ function isbnLookup(id) {
 # Reload the Spreadsheet
 - The Google Books lookups should now be present
 ![screenshot](screenshots/screen4.jpg)
+
+# Add Menu to Google Sheets
+- Add the following code
+```
+function onOpen(e) {
+  SpreadsheetApp.getUi()
+    .createAddonMenu()
+    .addItem("Test Function", "test")
+    .addToUi();
+}
+```
+- Reload the spreadsheet and note the new menu
+![screenshot](screenshots/screen5.jpg)
+
+# Add UI Confirmation to the test() function
+- Modify the test() function to access the [Spreadsheet UI](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi())
+```
+function test() {
+  var title = isbnLookup("9780141977263")
+  Logger.log(title);
+  SpreadsheetApp.getUi().alert(title);
+}
+```
+- Call the test function from the new menu
+![screenshot](screenshots/screen6.jpg)
+
+# Adding Custom HTML to Your Script
+- In the script IDE, create a new html file named "Sidebar.html"
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <h2>Sample Code Here</h2>
+  </body>
+</html>
+```
+![screenshot](screenshots/screen7.jpg)
+
+# Add a menu option to load the sidebar
+- Create a function showSidebar()
+```
+function showSidebar() {
+  var html = HtmlService.createHtmlOutputFromFile("Sidebar.html");
+  SpreadsheetApp.getUi().showSidebar(html);
+}
+```
+- Add a call to showSidebar() to the Add On Menu
+function onOpen(e) {
+  SpreadsheetApp.getUi()
+    .createAddonMenu()
+    .addItem("Test Function", "test")
+    .addItem("Show Sidebar", "showSidebar")
+    .addToUi();
+}
+![screenshot](screenshots/screen8.jpg)
+![screenshot](screenshots/screen9.jpg)
+[Creating a Google Doc Add-On Example](https://developers.google.com/apps-script/quickstart/docs)
+
