@@ -36,7 +36,8 @@ Google App Script is a server-side implementation of JavaScript with access to s
 
 ***
 # Examples
--
+- Extending Google Apps
+- Building a Web Service to Save to Google Drive
 ***
 # Example 1: Weekly Scheduling with Google Sheets
 - Volunteer assignment spreadsheet
