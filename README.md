@@ -51,6 +51,7 @@ Google App Script is a server-side implementation of JavaScript with access to s
   - Set up google sites if applicable
   - TBD: Make Google Sites more Accessible
   - Create a trigger to call "sendRota" on a daily basis
+- [Sample Screen Shots](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md)
   
 ***
 # Example 2: A Web Service to Upload a CSV to Google Sheets
