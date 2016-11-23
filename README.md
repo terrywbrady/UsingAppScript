@@ -97,8 +97,14 @@ function test() {
 - Click "View Logs" to confirm that the function ran.
 ![screenshot](screenshots/screen2.jpg)
 
-# Enhance the script
+# Use the script as a Spreadsheet formula
+- Modify cell B2 to contain the following formula `=isbnLookup(A2)`
+- Copy cell B2 into cell B3 to create the following formula `=isbnLookup(A3)`
+- Verify that the cell contents display the result of the function
+![screenshot](screenshots/screen3.jpg)
 
+# Enhance the script
+- Update the isbnLookup function to use the [Google Books API](https://developers.google.com/books/docs/v1/using#web-applications) to lookup the isbn
 ```
 function isbnLookup(id) {
   var resp = UrlFetchApp.fetch("https://www.googleapis.com/books/v1/volumes?country=US&q=isbn:"+id, {contentType : "application/json"});
@@ -107,5 +113,11 @@ function isbnLookup(id) {
   if (respdata["items"].length == 0) return "Not found";
   return respdata["items"][0]["volumeInfo"]["title"];
 }
-
 ```
+- Run the "test()" function again
+  - The first time you run this, you will need to authorize Google Apps to send data to an external URL
+- Check the logs to verify that "Pride and Prejudice" was found
+
+# Reload the Spreadsheet
+- The Google Books lookups should now be present
+![screenshot](screenshots/screen4.jpg)
