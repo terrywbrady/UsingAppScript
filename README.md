@@ -92,7 +92,10 @@ function test() {
 - Save the Script Project, name it "Test Project"
 
 # Test the script
-- From the "Select function" drop down, select "test" and click the run button 
+- From the "Select function" drop down, select "test" and click the "Run" or "Debug" button 
+![screenshot](screenshots/screen1.jpg)
+- Click "View Logs" to confirm that the function ran.
+![screenshot](screenshots/screen2.jpg)
 
 # Enhance the script
 
