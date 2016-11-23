@@ -3,6 +3,8 @@ Google App Script is a server-side implementation of JavaScript with access to s
 
 [Google Apps Script Documentation](https://developers.google.com/apps-script/)
 
+***
+
 # How can Google App Script be Used?
 - Accessible as a standalone Google Script project on Google Drive
   - Runnable on demand from the script editor
@@ -19,6 +21,8 @@ Google App Script is a server-side implementation of JavaScript with access to s
   - Offered for Free to your Apps Domain
   - Offered Privately by URL
   
+***
+  
 # Why Use Google Apps Script?
 - It is available where your users already are
   - No need to introduce another login
@@ -29,3 +33,16 @@ Google App Script is a server-side implementation of JavaScript with access to s
     - Script can be authorized to access personal Google Services (Mail, Calendar, Drive)
   - User must authorize the permissions granted to the script
 - Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem
+
+***
+# Example 1: Weekly Scheduling with Google Sheets
+- Volunteer assignment spreadsheet
+- Volunteer coordinators had limited computer literacy
+- [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
+  - Make an edit
+  - Send email
+  - Publish to [Google Sites](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
+- Try it yourself
+  - Select "Make a Copy" to save an editable copy
+  - Set up google sites if applicable
+  - TBD: Make Google Sites more Accessible
