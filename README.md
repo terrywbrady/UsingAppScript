@@ -78,6 +78,7 @@ Google App Script is a server-side implementation of JavaScript with access to s
 
 # Create a Script within the Sheet
 - Tools -> Script Editor
+- This will open up the App Script Cloud IDE
 - Add the following script code
 ```
 function isbnLookup(id) {
@@ -92,3 +93,16 @@ function test() {
 
 # Test the script
 - From the "Select function" drop down, select "test" and click the run button 
+
+# Enhance the script
+
+```
+function isbnLookup(id) {
+  var resp = UrlFetchApp.fetch("https://www.googleapis.com/books/v1/volumes?country=US&q=isbn:"+id, {contentType : "application/json"});
+  if (resp == null || resp == "") return "N/A";
+  var respdata = JSON.parse(resp.getContentText());
+  if (respdata["items"].length == 0) return "Not found";
+  return respdata["items"][0]["volumeInfo"]["title"];
+}
+
+```
