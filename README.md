@@ -240,7 +240,7 @@ function showSidebarTemplate() {
   SpreadsheetApp.getUi().showSidebar(html);
 }
 ```
-- Add a call to showSidebar() to the Add On Menu
+- Add a call to showSidebarTemplate() to the Add On Menu
 ```
 function onOpen(e) {
   SpreadsheetApp.getUi()
@@ -295,7 +295,7 @@ function showSidebarWithClientJS() {
   SpreadsheetApp.getUi().showSidebar(html);
 }
 ```
-- Add a call to showSidebar() to the Add On Menu
+- Add a call to showSidebarWithClientJS() to the Add On Menu
 ```
 function onOpen(e) {
   SpreadsheetApp.getUi()
