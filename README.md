@@ -229,9 +229,13 @@ function onOpen(e) {
 # Add a menu option to load the sidebar from a template
 - Create a function showSidebar()
 ```
+function getMessage() {
+  return "HelloThere";
+}
+
 function showSidebarTemplate() {
   var t = HtmlService.createTemplateFromFile("Template.html");
-  t.prop = "HelloThere";
+  t.prop = getMessage();
   var html = t.evaluate();
   SpreadsheetApp.getUi().showSidebar(html);
 }
