@@ -211,7 +211,8 @@ function onOpen(e) {
 
 ***
 # Adding an HTML Template to Your Script
-- In the script IDE, create a new html file named "Sidebar.html"
+A template can take an interpret values passed to the template.
+- In the script IDE, create a new html file named "Template.html"
 ```
 <!DOCTYPE html>
 <html>
@@ -223,11 +224,10 @@ function onOpen(e) {
   </body>
 </html>
 ```
-![screenshot](screenshots/screen7.jpg)
 
 ***
 # Add a menu option to load the sidebar from a template
-- Create a function showSidebar()
+- Create a function showSidebarTemplate()
 ```
 function getMessage() {
   return "HelloThere";
@@ -255,6 +255,61 @@ function onOpen(e) {
 
 ![screenshot](screenshots/screen10.jpg)
 ![screenshot](screenshots/screen11.jpg)
+
+***
+# Adding an HTML Template With Client JavaScript to Your Script
+Your client JavaScript can invoke server-side methods using *google.script.run*
+- In the script IDE, create a new html file named "SidebarWithClientJS.html"
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+      $(function(){
+        google.script.run.withSuccessHandler(showValue).getMessage();
+      });
+      
+      function showValue(data) {
+        $("#message").text(data);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Client Message</h2>
+    <span id="message"></span>
+  </body>
+</html>
+
+
+```
+
+***
+# Add a menu option to load the sidebar from a template
+- Create a function showSidebarWithClientJS()
+```
+function showSidebarWithClientJS() {
+  var html = HtmlService.createHtmlOutputFromFile("SidebarWithClientJS.html");
+  SpreadsheetApp.getUi().showSidebar(html);
+}
+```
+- Add a call to showSidebar() to the Add On Menu
+```
+function onOpen(e) {
+  SpreadsheetApp.getUi()
+    .createAddonMenu()
+    .addItem("Test Function", "test")
+    .addItem("Show Sidebar", "showSidebar")
+    .addItem("Show Template", "showSidebarTemplate")
+    .addItem("Show Sidebar With Client JS", "showSidebarWithClientJS")
+    .addToUi();
+}
+```
+
+![screenshot](screenshots/screen12.jpg)
+![screenshot](screenshots/screen13.jpg)
 
 ***
 # Creating a UI in Google Apps Script
