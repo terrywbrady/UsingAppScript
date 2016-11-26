@@ -196,6 +196,7 @@ function showSidebar() {
 }
 ```
 - Add a call to showSidebar() to the Add On Menu
+```
 function onOpen(e) {
   SpreadsheetApp.getUi()
     .createAddonMenu()
@@ -203,8 +204,53 @@ function onOpen(e) {
     .addItem("Show Sidebar", "showSidebar")
     .addToUi();
 }
+```
+
 ![screenshot](screenshots/screen8.jpg)
 ![screenshot](screenshots/screen9.jpg)
+
+***
+# Adding an HTML Template to Your Script
+- In the script IDE, create a new html file named "Sidebar.html"
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <h2>Property goes here: <?=prop?></h2>
+  </body>
+</html>
+```
+![screenshot](screenshots/screen7.jpg)
+
+***
+# Add a menu option to load the sidebar from a template
+- Create a function showSidebar()
+```
+function showSidebarTemplate() {
+  var t = HtmlService.createTemplateFromFile("Template.html");
+  t.prop = "HelloThere";
+  var html = t.evaluate();
+  SpreadsheetApp.getUi().showSidebar(html);
+}
+```
+- Add a call to showSidebar() to the Add On Menu
+```
+function onOpen(e) {
+  SpreadsheetApp.getUi()
+    .createAddonMenu()
+    .addItem("Test Function", "test")
+    .addItem("Show Sidebar", "showSidebar")
+    .addItem("Show Template", "showSidebarTemplate")
+    .addToUi();
+}
+
+```
+
+![screenshot](screenshots/screen10.jpg)
+![screenshot](screenshots/screen11.jpg)
 
 ***
 # Creating a UI in Google Apps Script
