@@ -45,12 +45,13 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
   - Make an edit
   - Send email
-  - Publish to [Google Sites](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
+  - Publish to Google Sites.  See the following [example](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
 - [Code on GitHub](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript)
 - Try it yourself
   - Select "Make a Copy" to save an editable copy
-  - Set up google sites if applicable
-  - TBD: Make Google Sites more Accessible
+  - Create a personal Google Site
+    - Create a page within the site named "rotasearch"
+    - Set a script property named "siteid" with a URL to your new site
   - Create a trigger to call "sendRota" on a daily basis
 - [Sample Screen Shots](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md)
   
