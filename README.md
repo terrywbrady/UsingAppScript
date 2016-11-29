@@ -45,6 +45,7 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
 - CSV files can be corrupted when shared between users
 - [Sample Script Project](https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web)
+- [Code on Github](https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript)
 - Try it yourself
   - Select "Make a Copy" to save an editable copy
   - Click "Deploy as Webapp", set the run as parameters as appropriate to you
