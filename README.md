@@ -38,7 +38,9 @@ Google App Script is a server-side implementation of JavaScript with access to s
 # Complete App Examples
 - Extending Google Apps
 - Building a Web Service to Save to Google Drive
+
 ***
+
 # Example 1: A Web Service to Upload a CSV to Google Sheets
 - Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
 - CSV files can be corrupted when shared between useers
