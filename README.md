@@ -12,8 +12,8 @@ Google App Script is a server-side implementation of JavaScript with access to s
   - Schedulable as a trigger (time-driven)
 - Embedded in a Google Document, a Google Sheet, a Google Form, or a Google Site
   - Runnable from a custom menu item
-  - Triggered by a user event (on Edit action)
-  - Availabe as a spreadhseet formula
+  - Triggered by a user event (on Edit/on Open action)
+  - Available as a spreadsheet formula
   - All of the standalone script options are also available for embedded scripts
 - Packaged for the Chrome Store as an Add-On
   - Offered for Sale to the Public
