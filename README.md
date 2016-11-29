@@ -39,7 +39,19 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - Extending Google Apps
 - Building a Web Service to Save to Google Drive
 ***
-# Example 1: Weekly Scheduling with Google Sheets
+# Example 1: A Web Service to Upload a CSV to Google Sheets
+- Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
+- CSV files can be corrupted when shared between useers
+- [Sample Script Project](https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web)
+- Try it yourself
+  - Select "Make a Copy" to save an editable copy
+  - Click "Deploy as Webapp", set the run as parameters as appropriate to you
+  - Get the current web app URL
+  - Run the Web App to upload a CSV file
+- [Sample Screen Shots](https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md)
+
+***
+# Example 2: Weekly Scheduling with Google Sheets
 - Volunteer assignment spreadsheet
 - Volunteer coordinators had limited computer literacy
 - [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
@@ -62,18 +74,7 @@ You can set time-based processes to execute your scripts on a regular basis.
 ![screenshot](screenshots/trigger2.jpg)
 ![screenshot](screenshots/trigger3.jpg)
 
-***
-# Example 2: A Web Service to Upload a CSV to Google Sheets
-- Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
-- CSV files can be corrupted when shared between useers
-- [Sample Script Project](https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web)
-- Try it yourself
-  - Select "Make a Copy" to save an editable copy
-  - Click "Deploy as Webapp", set the run as parameters as appropriate to you
-  - Get the current web app URL
-  - Run the Web App to upload a CSV file
-- [Sample Screen Shots](https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md)
-  
+
 ***
 # Creating a Test Google Sheet
 - Create a new Google Sheet
