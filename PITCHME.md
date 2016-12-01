@@ -246,6 +246,7 @@ function showSidebarTemplate() {
   SpreadsheetApp.getUi().showSidebar(html);
 }
 ```
+#VSLIDE
 - Add a call to showSidebarTemplate() to the Add On Menu
 ```
 function onOpen(e) {
@@ -258,8 +259,9 @@ function onOpen(e) {
 }
 
 ```
-
+#VSLIDE
 ![screenshot](screenshots/screen10.jpg)
+#VSLIDE
 ![screenshot](screenshots/screen11.jpg)
 
 #HSLIDE
