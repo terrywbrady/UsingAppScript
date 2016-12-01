@@ -1,9 +1,10 @@
+#VSLIDE
 # What is Google App Script?
 Google App Script is a server-side implementation of JavaScript with access to several Google API's.
 
 [Google Apps Script Documentation](https://developers.google.com/apps-script/)
 
-***
+#VSLIDE
 
 # How can Google App Script be Used?
 - Accessible as a standalone Google Script project on Google Drive
@@ -21,7 +22,7 @@ Google App Script is a server-side implementation of JavaScript with access to s
   - Offered for Free to your Apps Domain
   - Offered Privately by URL
   
-***
+#VSLIDE
   
 # Why Use Google Apps Script?
 - It is available where your users already are
@@ -34,12 +35,12 @@ Google App Script is a server-side implementation of JavaScript with access to s
   - User must authorize the permissions granted to the script
 - Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem
 
-***
+#VSLIDE
 # Complete App Examples
 - Building a Web Service to Save to Google Drive
 - Extending Google Apps
 
-***
+#VSLIDE
 
 # Example 1: A Web Service to Upload a CSV to Google Sheets
 - Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
