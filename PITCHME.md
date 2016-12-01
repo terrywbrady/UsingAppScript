@@ -1,12 +1,12 @@
-#VSLIDE
-# What is Google App Script?
+#HSLIDE
+### What is Google App Script?
 Google App Script is a server-side implementation of JavaScript with access to several Google API's.
 
 [Google Apps Script Documentation](https://developers.google.com/apps-script/)
 
-#VSLIDE
+#HSLIDE
 
-# How can Google App Script be Used?
+### How can Google App Script be Used?
 - Accessible as a standalone Google Script project on Google Drive
   - Runnable on demand from the script editor
   - Deployable as a web service
@@ -22,9 +22,9 @@ Google App Script is a server-side implementation of JavaScript with access to s
   - Offered for Free to your Apps Domain
   - Offered Privately by URL
   
-#VSLIDE
+#HSLIDE
   
-# Why Use Google Apps Script?
+### Why Use Google Apps Script?
 - It is available where your users already are
   - No need to introduce another login
   - Sharable using existing Google Drive sharing options
@@ -35,14 +35,14 @@ Google App Script is a server-side implementation of JavaScript with access to s
   - User must authorize the permissions granted to the script
 - Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem
 
-#VSLIDE
-# Complete App Examples
+#HSLIDE
+### Complete App Examples
 - Building a Web Service to Save to Google Drive
 - Extending Google Apps
 
-#VSLIDE
+#HSLIDE
 
-# Example 1: A Web Service to Upload a CSV to Google Sheets
+### Example 1: A Web Service to Upload a CSV to Google Sheets
 - Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
 - CSV files can be corrupted when shared between users
 - [Sample Script Project](https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web)
@@ -54,8 +54,8 @@ Google App Script is a server-side implementation of JavaScript with access to s
   - Run the Web App to upload a CSV file
 - [Sample Screen Shots](https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md)
 
-***
-# Example 2: Weekly Scheduling with Google Sheets
+#HSLIDE
+### Example 2: Weekly Scheduling with Google Sheets
 - Volunteer assignment spreadsheet
 - Volunteer coordinators had limited computer literacy
 - [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
@@ -71,16 +71,16 @@ Google App Script is a server-side implementation of JavaScript with access to s
   - Create a trigger to call "sendRota" on a daily basis
 - [Sample Screen Shots](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md)
   
-***
-# Example 1a: Scheduling a Time-Based Trigger
+#HSLIDE
+### Example 1a: Scheduling a Time-Based Trigger
 You can set time-based processes to execute your scripts on a regular basis.
 ![screenshot](screenshots/trigger1.jpg)
 ![screenshot](screenshots/trigger2.jpg)
 ![screenshot](screenshots/trigger3.jpg)
 
 
-***
-# Creating a Test Google Sheet
+#HSLIDE
+### Creating a Test Google Sheet
 - Create a new Google Sheet
 - Enter the following Data
 
@@ -89,8 +89,8 @@ You can set time-based processes to execute your scripts on a regular basis.
 |9780141977263||
 |9780590328197||
 
-***
-# Create a Script within the Sheet
+#HSLIDE
+### Create a Script within the Sheet
 - Tools -> Script Editor
 - This will open up the App Script Cloud IDE
 - Add the following script code
@@ -105,22 +105,22 @@ function test() {
 ```
 - Save the Script Project, name it "Test Project"
 
-***
-# Test the script
+#HSLIDE
+### Test the script
 - From the "Select function" drop down, select "test" and click the "Run" or "Debug" button 
 ![screenshot](screenshots/screen1.jpg)
 - Click "View Logs" to confirm that the function ran.
 ![screenshot](screenshots/screen2.jpg)
 
-***
-# Use the script as a Spreadsheet formula
+#HSLIDE
+### Use the script as a Spreadsheet formula
 - Modify cell B2 to contain the following formula `=isbnLookup(A2)`
 - Copy cell B2 into cell B3 to create the following formula `=isbnLookup(A3)`
 - Verify that the cell contents display the result of the function
 ![screenshot](screenshots/screen3.jpg)
 
-***
-# Enhance the script with an external service call
+#HSLIDE
+### Enhance the script with an external service call
 - [Google Apps Script API Reference for UrlFetchApp](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app)
 - Update the isbnLookup function to use the [Google Books API](https://developers.google.com/books/docs/v1/using#web-applications) to lookup the isbn
 ```
@@ -138,13 +138,13 @@ function isbnLookup(id) {
   - The first time you run this, you will need to authorize Google Apps to send data to an external URL
 - Check the logs to verify that "Pride and Prejudice" was found
 
-***
-# Reload the Spreadsheet
+#HSLIDE
+### Reload the Spreadsheet
 - The Google Books lookups should now be present
 ![screenshot](screenshots/screen4.jpg)
 
-***
-# Add Menu to Google Sheets
+#HSLIDE
+### Add Menu to Google Sheets
 - Add the following code
 ```
 function onOpen(e) {
@@ -157,8 +157,8 @@ function onOpen(e) {
 - Reload the spreadsheet and note the new menu
 ![screenshot](screenshots/screen5.jpg)
 
-***
-# Add UI Confirmation to the test() function
+#HSLIDE
+### Add UI Confirmation to the test() function
 - Modify the test() function to access the [Spreadsheet UI](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi())
 ```
 function test() {
@@ -170,14 +170,14 @@ function test() {
 - Call the test function from the new menu
 ![screenshot](screenshots/screen6.jpg)
 
-***
-# Trigger Restrictions
+#HSLIDE
+### Trigger Restrictions
 - When installing an onOpen() trigger or other special triggers some [restrictions](https://developers.google.com/apps-script/guides/triggers/) apply to what your script can do
 - You may need to simplify the actions performed with a trigger and defer them to a user-driven action
 - If you see unexpected behavior in your scripts, evaluate if one of these restrictions has applied
 
-***
-# Adding Custom HTML to Your Script
+#HSLIDE
+### Adding Custom HTML to Your Script
 - In the script IDE, create a new html file named "Sidebar.html"
 ```
 <!DOCTYPE html>
@@ -192,8 +192,8 @@ function test() {
 ```
 ![screenshot](screenshots/screen7.jpg)
 
-***
-# Add a menu option to load the sidebar
+#HSLIDE
+### Add a menu option to load the sidebar
 - Create a function showSidebar()
 ```
 function showSidebar() {
@@ -215,8 +215,8 @@ function onOpen(e) {
 ![screenshot](screenshots/screen8.jpg)
 ![screenshot](screenshots/screen9.jpg)
 
-***
-# Adding an HTML Template to Your Script
+#HSLIDE
+### Adding an HTML Template to Your Script
 A template can take an interpret values passed to the template.
 - In the script IDE, create a new html file named "Template.html"
 ```
@@ -231,8 +231,8 @@ A template can take an interpret values passed to the template.
 </html>
 ```
 
-***
-# Add a menu option to load the sidebar from a template
+#HSLIDE
+### Add a menu option to load the sidebar from a template
 - Create a function showSidebarTemplate()
 ```
 function getMessage() {
@@ -262,8 +262,8 @@ function onOpen(e) {
 ![screenshot](screenshots/screen10.jpg)
 ![screenshot](screenshots/screen11.jpg)
 
-***
-# Adding an HTML Template With Client JavaScript to Your Script
+#HSLIDE
+### Adding an HTML Template With Client JavaScript to Your Script
 Your client JavaScript can invoke server-side methods using *google.script.run*
 - In the script IDE, create a new html file named "SidebarWithClientJS.html"
 ```
@@ -292,8 +292,8 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 
 ```
 
-***
-# Add a menu option to load the sidebar from a template
+#HSLIDE
+### Add a menu option to load the sidebar from a template
 - Create a function showSidebarWithClientJS()
 ```
 function showSidebarWithClientJS() {
@@ -317,8 +317,8 @@ function onOpen(e) {
 ![screenshot](screenshots/screen12.jpg)
 ![screenshot](screenshots/screen13.jpg)
 
-***
-# Creating a UI in Google Apps Script
+#HSLIDE
+### Creating a UI in Google Apps Script
 - [Creating a Google Doc Add-On Example](https://developers.google.com/apps-script/quickstart/docs)
 - [Templated HTML](https://developers.google.com/apps-script/guides/html/templates)
 - [Calling Server Side Functions from Client JavaScript](https://developers.google.com/apps-script/guides/html/reference/run)
