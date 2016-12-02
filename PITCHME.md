@@ -91,13 +91,9 @@ Configuratable Authorization Options
 - Publish to Google Sites.  See the following [example](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
 - Create a trigger to call "sendRota" on a daily basis
   
-#HSLIDE
-### Example 1a: Scheduling a Time-Based Trigger
-You can set time-based processes to execute your scripts on a regular basis.
-![screenshot](screenshots/trigger1.jpg)
-![screenshot](screenshots/trigger2.jpg)
-![screenshot](screenshots/trigger3.jpg)
-
+#VSLIDE?image=screenshots/trigger1.jpg
+#VSLIDE?image=screenshots/trigger2.jpg
+#VSLIDE?image=screenshots/trigger3.jpg
 
 #HSLIDE
 ### Creating a Test Google Sheet
