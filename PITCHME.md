@@ -160,6 +160,8 @@ function isbnLookup(id) {
 }
 ```
 
+#VSLIDE?gist=86c5690fa1828c6914deb5efc5210340
+
 #VSLIDE
 Run the "test()" function again
 - The first time you run this, you will need to authorize Google Apps to send data to an external URL
