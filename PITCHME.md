@@ -92,7 +92,9 @@ Configuratable Authorization Options
 - Create a trigger to call "sendRota" on a daily basis
   
 #VSLIDE?image=screenshots/trigger1.jpg
+
 #VSLIDE?image=screenshots/trigger2.jpg
+
 #VSLIDE?image=screenshots/trigger3.jpg
 
 #HSLIDE
@@ -105,11 +107,13 @@ Configuratable Authorization Options
 |9780141977263||
 |9780590328197||
 
-#HSLIDE
+#VSLIDE
 ### Create a Script within the Sheet
 - Tools -> Script Editor
 - This will open up the App Script Cloud IDE
-- Add the following script code
+
+#VSLIDE
+Add the following script code
 ```
 function isbnLookup(id) {
     return "Sample ISBN Lookup " + id;
@@ -119,26 +123,31 @@ function test() {
   Logger.log(title);
 }
 ```
-- Save the Script Project, name it "Test Project"
+#VSLIDE
+Save the Script Project, name it "Test Project"
 
-#HSLIDE
+#VSLIDE
 ### Test the script
-- From the "Select function" drop down, select "test" and click the "Run" or "Debug" button 
+From the "Select function" drop down, select "test" and click the "Run" or "Debug" button 
 ![screenshot](screenshots/screen1.jpg)
-- Click "View Logs" to confirm that the function ran.
+
+#VSLIDE
+ Click "View Logs" to confirm that the function ran.
 ![screenshot](screenshots/screen2.jpg)
 
-#HSLIDE
+#VSLIDE
 ### Use the script as a Spreadsheet formula
 - Modify cell B2 to contain the following formula `=isbnLookup(A2)`
 - Copy cell B2 into cell B3 to create the following formula `=isbnLookup(A3)`
 - Verify that the cell contents display the result of the function
 ![screenshot](screenshots/screen3.jpg)
 
-#HSLIDE
+#VSLIDE
 ### Enhance the script with an external service call
 - [Google Apps Script API Reference for UrlFetchApp](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app)
 - Update the isbnLookup function to use the [Google Books API](https://developers.google.com/books/docs/v1/using#web-applications) to lookup the isbn
+
+#VSLIDE
 ```
 function isbnLookup(id) {
   var url = "https://www.googleapis.com/books/v1/volumes?country=US&q=isbn:"+id;
@@ -150,8 +159,10 @@ function isbnLookup(id) {
   return respdata["items"][0]["volumeInfo"]["title"];
 }
 ```
-- Run the "test()" function again
-  - The first time you run this, you will need to authorize Google Apps to send data to an external URL
+
+#VSLIDE
+Run the "test()" function again
+- The first time you run this, you will need to authorize Google Apps to send data to an external URL
 - Check the logs to verify that "Pride and Prejudice" was found
 
 #HSLIDE
