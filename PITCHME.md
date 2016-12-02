@@ -78,7 +78,7 @@ Configuratable Authorization Options
 - [Sample Screen Shots](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md)
 
 #VSLIDE
-####  Try it yourself
+####  Example 2: Try it yourself - Configuration
 - [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
 - Select "Make a Copy" to save an editable copy
 - Create a personal Google Site
@@ -86,19 +86,24 @@ Configuratable Authorization Options
   - Set a script property named "siteid" with a URL to your new site 
 
 #VSLIDE
+####  Example 2: Try it yourself
 - Make an edit
 - Send email
 - Publish to Google Sites.  See the following [example](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
 - Create a trigger to call "sendRota" on a daily basis
   
-#VSLIDE?image=screenshots/trigger1.jpg
+#VSLIDE
+### Example 2: Trigger Menu
+![Screen Shot](image=screenshots/trigger1.jpg)
 
-#VSLIDE?image=screenshots/trigger2.jpg
+### Example 2: Create Trigger
+![Screen Shot](#VSLIDE?image=screenshots/trigger2.jpg)
 
-#VSLIDE?image=screenshots/trigger3.jpg
+### Example 2: Create Trigger
+![Screen Shot](#VSLIDE?image=screenshots/trigger3.jpg)
 
 #HSLIDE
-### Creating a Test Google Sheet
+### Example 3A: Creating a Test Google Sheet With Fake ISBN Lookup
 - Create a new Google Sheet
 - Enter the following Data
 
@@ -108,12 +113,12 @@ Configuratable Authorization Options
 |9780590328197||
 
 #VSLIDE
-### Create a Script within the Sheet
+### Example 3A: Create a Script within the Sheet
 - Tools -> Script Editor
 - This will open up the App Script Cloud IDE
 
 #VSLIDE
-Add the following script code
+### Example 3A: Add the following script code
 ```
 function isbnLookup(id) {
     return "Sample ISBN Lookup " + id;
@@ -124,30 +129,33 @@ function test() {
 }
 ```
 #VSLIDE
-Save the Script Project, name it "Test Project"
+### Example 3A: Save the Script Project
+Name the project something like "Test Project"
 
 #VSLIDE
-### Test the script
+### Example 3A: Test the script
 From the "Select function" drop down, select "test" and click the "Run" or "Debug" button 
 ![screenshot](screenshots/screen1.jpg)
 
 #VSLIDE
- Click "View Logs" to confirm that the function ran.
+### ### Example 3A: View Log Output
+Click "View Logs" to confirm that the function ran.
 ![screenshot](screenshots/screen2.jpg)
 
 #VSLIDE
-### Use the script as a Spreadsheet formula
+### Example 3A: Use the script as a Spreadsheet formula
 - Modify cell B2 to contain the following formula `=isbnLookup(A2)`
 - Copy cell B2 into cell B3 to create the following formula `=isbnLookup(A3)`
 - Verify that the cell contents display the result of the function
 ![screenshot](screenshots/screen3.jpg)
 
-#VSLIDE
-### Enhance the script with an external service call
+#HSLIDE
+### Example 3B: Enhance the script with an external service call
 - [Google Apps Script API Reference for UrlFetchApp](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app)
 - Update the isbnLookup function to use the [Google Books API](https://developers.google.com/books/docs/v1/using#web-applications) to lookup the isbn
 
 #VSLIDE
+### Example 3B: Call Google Books Service 
 ```
 function isbnLookup(id) {
   var url = "https://www.googleapis.com/books/v1/volumes?country=US&q=isbn:"+id;
@@ -160,21 +168,19 @@ function isbnLookup(id) {
 }
 ```
 
-#VSLIDE?gist=86c5690fa1828c6914deb5efc5210340
-
 #VSLIDE
-Run the "test()" function again
+### Example 3B: Run the "test()" function again
 - The first time you run this, you will need to authorize Google Apps to send data to an external URL
 - Check the logs to verify that "Pride and Prejudice" was found
 
-#HSLIDE
-### Reload the Spreadsheet
+#VSLIDE
+### Example 3B: Reload the Spreadsheet
 - The Google Books lookups should now be present
 ![screenshot](screenshots/screen4.jpg)
 
 #HSLIDE
-### Add Menu to Google Sheets
-- Add the following code
+### Example 3C: Enhance the Sheets UI
+- Add the following code to Add Menu to Google Sheets
 ```
 function onOpen(e) {
   SpreadsheetApp.getUi()
@@ -183,12 +189,14 @@ function onOpen(e) {
     .addToUi();
 }
 ```
-- Reload the spreadsheet and note the new menu
+
+#VSLIDE
+### Example 3C: Reload to See the New Menu
 ![screenshot](screenshots/screen5.jpg)
 
-#HSLIDE
-### Add UI Confirmation to the test() function
-- Modify the test() function to access the [Spreadsheet UI](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi())
+#VSLIDE
+### Example 3C: Add UI Confirmation to the test() function
+Modify the test() function to access the [Spreadsheet UI](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi())
 ```
 function test() {
   var title = isbnLookup("9780141977263")
@@ -196,7 +204,8 @@ function test() {
   SpreadsheetApp.getUi().alert(title);
 }
 ```
-- Call the test function from the new menu
+#VSLIDE
+### Example 3C: Call the test function from the new menu
 ![screenshot](screenshots/screen6.jpg)
 
 #HSLIDE
