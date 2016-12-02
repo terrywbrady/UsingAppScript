@@ -12,20 +12,20 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - Packaged for the Chrome Store as an Add-On
   
 #VSLIDE
-Accessible as a standalone Google Script project on Google Drive
+#### Accessible as a standalone Google Script project on Google Drive
 - Runnable on demand from the script editor
 - Deployable as a web service
 - Schedulable as a trigger (time-driven)
 
 #VSLIDE
-Embedded in a Google Document, a Google Sheet, a Google Form, or a Google Site
+#### Embedded in a Google Document, a Google Sheet, a Google Form, or a Google Site
 - Runnable from a custom menu item
 - Triggered by a user event (on Edit/on Open action)
 - Available as a spreadsheet formula
 - All of the standalone script options are also available for embedded scripts
 
 #VSLIDE
-Packaged for the Chrome Store as an Add-On
+#### Packaged for the Chrome Store as an Add-On
 - Offered for Sale to the Public
 - Offered for Free to the Public
 - Offered for Free to your Apps Domain
@@ -59,29 +59,37 @@ Configuratable Authorization Options
 - CSV files can be corrupted when shared between users
 - [Sample Script Project](https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web)
 - [Code on Github](https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript)
-- Try it yourself
-  - Select "Make a Copy" to save an editable copy
-  - Click "Deploy as Webapp", set the run as parameters as appropriate to you
-  - Get the current web app URL
-  - Run the Web App to upload a CSV file
 - [Sample Screen Shots](https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md)
+
+#VSLIDE
+#### Try it yourself
+- [Sample Script Project](https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web)
+- Select "Make a Copy" to save an editable copy
+- Click "Deploy as Webapp", set the run as parameters as appropriate to you
+- Get the current web app URL
+- Run the Web App to upload a CSV file
 
 #HSLIDE
 ### Example 2: Weekly Scheduling with Google Sheets
 - Volunteer assignment spreadsheet
 - Volunteer coordinators had limited computer literacy
 - [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
-  - Make an edit
-  - Send email
-  - Publish to Google Sites.  See the following [example](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
 - [Code on GitHub](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript)
-- Try it yourself
-  - Select "Make a Copy" to save an editable copy
-  - Create a personal Google Site
-    - Create a page within the site named "rotasearch"
-    - Set a script property named "siteid" with a URL to your new site
-  - Create a trigger to call "sendRota" on a daily basis
 - [Sample Screen Shots](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md)
+
+#VSLIDE
+####  Try it yourself
+- [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
+- Select "Make a Copy" to save an editable copy
+- Create a personal Google Site
+  - Create a page within the site named "rotasearch"
+  - Set a script property named "siteid" with a URL to your new site 
+
+#VSLIDE
+- Make an edit
+- Send email
+- Publish to Google Sites.  See the following [example](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
+- Create a trigger to call "sendRota" on a daily basis
   
 #HSLIDE
 ### Example 1a: Scheduling a Time-Based Trigger
