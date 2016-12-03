@@ -208,15 +208,15 @@ function test() {
 ### Example 3C: Call the test function from the new menu
 ![screenshot](screenshots/screen6.jpg)
 
-#HSLIDE
-### Trigger Restrictions
+#VSLIDE
+### Example 3C: Note About Trigger Restrictions
 - When installing an onOpen() trigger or other special triggers some [restrictions](https://developers.google.com/apps-script/guides/triggers/) apply to what your script can do
 - You may need to simplify the actions performed with a trigger and defer them to a user-driven action
 - If you see unexpected behavior in your scripts, evaluate if one of these restrictions has applied
 
 #HSLIDE
-### Adding Custom HTML to Your Script
-- In the script IDE, create a new html file named "Sidebar.html"
+### Example 3D: Adding Custom HTML to Your Script
+In the script IDE, create a new html file named "Sidebar.html"
 ```
 <!DOCTYPE html>
 <html>
@@ -228,18 +228,23 @@ function test() {
   </body>
 </html>
 ```
+
+#VSLIDE
+### Example 3D: Create HTML
 ![screenshot](screenshots/screen7.jpg)
 
-#HSLIDE
-### Add a menu option to load the sidebar
-- Create a function showSidebar()
+#VSLIDE
+### Example 3D: Add a menu option to load the sidebar
+Create a function showSidebar()
 ```
 function showSidebar() {
   var html = HtmlService.createHtmlOutputFromFile("Sidebar.html");
   SpreadsheetApp.getUi().showSidebar(html);
 }
 ```
-- Add a call to showSidebar() to the Add On Menu
+#VSLIDE
+### Example 3D: Add Menu Option
+Add a call to showSidebar() to the Add On Menu
 ```
 function onOpen(e) {
   SpreadsheetApp.getUi()
@@ -250,11 +255,16 @@ function onOpen(e) {
 }
 ```
 
+#VSLIDE
+### Example 3D: Screenshot of Menu Option
 ![screenshot](screenshots/screen8.jpg)
+
+#VSLIDE
+### Example 3D: Display Sidebar Output
 ![screenshot](screenshots/screen9.jpg)
 
 #HSLIDE
-### Adding an HTML Template to Your Script
+### Example 3E: Create HTML Template
 A template can take an interpret values passed to the template.
 - In the script IDE, create a new html file named "Template.html"
 ```
@@ -269,14 +279,18 @@ A template can take an interpret values passed to the template.
 </html>
 ```
 
-#HSLIDE
-### Add a menu option to load the sidebar from a template
-- Create a function showSidebarTemplate()
+#VSLIDE
+### Example 3E: Create Method to display data
+Create a function getMessage() to display data
 ```
 function getMessage() {
   return "HelloThere";
 }
 
+#VSLIDE
+### Example 3E: Display Template Function
+Create a function showSidebarTemplate() which passes the output of getMessage() to the template
+```
 function showSidebarTemplate() {
   var t = HtmlService.createTemplateFromFile("Template.html");
   t.prop = getMessage();
@@ -285,7 +299,8 @@ function showSidebarTemplate() {
 }
 ```
 #VSLIDE
-- Add a call to showSidebarTemplate() to the Add On Menu
+### Example 3E: Add Menu Option
+Add a call to showSidebarTemplate() to the Add On Menu
 ```
 function onOpen(e) {
   SpreadsheetApp.getUi()
@@ -297,15 +312,19 @@ function onOpen(e) {
 }
 
 ```
+
 #VSLIDE
+### Example 3E: Screenshot of Menu Option
 ![screenshot](screenshots/screen10.jpg)
+
 #VSLIDE
+### Example 3E: Screenshot of Template Output
 ![screenshot](screenshots/screen11.jpg)
 
 #HSLIDE
-### Adding an HTML Template With Client JavaScript to Your Script
+###  Example 3F: HTML Template with Client JavaScript
 Your client JavaScript can invoke server-side methods using *google.script.run*
-- In the script IDE, create a new html file named "SidebarWithClientJS.html"
+In the script IDE, create a new html file named "SidebarWithClientJS.html"
 ```
 <!DOCTYPE html>
 <html>
@@ -328,20 +347,21 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
     <span id="message"></span>
   </body>
 </html>
-
-
 ```
 
-#HSLIDE
-### Add a menu option to load the sidebar from a template
-- Create a function showSidebarWithClientJS()
+#VSLIDE
+### Example 3F: Method to Display Template
+Create a function showSidebarWithClientJS()
 ```
 function showSidebarWithClientJS() {
   var html = HtmlService.createHtmlOutputFromFile("SidebarWithClientJS.html");
   SpreadsheetApp.getUi().showSidebar(html);
 }
 ```
-- Add a call to showSidebarWithClientJS() to the Add On Menu
+
+#VSLIDE
+### Example 3F: Add Menu Item
+Add a call to showSidebarWithClientJS() to the Add On Menu
 ```
 function onOpen(e) {
   SpreadsheetApp.getUi()
@@ -354,7 +374,13 @@ function onOpen(e) {
 }
 ```
 
+#VSLIDE
+### Example 3F: Screenshot of Menu Option
 ![screenshot](screenshots/screen12.jpg)
+
+#VSLIDE
+### Example 3F: Screenshot of Template Call
+Note that the client JavaScript made a call to getMessage()
 ![screenshot](screenshots/screen13.jpg)
 
 #HSLIDE
