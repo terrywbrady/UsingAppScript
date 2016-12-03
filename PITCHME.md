@@ -2,7 +2,9 @@
 ### Building Simple Apps with Google App Script
 
 Terry Brady
+
 Georgetown University Library
+
 http://www.github.com/terrywbrady/info
 
 #HSLIDE
