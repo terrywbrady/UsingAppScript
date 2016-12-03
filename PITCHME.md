@@ -383,6 +383,7 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 - In the script IDE, create a new html file named "SidebarWithClientJS.html"
 
 #VSLIDE
+Complete HTML File
 ```
 <!DOCTYPE html>
 <html>
@@ -406,6 +407,7 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 ```
 
 #VSLIDE
+Client JavaScript
 ```
 $(function(){
   google.script.run.withSuccessHandler(showValue).getMessage()
@@ -417,6 +419,7 @@ function showValue(data) {
 ```
 
 #VSLIDE
+HTML Body (Will be Modified by JS)
 ```
 <body>
   <h2>Client Message</h2>
