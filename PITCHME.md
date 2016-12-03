@@ -127,8 +127,8 @@ We will extend this example to illustrate several featues of Google App Script.
 
 #HSLIDE
 ##### Example 3A: Creating a Test Google Sheet With Fake ISBN Lookup
-- Create a new Google Sheet
-- Enter the following Data
+
+Create a Google Sheet with the following data
 
 |ISBN|Google Books Lookup|
 |---|---|
@@ -171,14 +171,8 @@ Click "View Logs" to confirm that the function ran.
 
 #VSLIDE
 ##### Example 3A: Use the script as a Spreadsheet formula
-- Modify cell B2 to contain the following formula 
-```
-=isbnLookup(A2)
-```
-- Copy cell B2 into cell B3 to create the following formula 
-```
-=isbnLookup(A3)
-```
+- Modify cell B2 to contain the following formula `=isbnLookup(A2)`
+- Copy cell B2 into cell B3 to create the following formula `=isbnLookup(A3)`
 
 #VSLIDE
 ##### Example 3A: View Formula Output
