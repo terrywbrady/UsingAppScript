@@ -182,8 +182,6 @@ Copy cell B2 into cell B3 to create the following formula
 
 #VSLIDE
 ##### Example 3A: View Formula Output
-- Verify that the cell contents display the result of the function
-
 ![screenshot](screenshots/screen3.jpg)
 
 #HSLIDE
