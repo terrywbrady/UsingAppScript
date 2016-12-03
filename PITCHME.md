@@ -212,8 +212,7 @@ function isbnLookup(id) {
 - Check the logs to verify that "Pride and Prejudice" was found
 
 #VSLIDE
-##### Example 3B: Reload the Spreadsheet
-- The Google Books lookups should now be present
+##### Example 3B: Reload the Spreadsheet 
 ![screenshot](screenshots/screen4.jpg)
 
 #HSLIDE
