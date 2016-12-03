@@ -1,4 +1,11 @@
 #HSLIDE
+### Building Simple Apps with Google App Script
+
+Terry Brady
+Georgetown University Library
+http://www.github.com/terrywbrady/info
+
+#HSLIDE
 ### What is Google App Script?
 
 Google App Script is a server-side implementation of JavaScript with access to several Google API's.
