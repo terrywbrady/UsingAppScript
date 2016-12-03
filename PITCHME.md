@@ -405,7 +405,24 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 </html>
 ```
 
-#VSLIDE?gist=86c5690fa1828c6914deb5efc5210340
+#VSLIDE
+```
+$(function(){
+  google.script.run.withSuccessHandler(showValue).getMessage()
+});
+
+function showValue(data) {
+  $("#message").text(data);
+}
+```
+
+#VSLIDE
+```
+<body>
+  <h2>Client Message</h2>
+  <span id="message"></span>
+</body>
+```
 
 #VSLIDE
 ##### Example 3F: Method to Display Template
