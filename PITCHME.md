@@ -49,8 +49,15 @@ Configuratable Authorization Options
 
 #HSLIDE
 ### Complete App Examples
-- Building a Web Service to Save to Google Drive
-- Extending Google Apps
+- Example 1: Building a Web Service to Save to Google Drive
+- Example 2: Extending Google Apps
+- Example 3: Google Sheet with ISBN Lookup
+ - 3A: Simulated Lookup
+ - 3B: Lookup with Google Books
+ - 3C: Add Google Sheet UI
+ - 3D: Show HTML
+ - 3E: Show Templated HTML
+ - 3F: Show HTML with Client JS (Calling Server JS)
 
 #HSLIDE
 
@@ -94,13 +101,13 @@ Configuratable Authorization Options
   
 #VSLIDE
 ### Example 2: Trigger Menu
-![Screen Shot](image=screenshots/trigger1.jpg)
+![Screen Shot](screenshots/trigger1.jpg)
 
 ### Example 2: Create Trigger
-![Screen Shot](#VSLIDE?image=screenshots/trigger2.jpg)
+![Screen Shot](screenshots/trigger2.jpg)
 
 ### Example 2: Create Trigger
-![Screen Shot](#VSLIDE?image=screenshots/trigger3.jpg)
+![Screen Shot](screenshots/trigger3.jpg)
 
 #HSLIDE
 ### Example 3A: Creating a Test Google Sheet With Fake ISBN Lookup
