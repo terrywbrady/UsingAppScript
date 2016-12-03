@@ -369,10 +369,9 @@ In the script IDE, create a new html file named "SidebarWithClientJS.html"
       $(function(){
         google.script.run.withSuccessHandler(showValue).getMessage();
       });
-      
-     function showValue(data) {
-       $("#message").text(data);
-     }
+      function showValue(data) {
+        $("#message").text(data);
+      }
     </script>
   </head>
   <body>
