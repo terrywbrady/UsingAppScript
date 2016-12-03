@@ -1,5 +1,13 @@
 #HSLIDE
+### Building Simple Apps with Google App Script
+
+Terry Brady
+Georgetown University Library
+http://www.github.com/terrywbrady/info
+
+#HSLIDE
 ### What is Google App Script?
+
 Google App Script is a server-side implementation of JavaScript with access to several Google API's.
 
 [Google Apps Script Documentation](https://developers.google.com/apps-script/)
@@ -41,6 +49,7 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem
 
 #VSLIDE
+
 Configuratable Authorization Options
 - Script can run as the user running the script
 - Script can run as the author of the script
@@ -113,7 +122,9 @@ Configuratable Authorization Options
 
 #HSLIDE
 ##### Example 3A: Create a Test Google Sheet with ISBN Lookup
+
 We will extend this example to illustrate several featues of Google App Script.
+
  - 3A: Simulated Lookup
  - 3B: Lookup with Google Books
  - 3C: Add Google Sheet UI
@@ -123,8 +134,8 @@ We will extend this example to illustrate several featues of Google App Script.
 
 #HSLIDE
 ##### Example 3A: Creating a Test Google Sheet With Fake ISBN Lookup
-- Create a new Google Sheet
-- Enter the following Data
+
+Create a Google Sheet with the following data
 
 |ISBN|Google Books Lookup|
 |---|---|
@@ -150,33 +161,34 @@ function test() {
 ```
 #VSLIDE
 ##### Example 3A: Save the Script Project
+
 Name the project something like "Test Project"
 
 #VSLIDE
 ##### Example 3A: Test the script
+
 From the "Select function" drop down, select "test" and click the "Run" or "Debug" button 
 ![screenshot](screenshots/screen1.jpg)
 
 #VSLIDE
 ##### Example 3A: View Log Output
+
 Click "View Logs" to confirm that the function ran.
 ![screenshot](screenshots/screen2.jpg)
 
 #VSLIDE
 ##### Example 3A: Use the script as a Spreadsheet formula
-- Modify cell B2 to contain the following formula 
-```
-=isbnLookup(A2)
-```
-- Copy cell B2 into cell B3 to create the following formula 
-```
-=isbnLookup(A3)
-```
+
+Modify cell B2 to contain the following formula 
+
+`=isbnLookup(A2)`
+
+Copy cell B2 into cell B3 to create the following formula 
+
+`=isbnLookup(A3)`
 
 #VSLIDE
 ##### Example 3A: View Formula Output
-- Verify that the cell contents display the result of the function
-
 ![screenshot](screenshots/screen3.jpg)
 
 #HSLIDE
@@ -207,8 +219,7 @@ function isbnLookup(id) {
 - Check the logs to verify that "Pride and Prejudice" was found
 
 #VSLIDE
-##### Example 3B: Reload the Spreadsheet
-- The Google Books lookups should now be present
+##### Example 3B: Reload the Spreadsheet 
 ![screenshot](screenshots/screen4.jpg)
 
 #HSLIDE
@@ -229,7 +240,9 @@ function onOpen(e) {
 
 #VSLIDE
 ##### Example 3C: Add UI Confirmation to the test() function
+
 Modify the test() function to access the [Spreadsheet UI](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi())
+
 ```
 function test() {
   var title = isbnLookup("9780141977263")
@@ -245,7 +258,9 @@ function test() {
 
 #HSLIDE
 ##### Example 3D: Adding Custom HTML to Your Script
+
 In the script IDE, create a new html file named "Sidebar.html"
+
 ```
 <!DOCTYPE html>
 <html>
@@ -264,7 +279,9 @@ In the script IDE, create a new html file named "Sidebar.html"
 
 #VSLIDE
 ##### Example 3D: Add a menu option to load the sidebar
+
 Create a function showSidebar()
+
 ```
 function showSidebar() {
   var html = HtmlService.createHtmlOutputFromFile("Sidebar.html");
@@ -274,7 +291,9 @@ function showSidebar() {
 
 #VSLIDE
 ##### Example 3D: Add Menu Option
+
 Add a call to showSidebar() to the Add On Menu
+
 ```
 function onOpen(e) {
   SpreadsheetApp.getUi()
@@ -295,8 +314,10 @@ function onOpen(e) {
 
 #HSLIDE
 ##### Example 3E: Create HTML Template
+
 A template can take an interpret values passed to the template.
 - In the script IDE, create a new html file named "Template.html"
+
 ```
 <!DOCTYPE html>
 <html>
@@ -311,7 +332,9 @@ A template can take an interpret values passed to the template.
 
 #VSLIDE
 ##### Example 3E: Create Method to display data
+
 Create a function getMessage() to display data
+
 ```
 function getMessage() {
   return "HelloThere";
@@ -320,7 +343,9 @@ function getMessage() {
 
 #VSLIDE
 ##### Example 3E: Display Template Function
+
 Create a function showSidebarTemplate() which passes the output of getMessage() to the template
+
 ```
 function showSidebarTemplate() {
   var t = HtmlService.createTemplateFromFile("Template.html");
@@ -332,7 +357,9 @@ function showSidebarTemplate() {
 
 #VSLIDE
 ##### Example 3E: Add Menu Option
+
 Add a call to showSidebarTemplate() to the Add On Menu
+
 ```
 function onOpen(e) {
   SpreadsheetApp.getUi()
@@ -356,9 +383,11 @@ function onOpen(e) {
 #HSLIDE
 #####  Example 3F: HTML Template with Client JavaScript
 Your client JavaScript can invoke server-side methods using *google.script.run*
-In the script IDE, create a new html file named "SidebarWithClientJS.html"
+
+- In the script IDE, create a new html file named "SidebarWithClientJS.html"
 
 #VSLIDE
+Complete HTML File
 ```
 <!DOCTYPE html>
 <html>
@@ -379,6 +408,27 @@ In the script IDE, create a new html file named "SidebarWithClientJS.html"
     <span id="message"></span>
   </body>
 </html>
+```
+
+#VSLIDE
+Client JavaScript
+```
+$(function(){
+  google.script.run.withSuccessHandler(showValue).getMessage()
+});
+
+function showValue(data) {
+  $("#message").text(data);
+}
+```
+
+#VSLIDE
+HTML Body (Will be Modified by JS)
+```
+<body>
+  <h2>Client Message</h2>
+  <span id="message"></span>
+</body>
 ```
 
 #VSLIDE
