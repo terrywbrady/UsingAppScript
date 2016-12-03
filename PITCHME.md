@@ -176,6 +176,7 @@ Click "View Logs" to confirm that the function ran.
 #VSLIDE
 ##### Example 3A: View Formula Output
 - Verify that the cell contents display the result of the function
+
 ![screenshot](screenshots/screen3.jpg)
 
 #HSLIDE
@@ -241,11 +242,6 @@ function test() {
 ##### Example 3C: Call the test function from the new menu
 ![screenshot](screenshots/screen6.jpg)
 
-#VSLIDE
-##### Example 3C: Note About Trigger Restrictions
-- When installing an onOpen() trigger or other special triggers some [restrictions](https://developers.google.com/apps-script/guides/triggers/) apply to what your script can do
-- You may need to simplify the actions performed with a trigger and defer them to a user-driven action
-- If you see unexpected behavior in your scripts, evaluate if one of these restrictions has applied
 
 #HSLIDE
 ##### Example 3D: Adding Custom HTML to Your Script
@@ -361,21 +357,22 @@ function onOpen(e) {
 #####  Example 3F: HTML Template with Client JavaScript
 Your client JavaScript can invoke server-side methods using *google.script.run*
 In the script IDE, create a new html file named "SidebarWithClientJS.html"
+
+#VSLIDE
 ```
 <!DOCTYPE html>
 <html>
   <head>
     <base target="_top">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><script>
     <script type="text/javascript">
       $(function(){
         google.script.run.withSuccessHandler(showValue).getMessage();
       });
       
-      function showValue(data) {
-        $("#message").text(data);
-      }
+     function showValue(data) {
+       $("#message").text(data);
+     }
     </script>
   </head>
   <body>
@@ -418,6 +415,12 @@ function onOpen(e) {
 ##### Example 3F: Screenshot of Template Call
 Note that the client JavaScript made a call to getMessage()
 ![screenshot](screenshots/screen13.jpg)
+
+#HSLIDE
+##### Note About Trigger Restrictions
+- When installing an onOpen() trigger or other special triggers some [restrictions](https://developers.google.com/apps-script/guides/triggers/) apply to what your script can do
+- You may need to simplify the actions performed with a trigger and defer them to a user-driven action
+- If you see unexpected behavior in your scripts, evaluate if one of these restrictions has applied
 
 #HSLIDE
 ##### Creating a UI in Google Apps Script
