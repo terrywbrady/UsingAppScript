@@ -5,7 +5,8 @@ Terry Brady
 
 Georgetown University Library
 
-http://www.github.com/terrywbrady/info
+<a target="_blank" href="https://github.com/terrywbrady/info">https://github.com/terrywbrady/info</a>
+
 
 ![](http://www.library.georgetown.edu/sites/default/files/library-logo.png)
 
