@@ -1,8 +1,14 @@
-# What is Google App Script?
-This project provides a tutorial on Building Applications with Google App Script
+# Developing Library Applications in Google Sheets with Google Apps Script (Code4Lib 2017)
 
-[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/terrywbrady/UsingAppScript/master?grs=github&t=white)
+## Agenda
+* JS Primer
+* GAS Tech Overview
+* Brainstorming - What Apps Scrpt Apps Might Be Useful to Develop and Share Across Libraries?
 
-### Presentation Log
-- Code4Lib BC, Dec 2016
-- Seattle JS, Jan 2017
+## Presentation TODO's
+https://github.com/terrywbrady/UsingAppScript/issues?q=is%3Aopen+is%3Aissue+label%3ACode4Lib
+
+## Slides
+[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/terrywbrady/UsingAppScript/Code4Lib?grs=github&t=white)
+
+
