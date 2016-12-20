@@ -1,8 +1,8 @@
 #HSLIDE
-### Developing Library Applications in Google Sheets with Google Apps Script
+### Developing Library Applications with Google Apps Script
 
-Terry Brady, Georgetown University Library
-Craig Boman, University of Dayton Library
+* Terry Brady, Georgetown University Library
+* Craig Boman, University of Dayton Library
 
 <a target="_blank" href="https://github.com/terrywbrady/UsingAppScript">https://github.com/terrywbrady/UsingAppScript</a>
 
