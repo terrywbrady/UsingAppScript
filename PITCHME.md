@@ -15,7 +15,7 @@ Georgetown University Library
 
 Google App Script is a server-side implementation of JavaScript with access to several Google API's.
 
-[Google Apps Script Documentation](https://developers.google.com/apps-script/)
+<a target="_blank" href="https://developers.google.com/apps-script/">Google Apps Script Documentation</a>
 
 #HSLIDE
 
@@ -71,13 +71,13 @@ Configuratable Authorization Options
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
 - Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
 - CSV files can be corrupted when shared between users
-- [Sample Script Project](https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web)
-- [Code on Github](https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript)
-- [Sample Screen Shots](https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md)
+- <a target="_blank" href="https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web">Sample Script Project</a>
+- <a target="_blank" href="https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript">Code on Github</a>
+- <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
 #VSLIDE
 ##### Example 1: Clone Project for Yourself
-- [Sample Script Project](https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web)
+- <a target="_blank" href="https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web">Sample Script Project</a>
 - Select "Make a Copy" to save an editable copy
 - Click "Deploy as Webapp", set the run as parameters as appropriate to you
 - Copy the current web app URL
@@ -93,13 +93,13 @@ Configuratable Authorization Options
 ### Example 2: Weekly Scheduling with Google Sheets
 - Volunteer assignment spreadsheet
 - Volunteer coordinators had limited computer literacy
-- [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
-- [Code on GitHub](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript)
-- [Sample Screen Shots](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md)
+- <a target="_blank" href="https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0">Sample Spreadsheet</a>
+- <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript">Code on GitHub</a>
+- <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
 #VSLIDE
 #####  Example 2: Clone/Configure for Yourself
-- [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
+- <a target="_blank" href="https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0">Sample Spreadsheet</a>
 - Select "Make a Copy" to save an editable copy
 - Create a personal Google Site
   - Create a page within the site named "rotasearch"
@@ -109,7 +109,7 @@ Configuratable Authorization Options
 #####  Example 2: Run it for yourself
 - Make an edit
 - Send email
-- Publish to Google Sites.  See the following [example](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
+- Publish to Google Sites.  See the following <a target="_blank" href="https://sites.google.com/a/georgetown.edu/examples/rotasearch">example</a>
 - Create a trigger to call "sendRota" on a daily basis
   
 #VSLIDE
@@ -198,8 +198,8 @@ Copy cell B2 into cell B3 to create the following formula
 
 #HSLIDE
 ##### Example 3B: Enhance the script with an external service call
-- [Google Apps Script API Reference for UrlFetchApp](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app)
-- Update the isbnLookup function to use the [Google Books API](https://developers.google.com/books/docs/v1/using#web-applications) to lookup the isbn
+- <a target="_blank" href="https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app">Google Apps Script API Reference for UrlFetchApp</a>
+- Update the isbnLookup function to use the <a target="_blank" href="https://developers.google.com/books/docs/v1/using#web-applications">Google Books API</a> to lookup the isbn
 
 #VSLIDE
 ##### Example 3B: Call Google Books Service 
@@ -246,7 +246,7 @@ function onOpen(e) {
 #VSLIDE
 ##### Example 3C: Add UI Confirmation to the test() function
 
-Modify the test() function to access the [Spreadsheet UI](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi())
+Modify the test() function to access the <a target="_blank" href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi()">Spreadsheet UI</a>
 
 ```
 function test() {
@@ -472,15 +472,15 @@ Note that the client JavaScript made a call to getMessage()
 
 #HSLIDE
 ##### Note About Trigger Restrictions
-- When installing an onOpen() trigger or other special triggers some [restrictions](https://developers.google.com/apps-script/guides/triggers/) apply to what your script can do
+- When installing an onOpen() trigger or other special triggers some <a target="_blank" href="https://developers.google.com/apps-script/guides/triggers/">restrictions</a> apply to what your script can do
 - You may need to simplify the actions performed with a trigger and defer them to a user-driven action
 - If you see unexpected behavior in your scripts, evaluate if one of these restrictions has applied
 
 #HSLIDE
 ##### Useful Reference
-- [Creating a Google Doc Add-On Example](https://developers.google.com/apps-script/quickstart/docs)
-- [Templated HTML](https://developers.google.com/apps-script/guides/html/templates)
-- [Calling Server Side Functions from Client JavaScript](https://developers.google.com/apps-script/guides/html/reference/run)
+- <a target="_blank" href="https://developers.google.com/apps-script/quickstart/docs">Creating a Google Doc Add-On Example</a>
+- <a target="_blank" href="https://developers.google.com/apps-script/guides/html/templates">Templated HTML</a>
+- <a target="_blank" href="https://developers.google.com/apps-script/guides/html/reference/run">Calling Server Side Functions from Client JavaScript</a>
 
 #HSLIDE
 ### Thank You!
@@ -489,6 +489,6 @@ Terry Brady
 
 Georgetown University Library
 
-http://www.github.com/terrywbrady/info
+<a target="_blank" href="http://www.github.com/terrywbrady/info">http://www.github.com/terrywbrady/info</a>
 
 ![](http://www.library.georgetown.edu/sites/default/files/library-logo.png)
