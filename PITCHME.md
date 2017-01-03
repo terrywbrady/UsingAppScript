@@ -160,8 +160,10 @@ function isbnLookup(id) {
 }
 
 function test() {
-  var title = isbnLookup("9780141977263")
-  Logger.log(title);
+  var isbn = "9780141977263";
+  var title = isbnLookup(isbn)
+  var msg = "The title for ISBN " + isbn + " is " + title;
+  Logger.log(msg);
 }
 ```
 #VSLIDE
@@ -228,7 +230,7 @@ function isbnLookup(id) {
 ![screenshot](screenshots/screen4.jpg)
 
 #HSLIDE
-##### Example 3C: Enhance the Sheets UI
+##### Example 3C: Call Your Function from the Sheets UI
 - Add the following code to Add Menu to Google Sheets
 ```
 function onOpen(e) {
@@ -250,9 +252,11 @@ Modify the test() function to access the <a target="_blank" href="https://develo
 
 ```
 function test() {
-  var title = isbnLookup("9780141977263")
-  Logger.log(title);
-  SpreadsheetApp.getUi().alert(title);
+  var isbn = "9780141977263";
+  var title = isbnLookup(isbn)
+  var msg = "The title for ISBN " + isbn + " is " + title;
+  Logger.log(msg);
+  SpreadsheetApp.getUi().alert(msg);
 }
 ```
 
@@ -273,7 +277,8 @@ In the script IDE, create a new html file named "Sidebar.html"
     <base target="_top">
   </head>
   <body>
-    <h2>Sample Code Here</h2>
+    <h2>Sample HTML Panel in Google Sheets</h2>
+    <div>We will use this panel to add additional features to the Spreadsheet</div>
   </body>
 </html>
 ```
@@ -330,20 +335,10 @@ A template can take an interpret values passed to the template.
     <base target="_top">
   </head>
   <body>
-    <h2>Property goes here: <?=prop?></h2>
+    <h2>Sample HTML Panel in Google Sheets</h2>
+    <div>The title for ISBN <?=isbn?>: <?=title?></div>
   </body>
 </html>
-```
-
-#VSLIDE
-##### Example 3E: Create Method to display data
-
-Create a function getMessage() to display data
-
-```
-function getMessage() {
-  return "HelloThere";
-}
 ```
 
 #VSLIDE
@@ -354,7 +349,8 @@ Create a function showSidebarTemplate() which passes the output of getMessage() 
 ```
 function showSidebarTemplate() {
   var t = HtmlService.createTemplateFromFile("Template.html");
-  t.prop = getMessage();
+  t.isbn = "0596517742";
+  t.title = isbnLookup(t.isbn);
   var html = t.evaluate();
   SpreadsheetApp.getUi().showSidebar(html);
 }
@@ -401,16 +397,18 @@ Complete HTML File
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><script>
     <script type="text/javascript">
       $(function(){
-        google.script.run.withSuccessHandler(showValue).getMessage();
+        $("#isbn").on("blur", function(){
+          google.script.run.withSuccessHandler(showValue).isbnLookup($("#isbn").val());
+        });
       });
       function showValue(data) {
-        $("#message").text(data);
+        $("#title").text(data);
       }
     </script>
   </head>
   <body>
-    <h2>Client Message</h2>
-    <span id="message"></span>
+    <h2>Sample HTML Panel in Google Sheets</h2>
+    <div>The title for ISBN <input id="isbn" type="text" size="10"/>: <?=title?></div>
   </body>
 </html>
 ```
