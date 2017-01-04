@@ -175,13 +175,18 @@ Name the project something like "Test Project"
 ##### Example 3A: Test the script
 
 From the "Select function" drop down, select "test" and click the "Run" or "Debug" button 
-![screenshot](screenshots/screen1.jpg)
+![screenshot](screenshots/screen3a-1.jpg)
 
 #VSLIDE
 ##### Example 3A: View Log Output
 
 Click "View Logs" to confirm that the function ran.
-![screenshot](screenshots/screen2.jpg)
+![screenshot](screenshots/screen3a-2.jpg)
+
+#VSLIDE
+##### Example 3A: View Log Output
+
+![screenshot](screenshots/screen3a-3.jpg)
 
 #VSLIDE
 ##### Example 3A: Use the script as a Spreadsheet formula
@@ -196,7 +201,7 @@ Copy cell B2 into cell B3 to create the following formula
 
 #VSLIDE
 ##### Example 3A: View Formula Output
-![screenshot](screenshots/screen3.jpg)
+![screenshot](screenshots/screen3a-4.jpg)
 
 #HSLIDE
 ##### Example 3B: Enhance the script with an external service call
@@ -214,20 +219,22 @@ function isbnLookup(id) {
   if (resp == null || resp == "") return "N/A";
 
   var respdata = JSON.parse(resp.getContentText());
+  if (respdata["items"] == undefined) return "Not found";
   if (respdata["items"].length == 0) return "Not found";
 
-  return respdata["items"][0]["volumeInfo"]["title"];
+  var data = respdata["items"][0]["volumeInfo"];
+  return (data["subtitle"] == undefined) ? data["title"] : data["title"] + ": " + data["subtitle"];
 }
 ```
 
 #VSLIDE
 ##### Example 3B: Run the "test()" function again
 - The first time you run this, you will need to authorize Google Apps to send data to an external URL
-- Check the logs to verify that "Pride and Prejudice" was found
+![screenshot](screenshots/screen3b-1.jpg)
 
 #VSLIDE
 ##### Example 3B: Reload the Spreadsheet 
-![screenshot](screenshots/screen4.jpg)
+![screenshot](screenshots/screen3b-2.jpg)
 
 #HSLIDE
 ##### Example 3C: Call Your Function from the Sheets UI
@@ -243,7 +250,7 @@ function onOpen(e) {
 
 #VSLIDE
 ##### Example 3C: Reload to See the New Menu
-![screenshot](screenshots/screen5.jpg)
+![screenshot](screenshots/screen3c-1.jpg)
 
 #VSLIDE
 ##### Example 3C: Add UI Confirmation to the test() function
@@ -252,7 +259,7 @@ Modify the test() function to access the <a target="_blank" href="https://develo
 
 ```
 function test() {
-  var isbn = "9780141977263";
+  var isbn = "0764506331";
   var title = isbnLookup(isbn)
   var msg = "The title for ISBN " + isbn + " is " + title;
   Logger.log(msg);
@@ -262,7 +269,7 @@ function test() {
 
 #VSLIDE
 ##### Example 3C: Call the test function from the new menu
-![screenshot](screenshots/screen6.jpg)
+![screenshot](screenshots/screen3c-2.jpg)
 
 
 #HSLIDE
@@ -285,7 +292,7 @@ In the script IDE, create a new html file named "Sidebar.html"
 
 #VSLIDE
 ##### Example 3D: Create HTML
-![screenshot](screenshots/screen7.jpg)
+![screenshot](screenshots/screen3d-1.jpg)
 
 #VSLIDE
 ##### Example 3D: Add a menu option to load the sidebar
@@ -316,11 +323,11 @@ function onOpen(e) {
 
 #VSLIDE
 ##### Example 3D: Screenshot of Menu Option
-![screenshot](screenshots/screen8.jpg)
+![screenshot](screenshots/screen3d-2.jpg)
 
 #VSLIDE
 ##### Example 3D: Display Sidebar Output
-![screenshot](screenshots/screen9.jpg)
+![screenshot](screenshots/screen3d-3.jpg)
 
 #HSLIDE
 ##### Example 3E: Create HTML Template
@@ -375,11 +382,11 @@ function onOpen(e) {
 
 #VSLIDE
 ##### Example 3E: Screenshot of Menu Option
-![screenshot](screenshots/screen10.jpg)
+![screenshot](screenshots/screen3e-1.jpg)
 
 #VSLIDE
 ##### Example 3E: Screenshot of Template Output
-![screenshot](screenshots/screen11.jpg)
+![screenshot](screenshots/screen3e-2.jpg)
 
 #HSLIDE
 #####  Example 3F: HTML Template with Client JavaScript
@@ -394,21 +401,27 @@ Complete HTML File
 <html>
   <head>
     <base target="_top">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><script>
-    <script type="text/javascript">
-      $(function(){
-        $("#isbn").on("blur", function(){
-          google.script.run.withSuccessHandler(showValue).isbnLookup($("#isbn").val());
-        });
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+    function showValue(data) {
+      $("#booktitle").val(data);
+    }
+
+    $(function(){
+      $("#isbn").on("blur", function(){
+        $("#booktitle").val("");
+        google.script.run.withSuccessHandler(showValue).isbnLookup($("#isbn").val());
       });
-      function showValue(data) {
-        $("#title").text(data);
-      }
+    });
     </script>
   </head>
   <body>
     <h2>Sample HTML Panel in Google Sheets</h2>
-    <div>The title for ISBN <input id="isbn" type="text" size="10"/>: <?=title?></div>
+    <div>
+      The title for ISBN 
+      <input id="isbn" type="text" size="10"/>: 
+      <textarea id="booktitle" rows="5" cols="35">--</textarea>
+    </div>
   </body>
 </html>
 ```
@@ -416,22 +429,29 @@ Complete HTML File
 #VSLIDE
 Client JavaScript
 ```
-$(function(){
-  google.script.run.withSuccessHandler(showValue).getMessage()
-});
+    function showValue(data) {
+      $("#booktitle").val(data);
+    }
 
-function showValue(data) {
-  $("#message").text(data);
-}
+    $(function(){
+      $("#isbn").on("blur", function(){
+        $("#booktitle").val("");
+        google.script.run.withSuccessHandler(showValue).isbnLookup($("#isbn").val());
+      });
+    });
 ```
 
 #VSLIDE
 HTML Body (Will be Modified by JS)
 ```
-<body>
-  <h2>Client Message</h2>
-  <span id="message"></span>
-</body>
+  <body>
+    <h2>Sample HTML Panel in Google Sheets</h2>
+    <div>
+      The title for ISBN 
+      <input id="isbn" type="text" size="10"/>: 
+      <textarea id="booktitle" rows="5" cols="35">--</textarea>
+    </div>
+   </body>
 ```
 
 #VSLIDE
@@ -461,12 +481,12 @@ function onOpen(e) {
 
 #VSLIDE
 ##### Example 3F: Screenshot of Menu Option
-![screenshot](screenshots/screen12.jpg)
+![screenshot](screenshots/screen3f-1.jpg)
 
 #VSLIDE
 ##### Example 3F: Screenshot of Template Call
 Note that the client JavaScript made a call to getMessage()
-![screenshot](screenshots/screen13.jpg)
+![screenshot](screenshots/screen3f-2.jpg)
 
 #HSLIDE
 ##### Note About Trigger Restrictions
