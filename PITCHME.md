@@ -17,6 +17,8 @@ Google App Script is a server-side implementation of JavaScript with access to s
 
 <a target="_blank" href="https://developers.google.com/apps-script/">Google Apps Script Documentation</a>
 
+#HSLIDE?gist=86c5690fa1828c6914deb5efc5210340
+
 #HSLIDE
 
 ### How can Google App Script be Used?
