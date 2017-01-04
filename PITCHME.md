@@ -402,18 +402,7 @@ Complete HTML File
   <head>
     <base target="_top">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-    function showValue(data) {
-      $("#booktitle").val(data);
-    }
-
-    $(function(){
-      $("#isbn").on("blur", function(){
-        $("#booktitle").val("");
-        google.script.run.withSuccessHandler(showValue).isbnLookup($("#isbn").val());
-      });
-    });
-    </script>
+    <!-- Client JavaScript Goes Here (See Next Slide) -->
   </head>
   <body>
     <h2>Sample HTML Panel in Google Sheets</h2>
@@ -429,6 +418,7 @@ Complete HTML File
 #VSLIDE
 Client JavaScript
 ```
+    <script>
     function showValue(data) {
       $("#booktitle").val(data);
     }
@@ -436,9 +426,11 @@ Client JavaScript
     $(function(){
       $("#isbn").on("blur", function(){
         $("#booktitle").val("");
-        google.script.run.withSuccessHandler(showValue).isbnLookup($("#isbn").val());
+        google.script.run.withSuccessHandler(showValue)
+          .isbnLookup($("#isbn").val());
       });
     });
+    </script>
 ```
 
 #VSLIDE
