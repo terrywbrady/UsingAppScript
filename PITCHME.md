@@ -474,8 +474,8 @@ function onOpen(e) {
 #VSLIDE
 ##### Example 3F: Add Menu Item
 Add a call to showSidebarWithClientJS() to the Add On Menu
-<pre>
-<code class="stretch">
+<pre class="stretch">
+<code>
 function onOpen(e) {
   SpreadsheetApp.getUi()
     .createAddonMenu()
