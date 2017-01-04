@@ -472,6 +472,23 @@ function onOpen(e) {
 ```
 
 #VSLIDE
+##### Example 3F: Add Menu Item
+Add a call to showSidebarWithClientJS() to the Add On Menu
+<pre>
+<code class="stretch">
+function onOpen(e) {
+  SpreadsheetApp.getUi()
+    .createAddonMenu()
+    .addItem("Test Function", "test")
+    .addItem("Show Sidebar", "showSidebar")
+    .addItem("Show Template", "showSidebarTemplate")
+    .addItem("Show Sidebar With Client JS", "showSidebarWithClientJS")
+    .addToUi();
+}
+</code>
+</pre>
+
+#VSLIDE
 ##### Example 3F: Screenshot of Menu Option
 ![screenshot](screenshots/screen3f-1.jpg)
 
