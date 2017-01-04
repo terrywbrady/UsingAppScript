@@ -476,9 +476,14 @@ function onOpen(e) {
 ![screenshot](screenshots/screen3f-1.jpg)
 
 #VSLIDE
-##### Example 3F: Screenshot of Template Call
-Note that the client JavaScript made a call to getMessage()
+##### Example 3F: Display HTML Page
+An onBlur event is bound to the ISBN field.
 ![screenshot](screenshots/screen3f-2.jpg)
+
+#VSLIDE
+##### Example 3F: Invoke Server JS from Client JS
+The title field is updated after entering an ISBN.
+![screenshot](screenshots/screen3f-3.jpg)
 
 #HSLIDE
 ##### Note About Trigger Restrictions
