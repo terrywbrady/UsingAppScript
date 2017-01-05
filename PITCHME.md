@@ -17,8 +17,6 @@ Google App Script is a server-side implementation of JavaScript with access to s
 
 <a target="_blank" href="https://developers.google.com/apps-script/">Google Apps Script Documentation</a>
 
-#HSLIDE?gist=86c5690fa1828c6914deb5efc5210340
-
 #HSLIDE
 
 ### How can Google App Script be Used?
@@ -73,7 +71,7 @@ Configuratable Authorization Options
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
 - Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
 - CSV files can be corrupted when shared between users
-- <a target="_blank" href="https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web">Sample Script Project</a>
+- <a target="_blank" href="https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing">Sample Script Project</a>
 - <a target="_blank" href="https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript">Code on Github</a>
 - <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
