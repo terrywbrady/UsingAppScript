@@ -8,7 +8,7 @@ Georgetown University Library
 <a target="_blank" href="https://github.com/terrywbrady/info">https://github.com/terrywbrady/info</a>
 
 
-![](http://www.library.georgetown.edu/sites/default/files/library-logo.png)
+![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
 
 #HSLIDE
 ### What is Google App Script?
@@ -55,7 +55,7 @@ Google App Script is a server-side implementation of JavaScript with access to s
 
 #VSLIDE
 
-Configuratable Authorization Options
+Configurable Authorization Options
 - Script can run as the user running the script <!-- .element: class="fragment" -->
 - Script can run as the author of the script <!-- .element: class="fragment" -->
 - Script can be authorized to access personal Google Services (Mail, Calendar, Drive) <!-- .element: class="fragment" -->
@@ -136,7 +136,7 @@ Three,Preserve Number with leading zeros,00002222
 
 
 #HSLIDE
-##### Example 3A: Create a Test Google Sheet with ISBN Lookup
+##### Example 3: Create a Test Google Sheet with ISBN Lookup
 
 We will extend this example to illustrate several featues of Google App Script.
 
@@ -233,13 +233,15 @@ function isbnLookup(id) {
   if (respdata["items"].length == 0) return "Not found";
 
   var data = respdata["items"][0]["volumeInfo"];
-  return (data["subtitle"] == undefined) ? data["title"] : data["title"] + ": " + data["subtitle"];
+  return (data["subtitle"] == undefined) ? 
+    data["title"] : data["title"] + ": " + data["subtitle"];
 }
 ```
 
 #VSLIDE
 ##### Example 3B: Run the "test()" function again
 - The first time you run this, you will need to authorize Google Apps to send data to an external URL
+
 ![screenshot](screenshots/screen3b-1.jpg)
 
 #VSLIDE
@@ -248,7 +250,7 @@ function isbnLookup(id) {
 
 #HSLIDE
 ##### Example 3C: Call Your Function from the Sheets UI
-- Add the following code to Add Menu to Google Sheets
+- Add Menu to Google Sheets
 ```
 function onOpen(e) {
   SpreadsheetApp.getUi()
@@ -285,7 +287,7 @@ function test() {
 #HSLIDE
 ##### Example 3D: Adding Custom HTML to Your Script
 
-In the script IDE, create a new html file named "Sidebar.html"
+In the script IDE, create "Sidebar.html"
 
 ```
 <!DOCTYPE html>
@@ -319,7 +321,7 @@ function showSidebar() {
 #VSLIDE
 ##### Example 3D: Add Menu Option
 
-Add a call to showSidebar() to the Add On Menu
+Add showSidebar() to the Add On Menu
 
 ```
 function onOpen(e) {
@@ -343,7 +345,7 @@ function onOpen(e) {
 ##### Example 3E: Create HTML Template
 
 A template can take an interpret values passed to the template.
-- In the script IDE, create a new html file named "Template.html"
+- In the script IDE, create "Template.html"
 
 ```
 <!DOCTYPE html>
@@ -361,7 +363,7 @@ A template can take an interpret values passed to the template.
 #VSLIDE
 ##### Example 3E: Display Template Function
 
-Create a function showSidebarTemplate() which passes the output of getMessage() to the template
+Create a function showSidebarTemplate() which passes data to a template
 
 ```
 function showSidebarTemplate() {
@@ -405,7 +407,7 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 - In the script IDE, create a new html file named "SidebarWithClientJS.html"
 
 #VSLIDE
-Complete HTML File
+HTML File With Client JS
 ```
 <!DOCTYPE html>
 <html>
@@ -413,6 +415,60 @@ Complete HTML File
     <base target="_top">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Client JavaScript Goes Here (See Next Slide) -->
+  </head>
+  <body>
+    <!-- HTML Body Goes Here (See 2 slides ahead) -->
+  </body>
+</html>
+```
+
+#VSLIDE
+Client JavaScript
+```
+<script>
+function showValue(data) {
+  $("#booktitle").val(data);
+}
+$(function(){
+  $("#isbn").on("blur", function(){
+    $("#booktitle").val("");
+    google.script.run.withSuccessHandler(showValue)
+      .isbnLookup($("#isbn").val());
+  });
+});
+</script>
+```
+
+#VSLIDE
+HTML Body (Will be Modified by JS)
+```
+    <h2>Sample HTML Panel in Google Sheets</h2>
+    <div>
+      The title for ISBN 
+      <input id="isbn" type="text" size="10"/>: 
+      <textarea id="booktitle" rows="5" cols="35">--</textarea>
+    </div>
+```
+#VSLIDE
+Complete File (For Copy/Paste)
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+    function showValue(data) {
+      $("#booktitle").val(data);
+    }
+    $(function(){
+      $("#isbn").on("blur", function(){
+        $("#booktitle").val("");
+        google.script.run.withSuccessHandler(showValue)
+          .isbnLookup($("#isbn").val());
+      });
+    });
+  </script>
   </head>
   <body>
     <h2>Sample HTML Panel in Google Sheets</h2>
@@ -423,37 +479,6 @@ Complete HTML File
     </div>
   </body>
 </html>
-```
-
-#VSLIDE
-Client JavaScript
-```
-    <script>
-    function showValue(data) {
-      $("#booktitle").val(data);
-    }
-
-    $(function(){
-      $("#isbn").on("blur", function(){
-        $("#booktitle").val("");
-        google.script.run.withSuccessHandler(showValue)
-          .isbnLookup($("#isbn").val());
-      });
-    });
-    </script>
-```
-
-#VSLIDE
-HTML Body (Will be Modified by JS)
-```
-  <body>
-    <h2>Sample HTML Panel in Google Sheets</h2>
-    <div>
-      The title for ISBN 
-      <input id="isbn" type="text" size="10"/>: 
-      <textarea id="booktitle" rows="5" cols="35">--</textarea>
-    </div>
-   </body>
 ```
 
 #VSLIDE
@@ -516,4 +541,4 @@ Georgetown University Library
 
 <a target="_blank" href="http://www.github.com/terrywbrady/info">http://www.github.com/terrywbrady/info</a>
 
-![](http://www.library.georgetown.edu/sites/default/files/library-logo.png)
+![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
