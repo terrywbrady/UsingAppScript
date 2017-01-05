@@ -248,7 +248,7 @@ function isbnLookup(id) {
 
 #HSLIDE
 ##### Example 3C: Call Your Function from the Sheets UI
-- Add the following code to Add Menu to Google Sheets
+- Add Menu to Google Sheets
 ```
 function onOpen(e) {
   SpreadsheetApp.getUi()
@@ -319,7 +319,7 @@ function showSidebar() {
 #VSLIDE
 ##### Example 3D: Add Menu Option
 
-Add a call to showSidebar() to the Add On Menu
+Add showSidebar() to the Add On Menu
 
 ```
 function onOpen(e) {
@@ -343,7 +343,7 @@ function onOpen(e) {
 ##### Example 3E: Create HTML Template
 
 A template can take an interpret values passed to the template.
-- In the script IDE, create a new html file named "Template.html"
+- In the script IDE, create "Template.html"
 
 ```
 <!DOCTYPE html>
@@ -361,7 +361,7 @@ A template can take an interpret values passed to the template.
 #VSLIDE
 ##### Example 3E: Display Template Function
 
-Create a function showSidebarTemplate() which passes the output of getMessage() to the template
+Create a function showSidebarTemplate() which passes data to a template
 
 ```
 function showSidebarTemplate() {

@@ -1,7 +1,4 @@
 .reveal pre code {
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1.1;
-  max-height: 600px;
-  width: 150%;
-  margin-left: -25%;
 }
