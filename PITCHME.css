@@ -2,3 +2,8 @@
   font-size: 1.3em;
   line-height: 1.2;
 }
+
+.reveal pre {
+  width: 120%;
+  margin-left: -10%;
+}
