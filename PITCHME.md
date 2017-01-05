@@ -47,27 +47,27 @@ Google App Script is a server-side implementation of JavaScript with access to s
 #HSLIDE
 ### Why Use Google Apps Script?
 - It is available where your users already are
-  - No need to introduce another login
-  - Sharable using existing Google Drive sharing options
-  - Configuratable Authorization
-  - User must authorize the permissions granted to the script
-- Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem
+  - No need to introduce another login <!-- .element: class="fragment" -->
+  - Sharable using existing Google Drive sharing options <!-- .element: class="fragment" -->
+  - Configuratable Authorization <!-- .element: class="fragment" -->
+  - User must authorize the permissions granted to the script <!-- .element: class="fragment" -->
+- Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem <!-- .element: class="fragment" -->
 
 #VSLIDE
 
 Configuratable Authorization Options
-- Script can run as the user running the script
-- Script can run as the author of the script
-- Script can be authorized to access personal Google Services (Mail, Calendar, Drive)
+- Script can run as the user running the script <!-- .element: class="fragment" -->
+- Script can run as the author of the script <!-- .element: class="fragment" -->
+- Script can be authorized to access personal Google Services (Mail, Calendar, Drive) <!-- .element: class="fragment" -->
 
 
 #HSLIDE
 ### Complete App Examples
 - Example 1: Building a Web Service
  - Saves Results to Google Drive
-- Example 2: Extending Google Sheets
+- Example 2: Extending Google Sheets <!-- .element: class="fragment" -->
  - Post Updates to Google Sites and Gmail
-- Example 3: Google Sheet with ISBN Lookup
+- Example 3: Google Sheet with ISBN Lookup <!-- .element: class="fragment" -->
  - Add Interactive HTML Panel to Google Sheets
 
 #HSLIDE
