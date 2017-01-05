@@ -1,4 +1,7 @@
 .reveal code {
-  font-size: xx-large;
+  font-size: 2em;
+  line-height: 2em;
   max-height: 600px;
+  width: 200%;
+  margin-left: -25%;
 }
