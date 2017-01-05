@@ -27,21 +27,21 @@ Google App Script is a server-side implementation of JavaScript with access to s
 #VSLIDE
 #### Accessible as a standalone Google Script project on Google Drive
 - Runnable on demand from the script editor
-- Deployable as a web service
-- Schedulable as a trigger (time-driven)
+- Deploy-able as a web service
+- Schedule-able as a trigger (time-driven)
 
 #VSLIDE
 #### Embedded in a Google Document, a Google Sheet, a Google Form, or a Google Site
-- Runnable from a custom menu item
-- Triggered by a user event (on Edit/on Open action)
-- Available as a spreadsheet formula
-- All of the standalone script options are also available for embedded scripts
+- All of the stand-alone script options are also available for embedded scripts
+- Runnable from a custom menu item <!-- .element: class="fragment" -->
+- Triggered by a user event (on Edit/on Open action) <!-- .element: class="fragment" -->
+- Available as a spreadsheet formula <!-- .element: class="fragment" -->
 
 #VSLIDE
 #### Packaged for the Chrome Store as an Add-On
 - Offered for Sale to the Public
-- Offered for Free to the Public
-- Offered for Free to your Apps Domain
+- Offered for Free to the Public 
+- Offered for Free to your Apps Domain 
 - Offered Privately by URL
   
 #HSLIDE
@@ -49,7 +49,7 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - It is available where your users already are
   - No need to introduce another login <!-- .element: class="fragment" -->
   - Sharable using existing Google Drive sharing options <!-- .element: class="fragment" -->
-  - Configuratable Authorization <!-- .element: class="fragment" -->
+  - Configurable Authorization <!-- .element: class="fragment" -->
   - User must authorize the permissions granted to the script <!-- .element: class="fragment" -->
 - Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem <!-- .element: class="fragment" -->
 
