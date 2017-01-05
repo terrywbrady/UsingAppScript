@@ -7,3 +7,7 @@
   width: 120%;
   margin-left: -10%;
 }
+
+.reveal pre code:focus {
+  max-height: none;
+}
