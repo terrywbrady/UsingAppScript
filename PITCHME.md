@@ -233,7 +233,8 @@ function isbnLookup(id) {
   if (respdata["items"].length == 0) return "Not found";
 
   var data = respdata["items"][0]["volumeInfo"];
-  return (data["subtitle"] == undefined) ? data["title"] : data["title"] + ": " + data["subtitle"];
+  return (data["subtitle"] == undefined) ? 
+    data["title"] : data["title"] + ": " + data["subtitle"];
 }
 ```
 
