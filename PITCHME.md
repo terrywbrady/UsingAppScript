@@ -285,7 +285,7 @@ function test() {
 #HSLIDE
 ##### Example 3D: Adding Custom HTML to Your Script
 
-In the script IDE, create a new html file named "Sidebar.html"
+In the script IDE, create "Sidebar.html"
 
 ```
 <!DOCTYPE html>
