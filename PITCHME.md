@@ -55,7 +55,7 @@ Google App Script is a server-side implementation of JavaScript with access to s
 
 #VSLIDE
 
-Configuratable Authorization Options
+Configurable Authorization Options
 - Script can run as the user running the script <!-- .element: class="fragment" -->
 - Script can run as the author of the script <!-- .element: class="fragment" -->
 - Script can be authorized to access personal Google Services (Mail, Calendar, Drive) <!-- .element: class="fragment" -->
