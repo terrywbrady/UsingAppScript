@@ -63,9 +63,12 @@ Configuratable Authorization Options
 
 #HSLIDE
 ### Complete App Examples
-- Example 1: Building a Web Service to Save to Google Drive
-- Example 2: Extending Google Apps
+- Example 1: Building a Web Service
+ - Saves Results to Google Drive
+- Example 2: Extending Google Sheets
+ - Post Updates to Google Sites and Gmail
 - Example 3: Google Sheet with ISBN Lookup
+ - Add Interactive HTML Panel to Google Sheets
 
 #HSLIDE
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
