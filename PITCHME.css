@@ -8,6 +8,6 @@
   margin-left: -10%;
 }
 
-.reveal pre code:focus {
+.reveal pre code:hover {
   max-height: none;
 }
