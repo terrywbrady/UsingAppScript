@@ -77,7 +77,7 @@ Configuratable Authorization Options
 
 #VSLIDE
 ##### Example 1: Clone Project for Yourself
-- <a target="_blank" href="https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web">Sample Script Project</a>
+- <a target="_blank" href="https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing">Sample Script Project</a>
 - Select "Make a Copy" to save an editable copy
 - Click "Deploy as Webapp", set the run as parameters as appropriate to you
 - Copy the current web app URL
@@ -87,6 +87,12 @@ Configuratable Authorization Options
 - Open the URL you saved
 - Supply a CSV as a file or in the text box provided
 - Upload CSV data
+```
+Col A, Col B, Col C
+One,Preserve date as MM/DD/YYYY,01/01/2017
+Two,Preserve date as YYYY-MM-DD,2017-01-01
+Three,Preserve Number with leading zeros,00002222
+```
 - Click the link to the generated spreadsheet
 
 #HSLIDE
