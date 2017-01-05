@@ -63,21 +63,24 @@ Configuratable Authorization Options
 
 #HSLIDE
 ### Complete App Examples
-- Example 1: Building a Web Service to Save to Google Drive
-- Example 2: Extending Google Apps
+- Example 1: Building a Web Service
+ - Saves Results to Google Drive
+- Example 2: Extending Google Sheets
+ - Post Updates to Google Sites and Gmail
 - Example 3: Google Sheet with ISBN Lookup
+ - Add Interactive HTML Panel to Google Sheets
 
 #HSLIDE
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
 - Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
 - CSV files can be corrupted when shared between users
-- <a target="_blank" href="https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web">Sample Script Project</a>
+- <a target="_blank" href="https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing">Sample Script Project</a>
 - <a target="_blank" href="https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript">Code on Github</a>
 - <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
 #VSLIDE
 ##### Example 1: Clone Project for Yourself
-- <a target="_blank" href="https://script.google.com/a/georgetown.edu/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=drive_web">Sample Script Project</a>
+- <a target="_blank" href="https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing">Sample Script Project</a>
 - Select "Make a Copy" to save an editable copy
 - Click "Deploy as Webapp", set the run as parameters as appropriate to you
 - Copy the current web app URL
@@ -85,8 +88,15 @@ Configuratable Authorization Options
 #VSLIDE
 ##### Example 1: Run it Yourself
 - Open the URL you saved
+ - The *doGet()* method will be invoked
 - Supply a CSV as a file or in the text box provided
 - Upload CSV data
+```
+Col A, Col B, Col C
+One,Preserve date as MM/DD/YYYY,01/01/2017
+Two,Preserve date as YYYY-MM-DD,2017-01-01
+Three,Preserve Number with leading zeros,00002222
+```
 - Click the link to the generated spreadsheet
 
 #HSLIDE
