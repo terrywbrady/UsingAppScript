@@ -136,7 +136,7 @@ Three,Preserve Number with leading zeros,00002222
 
 
 #HSLIDE
-##### Example 3A: Create a Test Google Sheet with ISBN Lookup
+##### Example 3: Create a Test Google Sheet with ISBN Lookup
 
 We will extend this example to illustrate several featues of Google App Script.
 
