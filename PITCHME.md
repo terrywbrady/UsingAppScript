@@ -85,6 +85,7 @@ Configuratable Authorization Options
 #VSLIDE
 ##### Example 1: Run it Yourself
 - Open the URL you saved
+ - The *doGet()* method will be invoked
 - Supply a CSV as a file or in the text box provided
 - Upload CSV data
 ```
