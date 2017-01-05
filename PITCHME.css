@@ -9,5 +9,5 @@
 }
 
 .reveal pre code:hover {
-  max-height: none;
+  max-height: 600px;
 }

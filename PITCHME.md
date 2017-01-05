@@ -405,7 +405,7 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 - In the script IDE, create a new html file named "SidebarWithClientJS.html"
 
 #VSLIDE
-Complete HTML File
+HTML File With Client JS
 ```
 <!DOCTYPE html>
 <html>
@@ -413,6 +413,60 @@ Complete HTML File
     <base target="_top">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Client JavaScript Goes Here (See Next Slide) -->
+  </head>
+  <body>
+    <!-- HTML Body Goes Here (See 2 slides ahead) -->
+  </body>
+</html>
+```
+
+#VSLIDE
+Client JavaScript
+```
+<script>
+function showValue(data) {
+  $("#booktitle").val(data);
+}
+$(function(){
+  $("#isbn").on("blur", function(){
+    $("#booktitle").val("");
+    google.script.run.withSuccessHandler(showValue)
+      .isbnLookup($("#isbn").val());
+  });
+});
+</script>
+```
+
+#VSLIDE
+HTML Body (Will be Modified by JS)
+```
+    <h2>Sample HTML Panel in Google Sheets</h2>
+    <div>
+      The title for ISBN 
+      <input id="isbn" type="text" size="10"/>: 
+      <textarea id="booktitle" rows="5" cols="35">--</textarea>
+    </div>
+```
+#VSLIDE
+Complete File (For Copy/Paste)
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+    function showValue(data) {
+      $("#booktitle").val(data);
+    }
+    $(function(){
+      $("#isbn").on("blur", function(){
+        $("#booktitle").val("");
+        google.script.run.withSuccessHandler(showValue)
+          .isbnLookup($("#isbn").val());
+      });
+    });
+  </script>
   </head>
   <body>
     <h2>Sample HTML Panel in Google Sheets</h2>
@@ -423,37 +477,6 @@ Complete HTML File
     </div>
   </body>
 </html>
-```
-
-#VSLIDE
-Client JavaScript
-```
-    <script>
-    function showValue(data) {
-      $("#booktitle").val(data);
-    }
-
-    $(function(){
-      $("#isbn").on("blur", function(){
-        $("#booktitle").val("");
-        google.script.run.withSuccessHandler(showValue)
-          .isbnLookup($("#isbn").val());
-      });
-    });
-    </script>
-```
-
-#VSLIDE
-HTML Body (Will be Modified by JS)
-```
-  <body>
-    <h2>Sample HTML Panel in Google Sheets</h2>
-    <div>
-      The title for ISBN 
-      <input id="isbn" type="text" size="10"/>: 
-      <textarea id="booktitle" rows="5" cols="35">--</textarea>
-    </div>
-   </body>
 ```
 
 #VSLIDE
