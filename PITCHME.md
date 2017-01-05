@@ -8,7 +8,7 @@ Georgetown University Library
 <a target="_blank" href="https://github.com/terrywbrady/info">https://github.com/terrywbrady/info</a>
 
 
-![](http://www.library.georgetown.edu/sites/default/files/library-logo.png)
+![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
 
 #HSLIDE
 ### What is Google App Script?
@@ -539,4 +539,4 @@ Georgetown University Library
 
 <a target="_blank" href="http://www.github.com/terrywbrady/info">http://www.github.com/terrywbrady/info</a>
 
-![](http://www.library.georgetown.edu/sites/default/files/library-logo.png)
+![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
