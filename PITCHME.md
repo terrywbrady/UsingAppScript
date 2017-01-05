@@ -241,6 +241,7 @@ function isbnLookup(id) {
 #VSLIDE
 ##### Example 3B: Run the "test()" function again
 - The first time you run this, you will need to authorize Google Apps to send data to an external URL
+
 ![screenshot](screenshots/screen3b-1.jpg)
 
 #VSLIDE
