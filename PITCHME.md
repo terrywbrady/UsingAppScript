@@ -19,14 +19,17 @@ Google App Script is a server-side implementation of JavaScript with access to s
 
 #HSLIDE
 
-### How can Google App Script be Used?
-- Accessible as a standalone Google Script project on Google Drive
-- Embedded in a Google Document
-  - Google Document, a Google Sheet, a Google Form, or a Google Site
-- Packaged for the Chrome Store as an Add-On
+### How can Google App Script be Accessed?
+- Google Script Project on Google Drive <!-- .element: class="fragment" -->
+- Embedded in a Google Product <!-- .element: class="fragment" -->
+  - Document
+  - Sheet
+  - Google Form
+  - Google Site
+- Packaged for the Chrome Store as an Add-On <!-- .element: class="fragment" -->
   
 #VSLIDE
-#### Accessible as a standalone Google Script project on Google Drive
+#### Standalone Google Script Project
 - Runnable on demand from the script editor
 - Deploy-able as a web service
 - Schedule-able as a trigger (time-driven)
