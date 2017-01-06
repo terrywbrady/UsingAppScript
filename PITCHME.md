@@ -21,7 +21,8 @@ Google App Script is a server-side implementation of JavaScript with access to s
 
 ### How can Google App Script be Used?
 - Accessible as a standalone Google Script project on Google Drive
-- Embedded in a Google Document, a Google Sheet, a Google Form, or a Google Site
+- Embedded in a Google Document
+  - Google Document, a Google Sheet, a Google Form, or a Google Site
 - Packaged for the Chrome Store as an Add-On
   
 #VSLIDE
@@ -31,49 +32,59 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - Schedule-able as a trigger (time-driven)
 
 #VSLIDE
-#### Embedded in a Google Document, a Google Sheet, a Google Form, or a Google Site
-- All of the stand-alone script options are also available for embedded scripts
-- Runnable from a custom menu item <!-- .element: class="fragment" -->
-- Triggered by a user event (on Edit/on Open action) <!-- .element: class="fragment" -->
-- Available as a spreadsheet formula <!-- .element: class="fragment" -->
+#### Embedded in a Google Document may also be 
+- Runnable from a custom menu item 
+- Triggered by a user event (on Edit/on Open action) 
+- Invocable as a spreadsheet formula 
 
 #VSLIDE
 #### Packaged for the Chrome Store as an Add-On
-- Offered for Sale to the Public
-- Offered for Free to the Public 
-- Offered for Free to your Apps Domain 
+- Offered to the Public
+  - For Sale or For Free 
+- Offered to your Google Apps Domain 
 - Offered Privately by URL
   
 #HSLIDE
 ### Why Use Google Apps Script?
 - It is available where your users already are
-  - No need to introduce another login <!-- .element: class="fragment" -->
-  - Sharable using existing Google Drive sharing options <!-- .element: class="fragment" -->
-  - Configurable Authorization <!-- .element: class="fragment" -->
-  - User must authorize the permissions granted to the script <!-- .element: class="fragment" -->
-- Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem <!-- .element: class="fragment" -->
+  - No need to introduce another login 
+- Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem 
+- Can be authorized to access personal Google Services (Mail, Calendar, Drive) 
 
 #VSLIDE
-
-Configurable Authorization Options
-- Script can run as the user running the script <!-- .element: class="fragment" -->
-- Script can run as the author of the script <!-- .element: class="fragment" -->
-- Script can be authorized to access personal Google Services (Mail, Calendar, Drive) <!-- .element: class="fragment" -->
-
+### Sharing Google Apps Script?
+- Sharable using existing Google Drive sharing options 
+- User must authorize the specific functions that will be performed by the script 
+- Configurable Authorization 
+  - Run as the user running the script 
+  - Run as the author of the script 
 
 #HSLIDE
-### Complete App Examples
-- Example 1: Building a Web Service
+### App Examples
+- App Example 1: Building a Web Service 
  - Saves Results to Google Drive
-- Example 2: Extending Google Sheets <!-- .element: class="fragment" -->
+- App Example 2: Extending Google Sheets <!-- .element: class="fragment" -->
  - Post Updates to Google Sites and Gmail
-- Example 3: Google Sheet with ISBN Lookup <!-- .element: class="fragment" -->
- - Add Interactive HTML Panel to Google Sheets
+- Code Example 3: Add Interactive HTML App to Google Sheets <!-- .element: class="fragment" -->
+ - Google Sheet with ISBN Lookup
 
 #HSLIDE
+##### Example 1: Web Service to Facilitate Metadata Collaboration
+- Librarians often work with text strings that look like numbers or dates
+ - Call numbers, Accession Numbers
+- What would happen to this data (by default) in Excel or Google Sheets?
+```
+Col A, Col B, Col C
+One,Preserve date as MM/DD/YYYY,01/01/2017
+Two,Preserve date as YYYY-MM-DD,2017-01-01
+Three,Preserve Number with leading zeros,00002222
+```
+- What happens when the data is shared?
+
+#VSLIDE
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
-- Auto-correct in Excel and Google Sheets is a frequent problem for librarians editing metadata
-- CSV files can be corrupted when shared between users
+- Load data to CSV
+- Disable auto-correct in all cells
 - <a target="_blank" href="https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing">Sample Script Project</a>
 - <a target="_blank" href="https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript">Code on Github</a>
 - <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
@@ -84,6 +95,17 @@ Configurable Authorization Options
 - Select "Make a Copy" to save an editable copy
 - Click "Deploy as Webapp", set the run as parameters as appropriate to you
 - Copy the current web app URL
+
+#VSLIDE
+##### Example 1: Project Components
+- Code.gs
+ - doGet() 
+  - Display upload page (Index.html)
+ - doPost() 
+  - Process CSV Upload, create Google Sheet
+  - Display a link to the generated Sheet (Response.html)
+- Index.html - CSV Upload Page
+- Response.html - HTML Fragment to display link to uploaded Sheets
 
 #VSLIDE
 ##### Example 1: Run it Yourself
@@ -99,13 +121,20 @@ Three,Preserve Number with leading zeros,00002222
 ```
 - Click the link to the generated spreadsheet
 
+#VSLIDE
+##### Example 1: References
+- <a target="_blank" href="https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing">Sample Script Project</a>
+- <a target="_blank" href="https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript">Code on Github</a>
+- <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
+
 #HSLIDE
-### Example 2: Weekly Scheduling with Google Sheets
-- Volunteer assignment spreadsheet
-- Volunteer coordinators had limited computer literacy
-- <a target="_blank" href="https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0">Sample Spreadsheet</a>
-- <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript">Code on GitHub</a>
-- <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
+### Example 2: Publish Weekly Volunteer Assignments from Google Sheets
+- Developed for an org in which several folks had limited computer literacy
+ - Edit assignments in a spreadsheet (upcoming dates as column headers)
+ - Publish assignment updates to Google Sites daily
+ - Email upcoming assignments once a week (with a link to Google Sites)
+- Due to limited time, try this one yourself <!-- .element: class="fragment" -->
+ - See the instructions on the slides below
 
 #VSLIDE
 #####  Example 2: Clone/Configure for Yourself
@@ -134,18 +163,26 @@ Three,Preserve Number with leading zeros,00002222
 ##### Example 2: Create Trigger
 ![Screen Shot](screenshots/trigger3.jpg)
 
+#VSLIDE
+### Example 2: References
+- <a target="_blank" href="https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0">Sample Spreadsheet</a>
+- <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript">Code on GitHub</a>
+- <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
 #HSLIDE
-##### Example 3: Create a Test Google Sheet with ISBN Lookup
+##### Code Example 3: Add Interactive HTML App to Google Sheets
 
-We will extend this example to illustrate several featues of Google App Script.
+- Create an application in Google Sheets that looks up ISBN numbers and returns book titles
 
- - 3A: Simulated Lookup
- - 3B: Lookup with Google Books
- - 3C: Add Google Sheet UI
- - 3D: Show HTML
- - 3E: Show Templated HTML
- - 3F: Show HTML with Client JS (Calling Server JS)
+#VSLIDE
+##### Code Example 3: Add Interactive HTML App to Google Sheets
+We will build the sample ISBN lookup app in 6 parts
+ - 3A: Simulated ISBN Lookup <!-- .element: class="fragment" -->
+ - 3B: Lookup ISBN with Google Books API <!-- .element: class="fragment" -->
+ - 3C: Display Lookup Results with Google Sheets UI <!-- .element: class="fragment" -->
+ - 3D: Display a static HTML panel <!-- .element: class="fragment" -->
+ - 3E: Display a Templated HTML panel (with lookup results) <!-- .element: class="fragment" -->
+ - 3F: Display an Interactive HTML panel (to lookup results) <!-- .element: class="fragment" -->
 
 #HSLIDE
 ##### Example 3A: Creating a Test Google Sheet With Fake ISBN Lookup
