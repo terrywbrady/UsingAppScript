@@ -37,8 +37,10 @@ Google App Script is a server-side implementation of JavaScript with access to s
 #VSLIDE
 #### When embedded in a Google Document... 
 - Runnable from a custom menu item 
-- Triggered by a user event (on Edit/on Open action) 
 - Invoke-able as a spreadsheet formula 
+- Triggered by a user event 
+ - onOpen()
+ - onEdit()
 
 #VSLIDE
 #### Packaged for the Chrome Store as an Add-On
@@ -263,7 +265,7 @@ Copy cell B2 into cell B3 to create the following formula
 ##### Example 3B: Call Google Books Service 
 ```
 function isbnLookup(id) {
-  var url = "https://www.googleapis.com/books/v1/volumes?country=US&q=isbn:"+id;
+  var url = "https://www.googleapis.com/books/v1/volumes?country=US&q=isbn:"+id+getApiKey();
   var options = {contentType : "application/json"};
 
   var resp = UrlFetchApp.fetch(url, options);
@@ -276,6 +278,21 @@ function isbnLookup(id) {
   var data = respdata["items"][0]["volumeInfo"];
   return (data["subtitle"] == undefined) ? 
     data["title"] : data["title"] + ": " + data["subtitle"];
+}
+```
+#VSLIDE
+##### Example 3B: API Key for Google Books 
+Running with no API Key
+```
+function getApiKey() {
+  return "";
+}
+```
+If you have an api key...
+```
+function getApiKey() {
+  var key = "";
+  return "&key=" + key;
 }
 ```
 
