@@ -32,10 +32,10 @@ Google App Script is a server-side implementation of JavaScript with access to s
 - Schedule-able as a trigger (time-driven)
 
 #VSLIDE
-#### Embedded in a Google Document may also be 
+#### When embedded in a Google Document... 
 - Runnable from a custom menu item 
 - Triggered by a user event (on Edit/on Open action) 
-- Invocable as a spreadsheet formula 
+- Invoke-able as a spreadsheet formula 
 
 #VSLIDE
 #### Packaged for the Chrome Store as an Add-On
@@ -46,10 +46,10 @@ Google App Script is a server-side implementation of JavaScript with access to s
   
 #HSLIDE
 ### Why Use Google Apps Script?
-- It is available where your users already are
+- It is available where your users already are <!-- .element: class="fragment" -->
   - No need to introduce another login 
-- Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem 
-- Can be authorized to access personal Google Services (Mail, Calendar, Drive) 
+- Sometimes a Document or a Spreadsheet provides the correct level of complexity to solve a problem  <!-- .element: class="fragment" -->
+- Can be authorized to access personal Google Services (Mail, Calendar, Drive) <!-- .element: class="fragment" -->
 
 #VSLIDE
 ### Sharing Google Apps Script?
@@ -61,12 +61,14 @@ Google App Script is a server-side implementation of JavaScript with access to s
 
 #HSLIDE
 ### App Examples
-- App Example 1: Building a Web Service 
+- App Example 1: Building a Web Service <!-- .element: class="fragment" -->
  - Saves Results to Google Drive
 - App Example 2: Extending Google Sheets <!-- .element: class="fragment" -->
- - Post Updates to Google Sites and Gmail
-- Code Example 3: Add Interactive HTML App to Google Sheets <!-- .element: class="fragment" -->
- - Google Sheet with ISBN Lookup
+ - Publish from Sheets to Google Sites and Gmail
+- Code Example 3: Embed Interactive HTML App <!-- .element: class="fragment" -->
+ - Add an HTML Panel to Google Sheets
+ - Add client-side JavaScript
+ - Perform ISBN Lookup
 
 #HSLIDE
 ##### Example 1: Web Service to Facilitate Metadata Collaboration
@@ -85,9 +87,6 @@ Three,Preserve Number with leading zeros,00002222
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
 - Load data to CSV
 - Disable auto-correct in all cells
-- <a target="_blank" href="https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing">Sample Script Project</a>
-- <a target="_blank" href="https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript">Code on Github</a>
-- <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
 #VSLIDE
 ##### Example 1: Clone Project for Yourself
@@ -98,19 +97,17 @@ Three,Preserve Number with leading zeros,00002222
 
 #VSLIDE
 ##### Example 1: Project Components
-- Code.gs
- - doGet() 
-  - Display upload page (Index.html)
- - doPost() 
+- _Code.gs_
+ - _doGet()_ Display upload page (Index.html)
+ - _doPost()_ 
   - Process CSV Upload, create Google Sheet
   - Display a link to the generated Sheet (Response.html)
-- Index.html - CSV Upload Page
-- Response.html - HTML Fragment to display link to uploaded Sheets
+- _Index.html_: CSV Upload Page
+- _Response.html_: HTML Fragment to display link to uploaded Sheets
 
 #VSLIDE
 ##### Example 1: Run it Yourself
-- Open the URL you saved
- - The *doGet()* method will be invoked
+- Open the URL you saved - calls doGet()
 - Supply a CSV as a file or in the text box provided
 - Upload CSV data
 ```
