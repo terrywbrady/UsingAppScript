@@ -97,13 +97,13 @@ Three,Preserve Number with leading zeros,00002222
 
 #VSLIDE
 ##### Example 1: Project Components
-- _Code.gs_
- - _doGet()_ Display upload page (Index.html)
- - _doPost()_ 
-  - Process CSV Upload, create Google Sheet
-  - Display a link to the generated Sheet (Response.html)
-- _Index.html_: CSV Upload Page
-- _Response.html_: HTML Fragment to display link to uploaded Sheets
+- **Code.gs**
+ - **doGet()** Display upload page (Index.html)
+ - **doPost()** 
+   - Process CSV Upload, create Google Sheet
+   - Display a link to the generated Sheet (Response.html)
+- **Index.html**: CSV Upload Page
+- **Response.html**: HTML Fragment to display link to uploaded Sheets
 
 #VSLIDE
 ##### Example 1: Run it Yourself
