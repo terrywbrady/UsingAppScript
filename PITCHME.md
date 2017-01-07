@@ -491,13 +491,13 @@ HTML Body (Will be Modified by JS)
 #VSLIDE
 Client JavaScript Overview
 - Ready function $(function()) is called on page load <!-- .element: class="fragment" --> 
-- onBlur() event added to #isbn <!-- .element: class="fragment" -->
-- User enters a value into #isbn <!-- .element: class="fragment" -->
+- onBlur() event added to ISBN <!-- .element: class="fragment" -->
+- User enters a value into ISBN <!-- .element: class="fragment" -->
 - onBlur() is called <!-- .element: class="fragment" -->
-  - #booktitle is cleared <!-- .element: class="fragment" -->
-  - The value entered into #isbn is passed to the server-side function isbnLookup() <!-- .element: class="fragment" -->
+  - BOOKTITLE is cleared <!-- .element: class="fragment" -->
+  - The value entered into ISBN is passed to the server-side function isbnLookup() <!-- .element: class="fragment" -->
     - If successful, showValue() will be invoked <!-- .element: class="fragment" -->
-      - #booktitle is updated with the title <!-- .element: class="fragment" -->
+      - BOOKTITLE is updated with the title <!-- .element: class="fragment" -->
 
 #VSLIDE
 Client JavaScript
