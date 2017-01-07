@@ -489,15 +489,15 @@ HTML Body (Will be Modified by JS)
 ```
 
 #VSLIDE
-Client JavaScript 
-- Ready function **$(function()) is called on page load
-- onBlur() event added to **#isbn**
-- User enters a value into **#isbn**
-- onBlur() is called
-  - **#booktitle** is cleared
-  - The value entered into **#isbn** is passed to the server-side function **isbnLookup()**
-    - If successful, **showValue()** will be invoked
-      - **#booktitle** is updated with the title
+Client JavaScript Overview
+- Ready function **$(function())** is called on page load <!-- .element: class="fragment" --> 
+- onBlur() event added to **#isbn** <!-- .element: class="fragment" -->
+- User enters a value into **#isbn** <!-- .element: class="fragment" -->
+- onBlur() is called <!-- .element: class="fragment" -->
+  - **#booktitle** is cleared <!-- .element: class="fragment" -->
+  - The value entered into **#isbn** is passed to the server-side function **isbnLookup()** <!-- .element: class="fragment" -->
+    - If successful, **showValue()** will be invoked <!-- .element: class="fragment" -->
+      - **#booktitle** is updated with the title <!-- .element: class="fragment" -->
 
 #VSLIDE
 Client JavaScript
