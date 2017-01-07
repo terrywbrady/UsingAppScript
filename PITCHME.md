@@ -136,7 +136,7 @@ Three,Preserve Number with leading zeros,00002222
  - Publish assignment updates to Google Sites daily
  - Email upcoming assignments once a week (with a link to Google Sites)
 
-#HSLIDE
+#VSLIDE
 ### Example 2: Publish Weekly Volunteer Assignments from Google Sheets
 - Due to limited time, try this one yourself 
  - See the instructions on the slides below
