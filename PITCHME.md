@@ -490,14 +490,14 @@ HTML Body (Will be Modified by JS)
 
 #VSLIDE
 Client JavaScript 
-- Page loads, document ready function is called
+- Ready function **$(function()) is called on page load
 - onBlur() event added to **#isbn**
 - User enters a value into **#isbn**
 - onBlur() is called
- - **#booktitle** is cleared
- - The value entered into **#isbn** is passed to the server-side function **isbnLookup()**
-  - If successful, **showValue()** will be invoked
-  - **#booktitle** will be update
+  - **#booktitle** is cleared
+  - The value entered into **#isbn** is passed to the server-side function **isbnLookup()**
+    - If successful, **showValue()** will be invoked
+      - **#booktitle** is updated with the title
 
 #VSLIDE
 Client JavaScript
