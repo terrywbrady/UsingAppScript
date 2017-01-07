@@ -282,17 +282,14 @@ function isbnLookup(id) {
 ```
 #VSLIDE
 ##### Example 3B: API Key for Google Books 
-Running with no API Key
+Without an API key, Google may throttle your requests
 ```
 function getApiKey() {
-  return "";
-}
-```
-If you have an api key...
-```
-function getApiKey() {
-  var key = "";
-  return "&key=" + key;
+  //Request a booksapi key from Google
+  //Set a script property using File->Project Properties->Script Properties
+  var key = PropertiesService.getScriptProperties().getProperty("booksapi");
+  //Logger.log(key);
+  return key == undefined ? "" : "&key="+key;
 }
 ```
 
@@ -465,7 +462,7 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 - In the script IDE, create a new html file named "SidebarWithClientJS.html"
 
 #VSLIDE
-HTML File With Client JS
+HTML File With Client JS: **SidebarWithClientJS.html**
 ```
 <!DOCTYPE html>
 <html>
@@ -479,6 +476,28 @@ HTML File With Client JS
   </body>
 </html>
 ```
+
+#VSLIDE
+HTML Body (Will be Modified by JS)
+```
+    <h2>Sample HTML Panel in Google Sheets</h2>
+    <div>
+      The title for ISBN 
+      <input id="isbn" type="text" size="14"/>: 
+      <textarea id="booktitle" rows="5" cols="35">--</textarea>
+    </div>
+```
+
+#VSLIDE
+Client JavaScript 
+- Page loads, document ready function is called
+- onBlur() event added to **#isbn**
+- User enters a value into **#isbn**
+- onBlur() is called
+ - **#booktitle** is cleared
+ - The value entered into **#isbn** is passed to the server-side function **isbnLookup()**
+  - If successful, **showValue()** will be invoked
+  - **#booktitle** will be update
 
 #VSLIDE
 Client JavaScript
@@ -497,16 +516,6 @@ $(function(){
 </script>
 ```
 
-#VSLIDE
-HTML Body (Will be Modified by JS)
-```
-    <h2>Sample HTML Panel in Google Sheets</h2>
-    <div>
-      The title for ISBN 
-      <input id="isbn" type="text" size="10"/>: 
-      <textarea id="booktitle" rows="5" cols="35">--</textarea>
-    </div>
-```
 #VSLIDE
 Complete File (For Copy/Paste)
 ```
@@ -532,7 +541,7 @@ Complete File (For Copy/Paste)
     <h2>Sample HTML Panel in Google Sheets</h2>
     <div>
       The title for ISBN 
-      <input id="isbn" type="text" size="10"/>: 
+      <input id="isbn" type="text" size="14"/>: 
       <textarea id="booktitle" rows="5" cols="35">--</textarea>
     </div>
   </body>
