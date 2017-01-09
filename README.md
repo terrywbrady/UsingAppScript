@@ -8,4 +8,5 @@ This project provides a tutorial on Building Applications with Google App Script
 - [Seattle JS, Jan 2017](https://www.meetup.com/seattlejs/events/231089467/)
  - https://gitpitch.com/terrywbrady/UsingAppScript/SeattleJs
 - [Code4Lib 2017 Pre-Conference, Mar 2017](http://2017.code4lib.org/workshops/Developing-Library-Applications-in-Google-Sheets-with-Google-Apps-Script)
+ - https://gitpitch.com/terrywbrady/UsingAppScript/Code4Lib
 
