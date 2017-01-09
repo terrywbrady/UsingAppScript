@@ -7,8 +7,9 @@ Georgetown University Library
 
 <a target="_blank" href="https://github.com/terrywbrady/info">https://github.com/terrywbrady/info</a>
 
-
 ![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
+
+<a target="_blank" href="https://github.com/terrywbrady/UsingAppScript/blob/master/Checklist.md">Presentation Checklist</a>
 
 #HSLIDE
 ### What is Google App Script?
