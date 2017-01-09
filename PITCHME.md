@@ -1,8 +1,8 @@
 #HSLIDE
 ### Building Library Applications with Google App Script
 
-<a target="_blank" href="https://github.com/terrywbrady/info">Terry Brady</a>, Georgetown University Library
-Craig Boman, University of Dayton Library
+- <a target="_blank" href="https://github.com/terrywbrady/info">Terry Brady</a>, Georgetown University Library
+- Craig Boman, University of Dayton Library
 
 ![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
 
