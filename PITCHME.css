@@ -1,0 +1,10 @@
+.reveal pre code {
+  font-size: 1.2em;
+  line-height: 1.1;
+  max-height: 500px !important;
+}
+
+.reveal pre {
+  width: 120%;
+  margin-left: -10%;
+}
