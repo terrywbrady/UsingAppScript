@@ -1,15 +1,10 @@
 #HSLIDE
-### Building Simple Apps with Google App Script
+### Developing Library Applications with Google Apps Script
 
-Terry Brady
+* Terry Brady, Georgetown University Library
+* Craig Boman, University of Dayton Library
 
-Georgetown University Library
-
-<a target="_blank" href="https://github.com/terrywbrady/info">https://github.com/terrywbrady/info</a>
-
-![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
-
-<a target="_blank" href="https://github.com/terrywbrady/UsingAppScript/blob/master/Checklist.md" style="font-size: x-small">Presentation Checklist</a> 
+<a target="_blank" href="https://github.com/terrywbrady/UsingAppScript">https://github.com/terrywbrady/UsingAppScript</a>
 
 #HSLIDE
 ### What is Google App Script?
