@@ -1,5 +1,5 @@
 #HSLIDE
-### Building Simple Apps with Google App Script
+### Building Simple Apps with Google Apps Script
 
 Terry Brady
 
@@ -12,15 +12,15 @@ Georgetown University Library
 <a target="_blank" href="https://github.com/terrywbrady/UsingAppScript/blob/master/Checklist.md" style="font-size: x-small">Presentation Checklist</a> 
 
 #HSLIDE
-### What is Google App Script?
+### What is Google Apps Script?
 
-Google App Script is a server-side implementation of JavaScript with access to several Google API's.
+Google Apps Script is a server-side implementation of JavaScript with access to several Google API's.
 
 <a target="_blank" href="https://developers.google.com/apps-script/">Google Apps Script Documentation</a>
 
 #HSLIDE
 
-### How can Google App Script be Accessed?
+### How can Google Apps Script be Accessed?
 - Google Script Project on Google Drive <!-- .element: class="fragment" -->
 - Embedded in a Google Product <!-- .element: class="fragment" -->
   - Document
