@@ -9,6 +9,16 @@
 <a target="_blank" href="https://github.com/terrywbrady/UsingAppScript/blob/master/Checklist.md" style="font-size: x-small">Presentation Checklist</a> 
 
 #HSLIDE
+### Training Overview
+- What is Google Apps Script <!-- .element: class="fragment" -->
+ - Running Sample Apps Script Examples <!-- .element: class="fragment" -->
+- Coding Google Apps Script <!-- .element: class="fragment" -->
+ - JavaScript Primer<!-- .element: class="fragment" -->
+ - Building a Sample Application<!-- .element: class="fragment" -->
+- Using Google Apps Script in the Library<!-- .element: class="fragment" -->
+ - Brainstorming possible uses  <!-- .element: class="fragment" -->
+
+#HSLIDE
 ### What is Google Apps Script?
 
 Google Apps Script is a server-side implementation of JavaScript with access to several Google API's.
@@ -173,9 +183,17 @@ Three,Preserve Number with leading zeros,00002222
 - <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
 #HSLIDE
+### Coding Google Apps Script
+- TODO 
+
+#VSLIDE
+### JavaScript Primer
+
+#HSLIDE
 ##### Code Example 3: Add Interactive HTML App to Google Sheets
 
 - Create an application in Google Sheets that looks up ISBN numbers and returns book titles
+
 
 #VSLIDE
 ##### Code Example 3: Add Interactive HTML App to Google Sheets
@@ -200,7 +218,7 @@ Create a Google Sheet with the following data
 #VSLIDE
 ##### Example 3A: Create a Script within the Sheet
 - Tools -> Script Editor
-- This will open up the App Script Cloud IDE
+- This will open up the Apps Script Cloud IDE
 
 #VSLIDE
 ##### Example 3A: Add the following script code
@@ -598,12 +616,12 @@ The title field is updated after entering an ISBN.
 - <a target="_blank" href="https://developers.google.com/apps-script/guides/html/reference/run">Calling Server Side Functions from Client JavaScript</a>
 
 #HSLIDE
+### Using Google App Script In the Library
+- Brainstorming possible uses
+- Brainstorming useful extensions
+
+#HSLIDE
 ### Thank You!
 
-Terry Brady
-
-Georgetown University Library
-
-<a target="_blank" href="http://www.github.com/terrywbrady/info">http://www.github.com/terrywbrady/info</a>
-
-![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
+- <a target="_blank" href="http://www.github.com/terrywbrady/info">Terry Brady</a>, Georgetown University Library
+- Craig Boman, University of Dayton Library
