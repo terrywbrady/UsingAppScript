@@ -189,6 +189,41 @@ Three,Preserve Number with leading zeros,00002222
 #VSLIDE
 ### JavaScript Primer
 
+Online Resources
+* <a target="_blank" href="http://www.w3schools.com/js/default.asp">W3Schools Tutorial</a>
+* <a target="_blank" href="https://jsfiddle.net/">JSFiddle - Test Your JavaScript</a>
+
+#VSLIDE
+### Offline Testing
+Save the following to your desktop as test.html.
+```
+<html>
+  <head>
+    <script type="text/javascript">
+      function hello(){
+        alert("hello from alert");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>JS Testing</h1>
+    <button onclick="hello()">Say Hello</button>
+  </body>
+</html>
+```
+
+#VSLIDE
+Issues to cover
+* variable set
+* object set
+* array set
+* call function
+* call function on an object
+* JQuery
+```
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+```
+
 #HSLIDE
 ##### Code Example 3: Add Interactive HTML App to Google Sheets
 
