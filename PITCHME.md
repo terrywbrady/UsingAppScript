@@ -184,7 +184,9 @@ Three,Preserve Number with leading zeros,00002222
 
 #HSLIDE
 ### Coding Google Apps Script
-- TODO 
+Before coding Google Apps Script, we will review JavaScript coding
+- Online JavaScript Resources
+- Offline JavaScript Tutorial 
 
 #VSLIDE
 ### JavaScript Primer
@@ -212,6 +214,7 @@ Save the following to your desktop as test.html.
 </html>
 ```
 
+#VSLIDE
 ### Create a JavaScript Function
 Save the following to your desktop as test.js.
 ```
@@ -220,6 +223,7 @@ function hello(){
 }
 ```
 
+#VSLIDE
 ### Set a variable (Number)
 Numbers can be assigned to a variable or computed by function.
 ```
@@ -231,6 +235,7 @@ function hello(){
 }
 ```
 
+#VSLIDE
 ### Set a variable (String)
 Strings are assigned by enclosing them with quotes.
 ```
@@ -240,6 +245,7 @@ function hello(){
 }
 ```
 
+#VSLIDE
 ### Set a variable (Array)
 Array values are assigned by containing them in brackets.  
 Array values are accessed by position within brackets (starting with 0).
@@ -251,6 +257,7 @@ function hello(){
 }
 ```
 
+#VSLIDE
 ### Set a variable (Object with simple property name)
 Object properties are assigned by containing them in curly braces.
 Object properties with simple names can be accessed with a period.  
@@ -260,6 +267,7 @@ function hello(){
   alert("Hello President " + president.last);
 }
 ```
+#VSLIDE
 ### Return a value from a function
 Functions are called by putting parentheses after the function name.
 A function returns a value with return;
@@ -272,6 +280,7 @@ function hello(){
   alert(greeting());
 }
 
+#VSLIDE
 ### Call a function with a parameter
 Functions are called by putting parentheses after the function name.
 Function parameters can be passed in the parentheses
@@ -296,6 +305,7 @@ function hello(){
 ```
 
 
+#VSLIDE
 ### Calling a function on an object
 Object properties are assigned by containing them in curly braces.
 Object properties with complex names (punctuation) can be accessed by bracketing the property name.  
