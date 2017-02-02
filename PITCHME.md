@@ -778,8 +778,10 @@ The title field is updated after entering an ISBN.
 
 #HSLIDE
 ### Using Google App Script In the Library
-- Brainstorming possible uses
-- Brainstorming useful extensions
+- How are Google Apps used in your library?
+- Where could Google Apps be useful?
+- What Common Extensions would be of use to Code4Lib?
+- Would this group like to initiate a project together? 
 
 #HSLIDE
 ### Thank You!
