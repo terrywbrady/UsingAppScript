@@ -163,18 +163,20 @@ A date trigger is also set up to send e-mail weekly
 #VSLIDE
 ## Example 2: Sample e-mail containing the changes
 
-#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/email.jpg
+#VSLIDE
+![](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/email.jpg)
 
 #VSLIDE
 ## Example 2: Publish Changes to Google Sites 
 A date trigger is also set up to update Google Sites Daily
 
-#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg
+#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet4.jpg
 
 #VSLIDE
 ## Example 2: Sample Google Site Page containing the changes
 
-#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg
+#VSLIDE
+![](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg)
 
 #VSLIDE
 #####  Example 2: Clone/Configure for Yourself
