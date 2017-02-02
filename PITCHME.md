@@ -134,6 +134,13 @@ Three,Preserve Number with leading zeros,00002222
 - <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
 #HSLIDE
+### Example 2: Sample Application Integrated with Google Services
+- Illustrates what an application can do with Google Services
+- User edits a spreadsheet
+ - Spreadsheet content is published by Gmail
+ - Spreadsheet content is published to Google Sites
+
+#VSLIDE
 ### Example 2: Publish Weekly Volunteer Assignments from Google Sheets
 - Developed for an org in which several folks had limited computer literacy
  - Publish assignment updates to Google Sites daily
@@ -143,7 +150,7 @@ Three,Preserve Number with leading zeros,00002222
 ## Exampe 2: Sample Spreadsheet
 - Dates in column headers
  - Code detects the next date to publish
-- Roles in row headers
+- Roles are defined in column headers
 
 #VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet1.jpg
 
@@ -160,7 +167,7 @@ A date trigger is also set up to send e-mail weekly
 
 #VSLIDE
 ## Example 2: Sample e-mail containing the changes
-Note that the sample e-mail was sent in Dec 2016
+Note that the sample e-mail was sent in Nov 2016
 
 #VSLIDE
 ![](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/email.jpg)
@@ -173,7 +180,7 @@ A date trigger is also set up to update Google Sites Daily
 
 #VSLIDE
 ## Example 2: Sample Google Site Page containing the changes
-Note that the sample page was updated in Dec 2016
+Note that the sample page was updated in Nov 2016
 
 #VSLIDE
 ![](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg)
