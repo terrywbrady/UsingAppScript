@@ -290,6 +290,7 @@ function hello(){
   //call a function by adding parentheses
   alert(greeting());
 }
+```
 
 #VSLIDE
 ### Call a function with a parameter
@@ -303,6 +304,7 @@ function hello(){
   //function parameters are passed inside parentheses
   alert(greeting("Friend"));
 }
+```
 
 #VSLIDE
 ### Calling a function on an object
