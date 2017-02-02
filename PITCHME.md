@@ -247,75 +247,74 @@ function hello(){
 
 #VSLIDE
 ### Set a variable (Array)
-- Array values are assigned by containing them in brackets.  
-- Array values are accessed by position within brackets (starting with 0).
-- A function (such as join) can be called on an array.
 ```
 function hello(){
+  //assign multiple values in brackets
   var arr = ["cat", "dog", "bird"];
+  //reference values by position in brackets, starting with zero
   alert("First item: " + arr[0] + ".  All items: " + arr.join(","));
 }
 ```
 
 #VSLIDE
 ### Set a variable (Object with simple property name)
-- Object properties are assigned by containing them in curly braces.
-- Object properties with simple names can be accessed with a period.  
 ```
 function hello(){
+  //assign properties within curly braces
   var president = {first: "George", last: "Washington"};
+  //reference simple properties with a period
   alert("Hello President " + president.last);
 }
 ```
+
+#VSLIDE
+### Set a variable (Object with complex property name)
+```
+function hello(){
+  //complex property names must be quoted
+  var president = {"first-name": "George", "last-name": "Washington"};
+  //complex property names are referenced within brackets
+  alert("Hello President " + president["last-name"]);
+}
+```
+
 #VSLIDE
 ### Return a value from a function
-- Functions are called by putting parentheses after the function name.
-- A function returns a value with return;
 ```
+//declare a function
 function greeting(){
   return "Greetings";
 }
 
 function hello(){
+  //call a function by adding parentheses
   alert(greeting());
 }
 
 #VSLIDE
 ### Call a function with a parameter
-- Functions are called by putting parentheses after the function name.
-- Function parameters can be passed in the parentheses
 ```
+//function parameters are declared inside parentheses
 function greeting(name){
   return "Greetings, " + name;
 }
 
 function hello(){
+  //function parameters are passed inside parentheses
   alert(greeting("Friend"));
 }
 
-
-### Set a variable (Object with complex property name)
-- Object properties are assigned by containing them in curly braces.
-- Object properties with complex names (punctuation) can be accessed by bracketing the property name.  
-```
-function hello(){
-  var president = {"first-name": "George", "last-name": "Washington"};
-  alert("Hello President " + president["last-name"]);
-}
-```
-
-
 #VSLIDE
 ### Calling a function on an object
-- Object properties are assigned by containing them in curly braces.
-- Object properties with complex names (punctuation) can be accessed by bracketing the property name.  
 ```
 function hello(){
   var president = {
     first: "George", 
     last: "Washington",
+    //object can contain functions
     respond: function() {return "Call me " + this.first;} 
   };
+  //functions within an object can be called
   alert(president.respond());
 }
 ```
@@ -334,16 +333,16 @@ Add the following to your html body
 
 #VSLIDE
 ### Use JQuery to get user input from web page
-- JQuery makes it easy to refernce input fields on a page.  
-- Fields with an id can be referenced by $("#id").
-- JQuery simplifies coding differences across browsers. 
-
+JQuery makes it easy to refernce input fields on a page regardless of your browser.  
 ```
 function greeting(name){
   return "Greetings, " + name;
 }
 
 function hello(){
+  //$ is used to call a JQuery function
+  //"#myname" looks for a field with id="myname"
+  //.val() returns the value supplied by the user
   var name=$("#myname").val();
   alert(greeting(name));
 }
