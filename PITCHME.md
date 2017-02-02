@@ -136,12 +136,14 @@ Three,Preserve Number with leading zeros,00002222
 #HSLIDE
 ### Example 2: Publish Weekly Volunteer Assignments from Google Sheets
 - Developed for an org in which several folks had limited computer literacy
- - Edit assignments in a spreadsheet (upcoming dates as column headers)
  - Publish assignment updates to Google Sites daily
  - Email upcoming assignments once a week (with a link to Google Sites)
 
 #VSLIDE
 ## Exampe 2: Sample Spreadsheet
+- Dates in column headers
+ - Code detects the next date to publish
+- Roles in row headers
 
 #VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet1.jpg
 
@@ -158,6 +160,7 @@ A date trigger is also set up to send e-mail weekly
 
 #VSLIDE
 ## Example 2: Sample e-mail containing the changes
+Note that the sample e-mail was sent in Dec 2016
 
 #VSLIDE
 ![](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/email.jpg)
@@ -170,6 +173,7 @@ A date trigger is also set up to update Google Sites Daily
 
 #VSLIDE
 ## Example 2: Sample Google Site Page containing the changes
+Note that the sample page was updated in Dec 2016
 
 #VSLIDE
 ![](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg)
@@ -186,7 +190,7 @@ A date trigger is also set up to update Google Sites Daily
 #####  Example 2: Run it for yourself
 - Make an edit
 - Send email
-- Publish to Google Sites.  See the following <a target="_blank" href="https://sites.google.com/a/georgetown.edu/examples/rotasearch">example</a>
+- Publish to Google Sites.  See the following <a target="_blank" href="https://sites.google.com/a/georgetown.edu/examples/rotasearch">Google Sites example</a>
 - Create a trigger to call "sendRota" on a daily basis
   
 #VSLIDE
