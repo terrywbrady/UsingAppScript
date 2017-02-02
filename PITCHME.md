@@ -195,15 +195,15 @@ Online Resources
 
 #VSLIDE
 ### Offline Testing
+The following JavaScript tutorial is here in case we have limited internet access
+
+#VSLIDE
+### Offline Testing
 Save the following to your desktop as test.html.
 ```
 <html>
   <head>
-    <script type="text/javascript">
-      function hello(){
-        alert("hello from alert");
-      }
-    </script>
+    <script type="text/javascript" src="test.js"></script>
   </head>
   <body>
     <h1>JS Testing</h1>
@@ -212,16 +212,131 @@ Save the following to your desktop as test.html.
 </html>
 ```
 
-#VSLIDE
-Issues to cover
-* variable set
-* object set
-* array set
-* call function
-* call function on an object
-* JQuery
+### Create a JavaScript Function
+Save the following to your desktop as test.js.
 ```
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+function hello(){
+  alert("hello from alert");
+}
+```
+
+### Set a variable (Number)
+Numbers can be assigned to a variable or computed by function.
+```
+var count = 0;
+
+function hello(){
+  count = count + 1;
+  alert("hello from alert :" + count);
+}
+```
+
+### Set a variable (String)
+Strings are assigned by enclosing them with quotes.
+```
+function hello(){
+  var name = "my friend";
+  alert("hello from alert :" + name);
+}
+```
+
+### Set a variable (Array)
+Array values are assigned by containing them in brackets.  
+Array values are accessed by position within brackets (starting with 0).
+A function (such as join) can be called on an array.
+```
+function hello(){
+  var arr = ["cat", "dog", "bird"];
+  alert("First item: " + arr[0] + ".  All items: " + arr.join(","));
+}
+```
+
+### Set a variable (Object with simple property name)
+Object properties are assigned by containing them in curly braces.
+Object properties with simple names can be accessed with a period.  
+```
+function hello(){
+  var president = {first: "George", last: "Washington"};
+  alert("Hello President " + president.last);
+}
+```
+### Return a value from a function
+Functions are called by putting parentheses after the function name.
+A function returns a value with return;
+```
+function greeting(){
+  return "Greetings";
+}
+
+function hello(){
+  alert(greeting());
+}
+
+### Call a function with a parameter
+Functions are called by putting parentheses after the function name.
+Function parameters can be passed in the parentheses
+```
+function greeting(name){
+  return "Greetings, " + name;
+}
+
+function hello(){
+  alert(greeting("Friend"));
+}
+
+
+### Set a variable (Object with complex property name)
+Object properties are assigned by containing them in curly braces.
+Object properties with complex names (punctuation) can be accessed by bracketing the property name.  
+```
+function hello(){
+  var president = {"first-name": "George", "last-name": "Washington"};
+  alert("Hello President " + president["last-name"]);
+}
+```
+
+
+### Calling a function on an object
+Object properties are assigned by containing them in curly braces.
+Object properties with complex names (punctuation) can be accessed by bracketing the property name.  
+```
+function hello(){
+  var president = {
+    first: "George", 
+    last: "Washington",
+    respond: function() {return "Call me " + this.first;} 
+  };
+  alert(president.respond());
+}
+```
+
+#VSLIDE
+### Using JQuery (if we have internet)
+
+Add the following to your html header
+```
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+```
+Add the following to your html body
+```
+<input id="myname" type="text"/>
+```
+
+#VSLIDE
+### Use JQuery to get user input from web page
+JQuery makes it easy to refernce input fields on a page.  
+Fields with an id can be referenced by $("#id").
+JQuery simplifies coding differences across browsers. 
+
+```
+function greeting(name){
+  return "Greetings, " + name;
+}
+
+function hello(){
+  var name=$("#myname").val();
+  alert(greeting(name));
+}
 ```
 
 #HSLIDE
