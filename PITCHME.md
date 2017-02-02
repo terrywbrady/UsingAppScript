@@ -4,10 +4,6 @@
 - <a target="_blank" href="https://github.com/terrywbrady/info">Terry Brady</a>, Georgetown University Library
 - Craig Boman, University of Dayton Library
 
-![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
-
-<a target="_blank" href="https://github.com/terrywbrady/UsingAppScript/blob/master/Checklist.md" style="font-size: x-small">Presentation Checklist</a> 
-
 #HSLIDE
 ### Training Overview
 - What is Google Apps Script <!-- .element: class="fragment" -->
