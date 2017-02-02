@@ -147,10 +147,11 @@ Three,Preserve Number with leading zeros,00002222
  - Email upcoming assignments once a week (with a link to Google Sites)
 
 #VSLIDE
-## Exampe 2: Sample Spreadsheet
-- Dates in column headers
+## Example 2: Sample Spreadsheet
+- Dates in column headers (Row 1)
  - Code detects the next date to publish
-- Roles are defined in column headers
+- Times (on a specific day) are defined in Row 2
+- Roles (to be assigned) are defined in column A
 
 #VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet1.jpg
 
