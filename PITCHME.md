@@ -144,25 +144,37 @@ Three,Preserve Number with leading zeros,00002222
  - Publish assignment updates to Google Sites daily
  - Email upcoming assignments once a week (with a link to Google Sites)
 
-#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet1.jpg
-## Example 2: Publish Weekly Volunteer Assignments from Google Sheets
+#VSLIDE
+## Exampe 2: Sample Spreadsheet
 
-#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet2.jpg
+#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet1.jpg
+
+#VSLIDE
 ## Example 2: Edit an assignment
 
-#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet3.jpg
+#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet2.jpg
+
+#VSLIDE
 ## Example 2: E-mail Future Assignments 
 A date trigger is also set up to send e-mail weekly
 
-#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/email.jpg
+#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet3.jpg
+
+#VSLIDE
 ## Example 2: Sample e-mail containing the changes
 
-#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg
+#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/email.jpg
+
+#VSLIDE
 ## Example 2: Publish Changes to Google Sites 
 A date trigger is also set up to update Google Sites Daily
 
 #VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg
+
+#VSLIDE
 ## Example 2: Sample Google Site Page containing the changes
+
+#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg
 
 #VSLIDE
 #####  Example 2: Clone/Configure for Yourself
