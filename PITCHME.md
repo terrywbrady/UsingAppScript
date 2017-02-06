@@ -824,4 +824,4 @@ The title field is updated after entering an ISBN.
 ### Thank You!
 
 - <a target="_blank" href="http://www.github.com/terrywbrady/info">Terry Brady</a>, Georgetown University Library
-- Craig Boman, University of Dayton Library
+- <a target="_blank" href="https://craigboman.github.io">Craig Boman</a>, University of Dayton Library
