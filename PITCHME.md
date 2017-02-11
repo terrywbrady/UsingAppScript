@@ -133,6 +133,8 @@ Three,Preserve Number with leading zeros,00002222
 - <a target="_blank" href="https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript">Code on Github</a>
 - <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
+#VSLIDE?video=https://www.youtube.com/watch?v=5LgWoImNQhI
+
 #HSLIDE
 ### Example 2: Sample Application Integrated with Google Services
 - Illustrates what an application can do with Google Services
