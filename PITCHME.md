@@ -223,6 +223,14 @@ Note that the sample page was updated in Nov 2016
 - <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript">Code on GitHub</a>
 - <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
+#VSLIDE
+##### Example 2: Create a Google Site
+![Full Video](https://www.youtube.com/embed/JP7VnNHclmQ)
+
+#VSLIDE
+##### Example 2: Publish from the Rota Spreadsheet
+![Full Video](https://www.youtube.com/embed/0sl2idjLP6w)
+
 #HSLIDE
 ### Coding Google Apps Script
 Before coding Google Apps Script, we will review JavaScript coding
