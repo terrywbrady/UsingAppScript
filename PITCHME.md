@@ -533,6 +533,10 @@ function getApiKey() {
 ##### Example 3B: Reload the Spreadsheet 
 ![screenshot](screenshots/screen3b-2.jpg)
 
+#VSLIDE
+##### Example 3b: ISBN Lookup with Google Books Api
+![Full Video](https://www.youtube.com/embed/TEFrDibnzuw)
+
 #HSLIDE
 ##### Example 3C: Call Your Function from the Sheets UI
 - Add Menu to Google Sheets
@@ -568,6 +572,9 @@ function test() {
 ##### Example 3C: Call the test function from the new menu
 ![screenshot](screenshots/screen3c-2.jpg)
 
+#VSLIDE
+##### Example 3c: Display User Feedback with the Google Sheets UI
+![Full Video](https://www.youtube.com/embed/yLaFhsMWuKc)
 
 #HSLIDE
 ##### Example 3D: Adding Custom HTML to Your Script
@@ -625,6 +632,10 @@ function onOpen(e) {
 #VSLIDE
 ##### Example 3D: Display Sidebar Output
 ![screenshot](screenshots/screen3d-3.jpg)
+
+#VSLIDE
+##### Example 3d: Display an HTML Panel in Google Sheets
+![Full Video](https://www.youtube.com/embed/waBVIvDQ5Ww)
 
 #HSLIDE
 ##### Example 3E: Create HTML Template
@@ -684,6 +695,10 @@ function onOpen(e) {
 #VSLIDE
 ##### Example 3E: Screenshot of Template Output
 ![screenshot](screenshots/screen3e-2.jpg)
+
+#VSLIDE
+##### Example 3e: Create an HTML Panel from a Template
+![Full Video](https://www.youtube.com/embed/3pjwjmGgPcQ)
 
 #HSLIDE
 #####  Example 3F: HTML Template with Client JavaScript
@@ -816,6 +831,10 @@ An onBlur event is bound to the ISBN field.
 ##### Example 3F: Invoke Server JS from Client JS
 The title field is updated after entering an ISBN.
 ![screenshot](screenshots/screen3f-3.jpg)
+
+#VSLIDE
+##### Example 3f: Add Client Side JavaScript to an HTML Panel
+![Full Video](https://www.youtube.com/embed/JehP77M3WY4)
 
 #HSLIDE
 ##### Note About Trigger Restrictions
