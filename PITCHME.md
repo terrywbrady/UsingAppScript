@@ -482,6 +482,10 @@ Copy cell B2 into cell B3 to create the following formula
 ##### Example 3A: View Formula Output
 ![screenshot](screenshots/screen3a-4.jpg)
 
+#VSLIDE
+##### Example 3a: Simulate an ISBN Lookup in Google Sheets
+![Full Video](https://www.youtube.com/embed/XUvjs1dFyJc)
+
 #HSLIDE
 ##### Example 3B: Enhance the script with an external service call
 - <a target="_blank" href="https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app">Google Apps Script API Reference for UrlFetchApp</a>
