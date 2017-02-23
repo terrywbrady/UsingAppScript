@@ -216,7 +216,7 @@ Note that the sample page was updated in Nov 2016
 
 #VSLIDE
 ##### Example 2: Defining Your Site URL as a Script Property
-![Screen Shot](screenshots/scriptprop.jpg)
+![Screen Shot](screenshots/scriptProp.jpg)
 
 #VSLIDE
 ##### Example 2: Sceenshot of Trigger Menu
@@ -227,7 +227,7 @@ Note that the sample page was updated in Nov 2016
 ![Screen Shot](screenshots/trigger2.jpg)
 
 #VSLIDE
-##### Example 2: Create Trigger
+##### Example 2: Create Trigger to Publish Automatically
 ![Screen Shot](screenshots/trigger3.jpg)
 
 #VSLIDE
