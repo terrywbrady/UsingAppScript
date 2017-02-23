@@ -202,9 +202,22 @@ Note that the sample page was updated in Nov 2016
 #####  Example 2: Run it for yourself
 - Make an edit
 - Send email
-- Publish to Google Sites.  See the following <a target="_blank" href="https://sites.google.com/a/georgetown.edu/examples/rotasearch">Google Sites example</a>
+- Optionally Publish to Google Sites.  
+ - See the following <a target="_blank" href="https://sites.google.com/a/georgetown.edu/examples/rotasearch">Google Sites example</a>
+ - This step will currently only work with "Classic" Google Sites
 - Create a trigger to call "sendRota" on a daily basis
   
+#VSLIDE
+##### Example 2: Configure Classic Google Sites for Publishing
+- Per this <a target="_blank" href="https://developers.google.com/apps-script/reference/sites/sites-app">note</a>, Google App Script does not yet support the new version of Google Sites
+- Get the URL to your classic Google Site such as https://sites.google.com/site/code4libdemo/
+- In your Google Script, add this as a Script Property named "siteid"
+- If you cannot create a classic Google Site, skip this step
+
+#VSLIDE
+##### Example 2: Defining Your Site URL as a Script Property
+![Screen Shot](screenshots/scriptprop.jpg)
+
 #VSLIDE
 ##### Example 2: Sceenshot of Trigger Menu
 ![Screen Shot](screenshots/trigger1.jpg)
