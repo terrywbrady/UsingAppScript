@@ -856,6 +856,10 @@ The title field is updated after entering an ISBN.
 - If you see unexpected behavior in your scripts, evaluate if one of these restrictions has applied
 
 #HSLIDE
+##### Additional Application Example from University of Dayton
+- <a target="_blank" href="https://github.com/rayvoelker/DIY_API">University of Dayton Inventory with Google Sheets</a>
+
+#HSLIDE
 ##### Useful Reference
 - <a target="_blank" href="https://developers.google.com/apps-script/quickstart/docs">Creating a Google Doc Add-On Example</a>
 - <a target="_blank" href="https://developers.google.com/apps-script/guides/html/templates">Templated HTML</a>
