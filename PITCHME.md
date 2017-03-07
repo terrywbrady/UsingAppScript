@@ -4,9 +4,6 @@
 - <a target="_blank" href="https://github.com/terrywbrady/info">Terry Brady</a>, Georgetown University Library
 - <a target="_blank" href="https://craigboman.github.io">Craig Boman</a>, University of Dayton Library
 
-- https://gitpitch.com/terrywbrady/UsingAppScript/Code4Lib
-- Wifi: UCLA_WEB
-
 #HSLIDE
 ### Training Overview
 - What is Google Apps Script <!-- .element: class="fragment" -->
