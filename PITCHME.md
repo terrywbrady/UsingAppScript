@@ -12,6 +12,16 @@ Georgetown University Library
 <a target="_blank" href="https://github.com/terrywbrady/UsingAppScript/blob/master/Checklist.md" style="font-size: x-small">Presentation Checklist</a> 
 
 #HSLIDE
+### Training Overview
+- What is Google Apps Script <!-- .element: class="fragment" -->
+ - Running Sample Apps Script Examples <!-- .element: class="fragment" -->
+- Coding Google Apps Script <!-- .element: class="fragment" -->
+ - JavaScript Primer<!-- .element: class="fragment" -->
+ - Building a Sample Application<!-- .element: class="fragment" -->
+- Using Google Apps Script in the Library<!-- .element: class="fragment" -->
+ - Brainstorming possible uses  <!-- .element: class="fragment" -->
+
+#HSLIDE
 ### What is Google Apps Script?
 
 Google Apps Script is a server-side implementation of JavaScript with access to several Google API's.
@@ -130,17 +140,62 @@ Three,Preserve Number with leading zeros,00002222
 - <a target="_blank" href="https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript">Code on Github</a>
 - <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
+#VSLIDE
+##### Example 1: Demo
+![Full Video](https://www.youtube.com/embed/5LgWoImNQhI)
+
 #HSLIDE
+### Example 2: Sample Application Integrated with Google Services
+- Illustrates what an application can do with Google Services
+- User edits a spreadsheet
+ - Spreadsheet content is published by Gmail
+ - Spreadsheet content is published to Google Sites
+
+#VSLIDE
 ### Example 2: Publish Weekly Volunteer Assignments from Google Sheets
 - Developed for an org in which several folks had limited computer literacy
- - Edit assignments in a spreadsheet (upcoming dates as column headers)
  - Publish assignment updates to Google Sites daily
  - Email upcoming assignments once a week (with a link to Google Sites)
 
 #VSLIDE
-### Example 2: Publish Weekly Volunteer Assignments from Google Sheets
-- Due to limited time, try this one yourself 
- - See the instructions on the slides below
+## Example 2: Sample Spreadsheet
+- Dates in column headers (Row 1)
+ - Code detects the next date to publish
+- Times (on a specific day) are defined in Row 2
+- Roles (to be assigned) are defined in column A
+
+#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet1.jpg
+
+#VSLIDE
+## Example 2: Edit an assignment
+
+#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet2.jpg
+
+#VSLIDE
+## Example 2: E-mail Future Assignments 
+A date trigger is also set up to send e-mail weekly
+
+#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet3.jpg
+
+#VSLIDE
+## Example 2: Sample e-mail containing the changes
+Note that the sample e-mail was sent in Nov 2016
+
+#VSLIDE
+![](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/email.jpg)
+
+#VSLIDE
+## Example 2: Publish Changes to Google Sites 
+A date trigger is also set up to update Google Sites Daily
+
+#VSLIDE?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sheet4.jpg
+
+#VSLIDE
+## Example 2: Sample Google Site Page containing the changes
+Note that the sample page was updated in Nov 2016
+
+#VSLIDE
+![](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg)
 
 #VSLIDE
 #####  Example 2: Clone/Configure for Yourself
@@ -154,9 +209,22 @@ Three,Preserve Number with leading zeros,00002222
 #####  Example 2: Run it for yourself
 - Make an edit
 - Send email
-- Publish to Google Sites.  See the following <a target="_blank" href="https://sites.google.com/a/georgetown.edu/examples/rotasearch">example</a>
+- Optionally Publish to Google Sites.  
+ - See the following <a target="_blank" href="https://sites.google.com/a/georgetown.edu/examples/rotasearch">Google Sites example</a>
+ - This step will currently only work with "Classic" Google Sites
 - Create a trigger to call "sendRota" on a daily basis
   
+#VSLIDE
+##### Example 2: Configure Classic Google Sites for Publishing
+- Per this <a target="_blank" href="https://developers.google.com/apps-script/reference/sites/sites-app">note</a>, Google App Script does not yet support the new version of Google Sites
+- Get the URL to your classic Google Site such as https://sites.google.com/site/code4libdemo/
+- In your Google Script, add this as a Script Property named "siteid"
+- If you cannot create a classic Google Site, skip this step
+
+#VSLIDE
+##### Example 2: Defining Your Site URL as a Script Property
+![Screen Shot](screenshots/scriptProp.jpg)
+
 #VSLIDE
 ##### Example 2: Sceenshot of Trigger Menu
 ![Screen Shot](screenshots/trigger1.jpg)
@@ -166,7 +234,7 @@ Three,Preserve Number with leading zeros,00002222
 ![Screen Shot](screenshots/trigger2.jpg)
 
 #VSLIDE
-##### Example 2: Create Trigger
+##### Example 2: Create Trigger to Publish Automatically
 ![Screen Shot](screenshots/trigger3.jpg)
 
 #VSLIDE
@@ -175,10 +243,19 @@ Three,Preserve Number with leading zeros,00002222
 - <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript">Code on GitHub</a>
 - <a target="_blank" href="https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
+#VSLIDE
+##### Example 2: Create a Google Site
+![Full Video](https://www.youtube.com/embed/JP7VnNHclmQ)
+
+#VSLIDE
+##### Example 2: Publish from the Rota Spreadsheet
+![Full Video](https://www.youtube.com/embed/0sl2idjLP6w)
+
 #HSLIDE
 ##### Code Example 3: Add Interactive HTML App to Google Sheets
 
 - Create an application in Google Sheets that looks up ISBN numbers and returns book titles
+
 
 #VSLIDE
 ##### Code Example 3: Add Interactive HTML App to Google Sheets
@@ -203,7 +280,7 @@ Create a Google Sheet with the following data
 #VSLIDE
 ##### Example 3A: Create a Script within the Sheet
 - Tools -> Script Editor
-- This will open up the App Script Cloud IDE
+- This will open up the Apps Script Cloud IDE
 
 #VSLIDE
 ##### Example 3A: Add the following script code
@@ -257,6 +334,10 @@ Copy cell B2 into cell B3 to create the following formula
 ##### Example 3A: View Formula Output
 ![screenshot](screenshots/screen3a-4.jpg)
 
+#VSLIDE
+##### Example 3a: Simulate an ISBN Lookup in Google Sheets
+![Full Video](https://www.youtube.com/embed/XUvjs1dFyJc)
+
 #HSLIDE
 ##### Example 3B: Enhance the script with an external service call
 - <a target="_blank" href="https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app">Google Apps Script API Reference for UrlFetchApp</a>
@@ -304,6 +385,10 @@ function getApiKey() {
 ##### Example 3B: Reload the Spreadsheet 
 ![screenshot](screenshots/screen3b-2.jpg)
 
+#VSLIDE
+##### Example 3b: ISBN Lookup with Google Books Api
+![Full Video](https://www.youtube.com/embed/TEFrDibnzuw)
+
 #HSLIDE
 ##### Example 3C: Call Your Function from the Sheets UI
 - Add Menu to Google Sheets
@@ -339,6 +424,9 @@ function test() {
 ##### Example 3C: Call the test function from the new menu
 ![screenshot](screenshots/screen3c-2.jpg)
 
+#VSLIDE
+##### Example 3c: Display User Feedback with the Google Sheets UI
+![Full Video](https://www.youtube.com/embed/yLaFhsMWuKc)
 
 #HSLIDE
 ##### Example 3D: Adding Custom HTML to Your Script
@@ -396,6 +484,10 @@ function onOpen(e) {
 #VSLIDE
 ##### Example 3D: Display Sidebar Output
 ![screenshot](screenshots/screen3d-3.jpg)
+
+#VSLIDE
+##### Example 3d: Display an HTML Panel in Google Sheets
+![Full Video](https://www.youtube.com/embed/waBVIvDQ5Ww)
 
 #HSLIDE
 ##### Example 3E: Create HTML Template
@@ -455,6 +547,10 @@ function onOpen(e) {
 #VSLIDE
 ##### Example 3E: Screenshot of Template Output
 ![screenshot](screenshots/screen3e-2.jpg)
+
+#VSLIDE
+##### Example 3e: Create an HTML Panel from a Template
+![Full Video](https://www.youtube.com/embed/3pjwjmGgPcQ)
 
 #HSLIDE
 #####  Example 3F: HTML Template with Client JavaScript
@@ -587,6 +683,10 @@ An onBlur event is bound to the ISBN field.
 ##### Example 3F: Invoke Server JS from Client JS
 The title field is updated after entering an ISBN.
 ![screenshot](screenshots/screen3f-3.jpg)
+
+#VSLIDE
+##### Example 3f: Add Client Side JavaScript to an HTML Panel
+![Full Video](https://www.youtube.com/embed/JehP77M3WY4)
 
 #HSLIDE
 ##### Note About Trigger Restrictions
