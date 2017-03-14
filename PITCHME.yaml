@@ -5,3 +5,6 @@ gatoken : UA-89672351-2
 
 # Increase the size of code blocks
 theme-override : PITCHME.css
+
+# Allow fast nav with shift key
+revealjs-version : 3.4.1
