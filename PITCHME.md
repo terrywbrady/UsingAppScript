@@ -9,8 +9,6 @@ Georgetown University Library
 
 ![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
 
-<a target="_blank" href="https://github.com/terrywbrady/UsingAppScript/blob/master/Checklist.md" style="font-size: x-small">Presentation Checklist</a> 
-
 #HSLIDE
 ### Training Overview
 - What is Google Apps Script <!-- .element: class="fragment" -->
