@@ -14,7 +14,6 @@ Georgetown University Library
 - What is Google Apps Script |
  - Running Sample Apps Script Examples |
 - Coding Google Apps Script |
- - JavaScript Primer|
  - Building a Sample Application|
 - Using Google Apps Script in the Library|
  - Brainstorming possible uses  |
@@ -88,13 +87,13 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 ##### Example 1: Web Service to Facilitate Metadata Collaboration
 - Librarians often work with text strings that look like numbers or dates
  - Call numbers, Accession Numbers
-- What would happen to this data (by default) in Excel or Google Sheets?
-```
-Col A, Col B, Col C
-One,Preserve date as MM/DD/YYYY,01/01/2017
-Two,Preserve date as YYYY-MM-DD,2017-01-01
-Three,Preserve Number with leading zeros,00002222
-```
+- Consider the data on the next slide
+
++++?code=code/data.csv
+
++++
+##### Example 1: Sample CSV File
+- What would happen to this data when opened in Excel or Google Sheets?
 - What happens when the data is shared?
 
 +++
@@ -124,13 +123,9 @@ Three,Preserve Number with leading zeros,00002222
 - Open the URL you saved - calls doGet()
 - Supply a CSV as a file or in the text box provided
 - Upload CSV data
-```
-Col A, Col B, Col C
-One,Preserve date as MM/DD/YYYY,01/01/2017
-Two,Preserve date as YYYY-MM-DD,2017-01-01
-Three,Preserve Number with leading zeros,00002222
-```
 - Click the link to the generated spreadsheet
+
++++?code=code/data.csv
 
 +++
 ##### Example 1: References
@@ -138,6 +133,7 @@ Three,Preserve Number with leading zeros,00002222
 - <a target="_blank" href="https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript">Code on Github</a>
 - <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
++++?video=https://www.youtube.com/embed/5LgWoImNQhI
 +++
 ##### Example 1: Demo
 ![Full Video](https://www.youtube.com/embed/5LgWoImNQhI)
