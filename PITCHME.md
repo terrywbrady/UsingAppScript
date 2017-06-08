@@ -133,7 +133,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 - <a target="_blank" href="https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript">Code on Github</a>
 - <a target="_blank" href="https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md">Sample Screen Shots</a>
 
-+++?video=https://youtu.be/5LgWoImNQhI
++++?video=https://www.youtube.com/watch?v=5LgWoImNQhI&feature=youtu.be
 
 +++
 ##### Example 1: Demo
