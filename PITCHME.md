@@ -138,8 +138,10 @@ format 1
 +++?video=https://www.youtube.com/watch?v=5LgWoImNQhI&feature=youtu.be
 +++ 
 format 2
-
 +++?video=https://youtu.be/5LgWoImNQhI
++++ 
+format 3
++++?video=https://www.youtube.com/embed/5LgWoImNQhI
 
 +++
 ##### Example 1: Demo
