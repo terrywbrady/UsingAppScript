@@ -475,15 +475,15 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 @[19-26](HTML Body -Will be Modified by JS)
 @[7-16](Client JS)
 @[10](jQuery Ready $ function is called on page load)
-@[11](**onBlur** event added to ISBN)
-@[11](User enters a value into ISBN)
-@[11](**onBlu**r is called)
-@[12](BOOKTITLE is cleared)
-@[14](ISBN passed to **isbnLookup**)
+@[11](**onBlur** event added to *ISBN*)
+@[11](User enters a value into *ISBN*)
+@[12-14](**onBlur** is called)
+@[12](*BOOKTITLE* is cleared)
+@[14](*ISBN* passed to **isbnLookup**)
 @[13](**isbnLookup** is a server-side Google Apps function)
 @[13](If successful, **showValue** will be invoked)
 @[7-9](**showValue** function)
-@[8](BOOKTITLE is updated with the title)
+@[8](*BOOKTITLE* is updated with the title)
 
 +++
 ##### Example 3F: Method to Display Template
