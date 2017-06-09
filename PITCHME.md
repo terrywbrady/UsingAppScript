@@ -282,6 +282,7 @@ Create a Google Sheet with the following data
 |9780590328197||
 
 +++?code=code/3A_lookup.gs&lang=js
+@(Sample Code - Save to Code.gs)
 
 +++
 ##### Example 3A: Save the Script Project
@@ -334,13 +335,18 @@ Copy cell B2 into cell B3 to create the following formula
 ##### Example 3B: Call Google Books Service 
 
 +++?code=code/3B_google_books.gs&lang=js
+@[1](Replace function contents)
+@[2-3](Prepare call to Google Books API)
+@[5-6](Verify request response)
+@[8-10](Verify return object)
+@[12-16](Extract title OR title+subtitle)
 
 +++
 ##### Example 3B: API Key for Google Books 
 Without an API key, Google may throttle your requests
 
 +++?code=code/3B_api_key.gs&lang=js
-
+@[](If needed, obtain your own Google Books API Key)
 
 +++
 ##### Example 3B: Run the "test()" function again
@@ -387,6 +393,7 @@ Modify the test() function to access the <a target="_blank" href="https://develo
 In the script IDE, create "Sidebar.html"
 
 +++?code=code/3D_Sidebar.html&lang=html
+@[](Save as "Sidebar.html")
 
 
 +++
@@ -463,9 +470,9 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 +++
 HTML File With Client JS: **SidebarWithClientJS.html**
 
-+++?code=code/3F_SidebarWithClientJS.html&lang=html
++++?code=code/3F_SidebarWithClientJS.html&lang=text
 @[5](Include jQuery)
-@[19-26](HTML Body (Will be Modified by JS))
+@[19-26](HTML Body -Will be Modified by JS)
 @[7-16](Client JS)
 
 +++
