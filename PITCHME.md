@@ -174,8 +174,7 @@ A date trigger is also set up to send e-mail weekly
 ## Example 2: Sample e-mail containing the changes
 Note that the sample e-mail was sent in Nov 2016
 
-+++
-![](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/email.jpg)
++++?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/email.jpg
 
 +++
 ## Example 2: Publish Changes to Google Sites 
@@ -187,8 +186,7 @@ A date trigger is also set up to update Google Sites Daily
 ## Example 2: Sample Google Site Page containing the changes
 Note that the sample page was updated in Nov 2016
 
-+++
-![](https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg)
++++?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg
 
 +++
 #####  Example 2: Clone/Configure for Yourself
@@ -216,19 +214,20 @@ Note that the sample page was updated in Nov 2016
 
 +++
 ##### Example 2: Defining Your Site URL as a Script Property
-![Screen Shot](screenshots/scriptProp.jpg)
+
++++?image=screenshots/scriptProp.jpg
 
 +++
 ##### Example 2: Sceenshot of Trigger Menu
-![Screen Shot](screenshots/trigger1.jpg)
++++?image=screenshots/trigger1.jpg
 
 +++
 ##### Example 2: Screenshot of Create Trigger
-![Screen Shot](screenshots/trigger2.jpg)
++++?image=screenshots/trigger2.jpg
 
 +++
 ##### Example 2: Create Trigger to Publish Automatically
-![Screen Shot](screenshots/trigger3.jpg)
++++?image=screenshots/trigger3.jpg
 
 +++
 ### Example 2: References
@@ -298,18 +297,18 @@ Name the project something like "Test Project"
 ##### Example 3A: Test the script
 
 From the "Select function" drop down, select "test" and click the "Run" or "Debug" button 
-![screenshot](screenshots/screen3a-1.jpg)
++++?image=screenshots/screen3a-1.jpg
 
 +++
 ##### Example 3A: View Log Output
 
 Click "View Logs" to confirm that the function ran.
-![screenshot](screenshots/screen3a-2.jpg)
++++?image=screenshots/screen3a-2.jpg
 
 +++
 ##### Example 3A: View Log Output
 
-![screenshot](screenshots/screen3a-3.jpg)
++++?image=screenshots/screen3a-3.jpg
 
 +++
 ##### Example 3A: Use the script as a Spreadsheet formula
@@ -325,7 +324,7 @@ Copy cell B2 into cell B3 to create the following formula
 
 +++
 ##### Example 3A: View Formula Output
-![screenshot](screenshots/screen3a-4.jpg)
++++?image=screenshots/screen3a-4.jpg
 
 +++
 ##### Example 3a: Simulate an ISBN Lookup in Google Sheets
@@ -372,11 +371,11 @@ function getApiKey() {
 ##### Example 3B: Run the "test()" function again
 - The first time you run this, you will need to authorize Google Apps to send data to an external URL
 
-![screenshot](screenshots/screen3b-1.jpg)
++++?image=screenshots/screen3b-1.jpg
 
 +++
 ##### Example 3B: Reload the Spreadsheet 
-![screenshot](screenshots/screen3b-2.jpg)
++++?image=screenshots/screen3b-2.jpg
 
 +++
 ##### Example 3b: ISBN Lookup with Google Books Api
@@ -396,7 +395,7 @@ function onOpen(e) {
 
 +++
 ##### Example 3C: Reload to See the New Menu
-![screenshot](screenshots/screen3c-1.jpg)
++++?image=screenshots/screen3c-1.jpg
 
 +++
 ##### Example 3C: Add UI Confirmation to the test() function
@@ -415,7 +414,7 @@ function test() {
 
 +++
 ##### Example 3C: Call the test function from the new menu
-![screenshot](screenshots/screen3c-2.jpg)
++++?image=screenshots/screen3c-2.jpg
 
 +++
 ##### Example 3c: Display User Feedback with the Google Sheets UI
@@ -441,7 +440,7 @@ In the script IDE, create "Sidebar.html"
 
 +++
 ##### Example 3D: Create HTML
-![screenshot](screenshots/screen3d-1.jpg)
++++?image=screenshots/screen3d-1.jpg
 
 +++
 ##### Example 3D: Add a menu option to load the sidebar
@@ -472,11 +471,11 @@ function onOpen(e) {
 
 +++
 ##### Example 3D: Screenshot of Menu Option
-![screenshot](screenshots/screen3d-2.jpg)
++++?image=screenshots/screen3d-2.jpg
 
 +++
 ##### Example 3D: Display Sidebar Output
-![screenshot](screenshots/screen3d-3.jpg)
++++?image=screenshots/screen3d-3.jpg
 
 +++
 ##### Example 3d: Display an HTML Panel in Google Sheets
@@ -535,11 +534,11 @@ function onOpen(e) {
 
 +++
 ##### Example 3E: Screenshot of Menu Option
-![screenshot](screenshots/screen3e-1.jpg)
++++?image=screenshots/screen3e-1.jpg
 
 +++
 ##### Example 3E: Screenshot of Template Output
-![screenshot](screenshots/screen3e-2.jpg)
++++?image=screenshots/screen3e-2.jpg
 
 +++
 ##### Example 3e: Create an HTML Panel from a Template
@@ -665,17 +664,17 @@ function onOpen(e) {
 
 +++
 ##### Example 3F: Screenshot of Menu Option
-![screenshot](screenshots/screen3f-1.jpg)
++++?image=screenshots/screen3f-1.jpg
 
 +++
 ##### Example 3F: Display HTML Page
 An onBlur event is bound to the ISBN field.
-![screenshot](screenshots/screen3f-2.jpg)
++++?image=screenshots/screen3f-2.jpg
 
 +++
 ##### Example 3F: Invoke Server JS from Client JS
 The title field is updated after entering an ISBN.
-![screenshot](screenshots/screen3f-3.jpg)
++++?image=screenshots/screen3f-3.jpg
 
 +++
 ##### Example 3f: Add Client Side JavaScript to an HTML Panel
