@@ -386,7 +386,7 @@ Modify the test() function to access the <a target="_blank" href="https://develo
 
 In the script IDE, create "Sidebar.html"
 
-+++?code=code/3D_sidebar.html&lang=html
++++?code=code/3D_Sidebar.html&lang=html
 
 
 +++
@@ -426,50 +426,21 @@ Add showSidebar() to the Add On Menu
 A template can take an interpret values passed to the template.
 - In the script IDE, create "Template.html"
 
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <base target="_top">
-  </head>
-  <body>
-    <h2>Sample HTML Panel in Google Sheets</h2>
-    <div>The title for ISBN <?=isbn?>: <?=title?></div>
-  </body>
-</html>
-```
++++?code=code/3E_Template.html&lang=html
 
 +++
 ##### Example 3E: Display Template Function
 
 Create a function showSidebarTemplate() which passes data to a template
 
-```
-function showSidebarTemplate() {
-  var t = HtmlService.createTemplateFromFile("Template.html");
-  t.isbn = "0596517742";
-  t.title = isbnLookup(t.isbn);
-  var html = t.evaluate();
-  SpreadsheetApp.getUi().showSidebar(html);
-}
-```
++++?code=code/3E_template.gs&lang=js
 
 +++
 ##### Example 3E: Add Menu Option
 
 Add a call to showSidebarTemplate() to the Add On Menu
 
-```
-function onOpen(e) {
-  SpreadsheetApp.getUi()
-    .createAddonMenu()
-    .addItem("Test Function", "test")
-    .addItem("Show Sidebar", "showSidebar")
-    .addItem("Show Template", "showSidebarTemplate")
-    .addToUi();
-}
-
-```
++++?code=code/3E_open.gs&lang=js
 
 +++
 ##### Example 3E: Screenshot of Menu Option
@@ -491,30 +462,11 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 
 +++
 HTML File With Client JS: **SidebarWithClientJS.html**
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <base target="_top">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <!-- Client JavaScript Goes Here (See Next Slide) -->
-  </head>
-  <body>
-    <!-- HTML Body Goes Here (See 2 slides ahead) -->
-  </body>
-</html>
-```
 
-+++
-HTML Body (Will be Modified by JS)
-```
-    <h2>Sample HTML Panel in Google Sheets</h2>
-    <div>
-      The title for ISBN 
-      <input id="isbn" type="text" size="14"/>: 
-      <textarea id="booktitle" rows="5" cols="35">--</textarea>
-    </div>
-```
++++?code=code/3F_SidebarWithClientJS.html&lang=html
+@[5](Include jQuery)
+@[19-26](HTML Body (Will be Modified by JS))
+@[7-16](Client JS)
 
 +++
 Client JavaScript Overview
@@ -526,55 +478,6 @@ Client JavaScript Overview
   - The value entered into ISBN is passed to the server-side function isbnLookup() |
     - If successful, showValue() will be invoked |
       - BOOKTITLE is updated with the title |
-
-+++
-Client JavaScript
-```
-<script>
-function showValue(data) {
-  $("#booktitle").val(data);
-}
-$(function(){
-  $("#isbn").on("blur", function(){
-    $("#booktitle").val("");
-    google.script.run.withSuccessHandler(showValue)
-      .isbnLookup($("#isbn").val());
-  });
-});
-</script>
-```
-
-+++
-Complete File (For Copy/Paste)
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <base target="_top">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-    function showValue(data) {
-      $("#booktitle").val(data);
-    }
-    $(function(){
-      $("#isbn").on("blur", function(){
-        $("#booktitle").val("");
-        google.script.run.withSuccessHandler(showValue)
-          .isbnLookup($("#isbn").val());
-      });
-    });
-  </script>
-  </head>
-  <body>
-    <h2>Sample HTML Panel in Google Sheets</h2>
-    <div>
-      The title for ISBN 
-      <input id="isbn" type="text" size="14"/>: 
-      <textarea id="booktitle" rows="5" cols="35">--</textarea>
-    </div>
-  </body>
-</html>
-```
 
 +++
 ##### Example 3F: Method to Display Template
@@ -589,17 +492,8 @@ function showSidebarWithClientJS() {
 +++
 ##### Example 3F: Add Menu Item
 Add a call to showSidebarWithClientJS() to the Add On Menu
-```
-function onOpen(e) {
-  SpreadsheetApp.getUi()
-    .createAddonMenu()
-    .addItem("Test Function", "test")
-    .addItem("Show Sidebar", "showSidebar")
-    .addItem("Show Template", "showSidebarTemplate")
-    .addItem("Show Sidebar With Client JS", "showSidebarWithClientJS")
-    .addToUi();
-}
-```
+
++++?code=code/3F_open.gs&lang=js
 
 +++
 ##### Example 3F: Screenshot of Menu Option
