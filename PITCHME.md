@@ -470,7 +470,7 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 - In the script IDE, create a new html file named "SidebarWithClientJS.html"
 
 +++?code=code/3F_SidebarWithClientJS.html&lang=html
-@[](Save file as "SidebarWithClientJS.html")
+@[1-18](Save file as "SidebarWithClientJS.html")
 @[5](Include jQuery)
 @[19-26](HTML Body -Will be Modified by JS)
 @[6-17](Client JS)
