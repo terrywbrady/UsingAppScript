@@ -282,6 +282,8 @@ Create a Google Sheet with the following data
 |9780590328197||
 
 +++?code=code/3A_lookup.gs&lang=js
+
++++
 ##### Example 3A: Save the Script Project
 
 Name the project something like "Test Project"
@@ -330,35 +332,15 @@ Copy cell B2 into cell B3 to create the following formula
 
 +++
 ##### Example 3B: Call Google Books Service 
-```
-function isbnLookup(id) {
-  var url = "https://www.googleapis.com/books/v1/volumes?country=US&q=isbn:"+id+getApiKey();
-  var options = {contentType : "application/json"};
 
-  var resp = UrlFetchApp.fetch(url, options);
-  if (resp == null || resp == "") return "N/A";
++++?code=code/3B_google_books.gs&lang=js
 
-  var respdata = JSON.parse(resp.getContentText());
-  if (respdata["items"] == undefined) return "Not found";
-  if (respdata["items"].length == 0) return "Not found";
-
-  var data = respdata["items"][0]["volumeInfo"];
-  return (data["subtitle"] == undefined) ? 
-    data["title"] : data["title"] + ": " + data["subtitle"];
-}
-```
 +++
 ##### Example 3B: API Key for Google Books 
 Without an API key, Google may throttle your requests
-```
-function getApiKey() {
-  //Request a booksapi key from Google
-  //Set a script property using File->Project Properties->Script Properties
-  var key = PropertiesService.getScriptProperties().getProperty("booksapi");
-  //Logger.log(key);
-  return key == undefined ? "" : "&key="+key;
-}
-```
+
++++?code=code/3B_api_key.gs&lang=js
+
 
 +++
 ##### Example 3B: Run the "test()" function again
@@ -377,14 +359,8 @@ function getApiKey() {
 ---
 ##### Example 3C: Call Your Function from the Sheets UI
 - Add Menu to Google Sheets
-```
-function onOpen(e) {
-  SpreadsheetApp.getUi()
-    .createAddonMenu()
-    .addItem("Test Function", "test")
-    .addToUi();
-}
-```
+
++++?code=code/3C_open.gs&lang=js
 
 +++
 ##### Example 3C: Reload to See the New Menu
@@ -395,15 +371,7 @@ function onOpen(e) {
 
 Modify the test() function to access the <a target="_blank" href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi()">Spreadsheet UI</a>
 
-```
-function test() {
-  var isbn = "0764506331";
-  var title = isbnLookup(isbn)
-  var msg = "The title for ISBN " + isbn + " is " + title;
-  Logger.log(msg);
-  SpreadsheetApp.getUi().alert(msg);
-}
-```
++++?code=code/3C_test.gs&lang=js
 
 +++
 ##### Example 3C: Call the test function from the new menu
@@ -418,18 +386,8 @@ function test() {
 
 In the script IDE, create "Sidebar.html"
 
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <base target="_top">
-  </head>
-  <body>
-    <h2>Sample HTML Panel in Google Sheets</h2>
-    <div>We will use this panel to add additional features to the Spreadsheet</div>
-  </body>
-</html>
-```
++++?code=code/3C_sidebar.html&lang=html
+
 
 +++
 ##### Example 3D: Create HTML
