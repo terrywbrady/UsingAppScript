@@ -472,8 +472,8 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 +++?code=code/3F_SidebarWithClientJS.html&lang=html
 @[1-5](Save file as "SidebarWithClientJS.html")
 @[5](Include jQuery)
-@[19-26](HTML Body -Will be Modified by JS)
 @[6-17](Client JS)
+@[19-26](HTML Body -Will be Modified by JS)
 +++?code=code/3F_client.js&lang=js
 @[](Zooming into the client JS)
 @[4](jQuery Ready $ function is called on page load)
