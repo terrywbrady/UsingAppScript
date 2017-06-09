@@ -90,11 +90,10 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 - Consider the data on the next slide
 
 +++?code=code/data.csv
-
-+++
-##### Example 1: Sample CSV File
-- What would happen to this data when opened in Excel or Google Sheets?
-- What happens when the data is shared?
+@[](What will happen to this data when opened in Excel or Google Sheets?)
+@[](What will happen to this data if shared with another user)
+@[3](The date on this line will be converted to a standard date)
+@[4](The leading zeros in the number will be lost)
 
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
@@ -282,7 +281,7 @@ Create a Google Sheet with the following data
 |9780590328197||
 
 +++?code=code/3A_lookup.gs&lang=js
-@(Sample Code - Save to Code.gs)
+@[](Sample Code - Save to "Code.gs")
 
 +++
 ##### Example 3A: Save the Script Project
@@ -346,7 +345,7 @@ Copy cell B2 into cell B3 to create the following formula
 Without an API key, Google may throttle your requests
 
 +++?code=code/3B_api_key.gs&lang=js
-@[](If needed, obtain your own Google Books API Key)
+@[](If you encounter throttling, obtain your own Google Books API Key)
 
 +++
 ##### Example 3B: Run the "test()" function again
@@ -367,6 +366,7 @@ Without an API key, Google may throttle your requests
 - Add Menu to Google Sheets
 
 +++?code=code/3C_open.gs&lang=js
+@[](Add this function to you Code.gs file)
 
 +++
 ##### Example 3C: Reload to See the New Menu
@@ -406,6 +406,7 @@ In the script IDE, create "Sidebar.html"
 Create a function showSidebar()
 
 +++?code=code/3D_sidebar.gs&lang=js
+@[5](Add this line to your onOpen() function)
 
 +++
 ##### Example 3D: Add Menu Option
@@ -448,6 +449,7 @@ Create a function showSidebarTemplate() which passes data to a template
 Add a call to showSidebarTemplate() to the Add On Menu
 
 +++?code=code/3E_open.gs&lang=js
+@[6](Add this line to your onOpen() function)
 
 +++
 ##### Example 3E: Screenshot of Menu Option
@@ -474,33 +476,29 @@ HTML File With Client JS: **SidebarWithClientJS.html**
 @[5](Include jQuery)
 @[19-26](HTML Body -Will be Modified by JS)
 @[7-16](Client JS)
-
-+++
-Client JavaScript Overview
-- Ready function $(function()) is called on page load | 
-- onBlur() event added to ISBN |
-- User enters a value into ISBN |
-- onBlur() is called |
-  - BOOKTITLE is cleared |
-  - The value entered into ISBN is passed to the server-side function isbnLookup() |
-    - If successful, showValue() will be invoked |
-      - BOOKTITLE is updated with the title |
+@[10](Ready function $(function()) is called on page load)
+@[11](onBlur() event added to ISBN)
+@[11](User enters a value into ISBN)
+@[11](onBlur() is called)
+@[12](BOOKTITLE is cleared)
+@[13-14](The value entered into ISBN is passed to the server-side function isbnLookup())
+@[13](If successful, showValue() will be invoked)
+@[7-9](showValue() function)
+@[8](BOOKTITLE is updated with the title)
 
 +++
 ##### Example 3F: Method to Display Template
 Create a function showSidebarWithClientJS()
-```
-function showSidebarWithClientJS() {
-  var html = HtmlService.createHtmlOutputFromFile("SidebarWithClientJS.html");
-  SpreadsheetApp.getUi().showSidebar(html);
-}
-```
+
++++?code=code/3F_showSidebar.gs&lang=js
+@[](Add this function to "Code.gs")
 
 +++
 ##### Example 3F: Add Menu Item
 Add a call to showSidebarWithClientJS() to the Add On Menu
 
 +++?code=code/3F_open.gs&lang=js
+@[7](Add this line to your onOpen() function)
 
 +++
 ##### Example 3F: Screenshot of Menu Option
