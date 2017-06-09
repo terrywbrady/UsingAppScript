@@ -264,7 +264,10 @@ We will build the sample ISBN lookup app in 6 parts
 
 Create a Google Sheet with the following data
 
-+++?code=code/3A_data.md&lang=md
+|ISBN|Google Books Lookup|
+|---|---|
+|9780141977263||
+|9780590328197||
 
 +++
 ##### Example 3A: Create a Script within the Sheet
@@ -273,7 +276,11 @@ Create a Google Sheet with the following data
 
 +++
 ##### Example 3A: Add the following script code
-+++?code=code/3A_data.md&lang=md
+|ISBN|Google Books Lookup|
+|---|---|
+|9780141977263||
+|9780590328197||
+
 +++?code=code/3A_lookup.gs&lang=js
 ##### Example 3A: Save the Script Project
 
