@@ -386,7 +386,7 @@ Modify the test() function to access the <a target="_blank" href="https://develo
 
 In the script IDE, create "Sidebar.html"
 
-+++?code=code/3C_sidebar.html&lang=html
++++?code=code/3D_sidebar.html&lang=html
 
 
 +++
@@ -398,27 +398,15 @@ In the script IDE, create "Sidebar.html"
 
 Create a function showSidebar()
 
-```
-function showSidebar() {
-  var html = HtmlService.createHtmlOutputFromFile("Sidebar.html");
-  SpreadsheetApp.getUi().showSidebar(html);
-}
-```
++++?code=code/3D_sidebar.gs&lang=js
 
 +++
 ##### Example 3D: Add Menu Option
 
 Add showSidebar() to the Add On Menu
 
-```
-function onOpen(e) {
-  SpreadsheetApp.getUi()
-    .createAddonMenu()
-    .addItem("Test Function", "test")
-    .addItem("Show Sidebar", "showSidebar")
-    .addToUi();
-}
-```
++++?code=code/3D_open.gs&lang=js
+
 
 +++
 ##### Example 3D: Screenshot of Menu Option
