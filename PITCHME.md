@@ -472,18 +472,19 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 +++
 HTML File With Client JS: **SidebarWithClientJS.html**
 
-+++?code=code/3F_SidebarWithClientJS.html&lang=text
++++?code=code/3F_SidebarWithClientJS.html&lang=html
 @[5](Include jQuery)
 @[19-26](HTML Body -Will be Modified by JS)
 @[7-16](Client JS)
-@[10](Ready function $(function()) is called on page load)
-@[11](onBlur() event added to ISBN)
+@[10](jQuery Ready $ function is called on page load)
+@[11](onBlur event added to ISBN)
 @[11](User enters a value into ISBN)
-@[11](onBlur() is called)
+@[11](onBlur is called)
 @[12](BOOKTITLE is cleared)
-@[13-14](The value entered into ISBN is passed to the server-side function isbnLookup())
-@[13](If successful, showValue() will be invoked)
-@[7-9](showValue() function)
+@[14](ISBN passed to isbnLookup)
+@[13](isbnLookup is a server-side Google Apps function)
+@[13](If successful, *showValue* will be invoked)
+@[7-9](showValue function)
 @[8](BOOKTITLE is updated with the title)
 
 +++
