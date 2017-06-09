@@ -469,21 +469,22 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 
 - In the script IDE, create a new html file named "SidebarWithClientJS.html"
 
-+++?code=code/3F_SidebarWithClientJS.html&lang=text
++++?code=code/3F_SidebarWithClientJS.html&lang=html
 @[](Save file as "SidebarWithClientJS.html")
 @[5](Include jQuery)
 @[19-26](HTML Body -Will be Modified by JS)
-@[7-16](Client JS)
-@[10](jQuery Ready $ function is called on page load)
-@[11](**onBlur** event added to *ISBN*)
-@[11](User enters a value into *ISBN*)
-@[12-14](**onBlur** is called)
-@[12](*BOOKTITLE* is cleared)
-@[14](*ISBN* passed to **isbnLookup**)
-@[13](**isbnLookup** is a server-side Google Apps function)
-@[13](If successful, **showValue** will be invoked)
-@[7-9](**showValue** function)
-@[8](*BOOKTITLE* is updated with the title)
+@[6-17](Client JS)
++++?code=code/3F_client.js&lang=js
+@[4](jQuery Ready $ function is called on page load)
+@[5](**onBlur** event added to *ISBN*)
+@[6](User enters a value into *ISBN*)
+@[7-8](**onBlur** is called)
+@[6](*BOOKTITLE* is cleared)
+@[8](*ISBN* passed to **isbnLookup**)
+@[6-7](**isbnLookup** is a server-side Google Apps function)
+@[7](If successful, **showValue** will be invoked)
+@[1-3](**showValue** function)
+@[2](*BOOKTITLE* is updated with the title)
 
 +++
 ##### Example 3F: Method to Display Template
