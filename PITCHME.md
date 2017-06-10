@@ -23,7 +23,7 @@ https://github.com/terrywbrady/info
 
 Google Apps Script is a server-side implementation of JavaScript with access to several Google API's.
 
-<a target="_blank" href="https://developers.google.com/apps-script/">Google Apps Script Documentation</a>
+[Google Apps Script Documentation](https://developers.google.com/apps-script/)
 
 ---
 
@@ -102,7 +102,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 +++
 ##### Example 1: Clone Project for Yourself
-- <a target="_blank" href="https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing">Sample Script Project</a>
+- [Sample Script Project](https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing)
 - Select "Make a Copy" to save an editable copy
 - Click "Deploy as Webapp", set the run as parameters as appropriate to you
 - Copy the current web app URL
