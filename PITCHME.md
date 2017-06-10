@@ -5,7 +5,7 @@ Terry Brady
 
 Georgetown University Library
 
-<a target="_blank" href="https://github.com/terrywbrady/info">https://github.com/terrywbrady/info</a>
+https://github.com/terrywbrady/info
 
 ![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
 
@@ -378,6 +378,7 @@ Without an API key, Google may throttle your requests
 Modify the test() function to access the <a target="_blank" href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi()">Spreadsheet UI</a>
 
 +++?code=code/3C_test.gs&lang=js
+@[](Modify the **test** function)
 
 +++
 ##### Example 3C: Call the test function from the new menu
@@ -406,7 +407,7 @@ In the script IDE, create "Sidebar.html"
 Create a function showSidebar()
 
 +++?code=code/3D_sidebar.gs&lang=js
-@[5](Add this line to your onOpen() function)
+@[5](Add this function to "Code.gs")
 
 +++
 ##### Example 3D: Add Menu Option
@@ -414,7 +415,7 @@ Create a function showSidebar()
 Add showSidebar() to the Add On Menu
 
 +++?code=code/3D_open.gs&lang=js
-
+@[5](Add this line to your **onOpen** function)
 
 +++
 ##### Example 3D: Screenshot of Menu Option
@@ -435,6 +436,7 @@ A template can take an interpret values passed to the template.
 - In the script IDE, create "Template.html"
 
 +++?code=code/3E_Template.html&lang=html
+@[](Save this file as "Template.html")
 
 +++
 ##### Example 3E: Display Template Function
@@ -442,6 +444,7 @@ A template can take an interpret values passed to the template.
 Create a function showSidebarTemplate() which passes data to a template
 
 +++?code=code/3E_template.gs&lang=js
+@[](Add this function to "Code.gs")
 
 +++
 ##### Example 3E: Add Menu Option
