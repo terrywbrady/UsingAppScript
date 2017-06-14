@@ -88,21 +88,12 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
  - Call numbers, Accession Numbers
 - Consider the data on the next slide
 
-+++?code=code/data.csv&lang=md
++++?code=code/data1.csv&lang=md
 @[](What will happen to this data when opened in Excel or Google Sheets?)
 @[](What will happen to this data if shared with another user)
 @[3](The date on this line will be converted to a standard date)
 @[4](The leading zeros in the number will be lost)
 
-+++
-### Example 1: Data
-
-```
-Col A, Col B, Col C
-One,Preserve date as MM/DD/YYYY,01/01/2017
-Two,Preserve date as YYYY-MM-DD,2017-01-01
-Three,Preserve Number with leading zeros,00002222
-```
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
 - Load data to CSV
