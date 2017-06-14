@@ -106,7 +106,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 - Click "Deploy as Webapp", set the run as parameters as appropriate to you
 - Copy the current web app URL
 
-+++?code=https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript/blob/master/Code.gs
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Code.gs?lang=js
 
 +++
 ##### Example 1: Project Components
