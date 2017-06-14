@@ -1,3 +1,5 @@
+core.safecrlf true
+
 # Auto detect text files and perform LF normalization
 *.md text eol=crlf
 *.csv binary
