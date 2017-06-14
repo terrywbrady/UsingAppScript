@@ -93,9 +93,13 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[1-4](What will happen to this data if shared with another user)
 @[3](The date on this line will be converted to a standard date)
 @[4](The leading zeros in the number will be lost)
-@[1-4]([Raw Data](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/master/code/data.csv))
 +++
-[Raw Data](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/master/code/data.csv)
+<pre>
+Col A, Col B, Col C
+One,Preserve date as MM/DD/YYYY,01/01/2017
+Two,Preserve date as YYYY-MM-DD,2017-01-01
+Three,Preserve Number with leading zeros,00002222
+</pre>
 
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
