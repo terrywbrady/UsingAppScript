@@ -96,6 +96,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 +++
 ### Example 1: Data
+
 ```
 Col A, Col B, Col C
 One,Preserve date as MM/DD/YYYY,01/01/2017
