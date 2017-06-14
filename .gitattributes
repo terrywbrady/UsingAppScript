@@ -1,4 +1,6 @@
 # Auto detect text files and perform LF normalization
+*.md text eol=crlf
+*.csv text eol=crlf
 * text=auto
 
 # Custom for Visual Studio
