@@ -106,7 +106,15 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 - Click "Deploy as Webapp", set the run as parameters as appropriate to you
 - Copy the current web app URL
 
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Code.gs?lang=js
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Code.gs&lang=js
+@[2-6](Display upload page)
+@[14-18](Process uploaded data)
+@[15](Call Create Spreadsheet)
+@[41-47](Generate New Spreadsheet)
+@[48-49](Create Data Range for Uploaded Data)
+@[50-53](Populate Cells with Validation off)
+@[54-55](Style Header)
+@[56-61](Resize Columns)
 
 +++
 ##### Example 1: Project Components
