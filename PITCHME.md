@@ -10,13 +10,12 @@ https://github.com/terrywbrady/info
 ![](https://www.library.georgetown.edu/sites/default/files/library-logo.png)
 
 ---
-### Training Overview
+### Presentation Overview
 - What is Google Apps Script |
  - Running Sample Apps Script Examples |
 - Coding Google Apps Script |
  - Building a Sample Application|
-- Using Google Apps Script in the Library|
- - Brainstorming possible uses  |
+- Brainstorming possible uses  |
 
 ---
 ### What is Google Apps Script?
@@ -189,7 +188,7 @@ Note that the sample page was updated in Nov 2016
 
 +++
 #####  Example 2: Clone/Configure for Yourself
-- <a target="_blank" href="https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0">Sample Spreadsheet</a>
+- [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
 - Select "Make a Copy" to save an editable copy
 - Create a personal Google Site
   - Create a page within the site named "rotasearch"
@@ -200,13 +199,13 @@ Note that the sample page was updated in Nov 2016
 - Make an edit
 - Send email
 - Optionally Publish to Google Sites.  
- - See the following <a target="_blank" href="https://sites.google.com/a/georgetown.edu/examples/rotasearch">Google Sites example</a>
+ - See the following [Google Sites example](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
  - This step will currently only work with "Classic" Google Sites
 - Create a trigger to call "sendRota" on a daily basis
   
 +++
 ##### Example 2: Configure Classic Google Sites for Publishing
-- Per this <a target="_blank" href="https://developers.google.com/apps-script/reference/sites/sites-app">note</a>, Google App Script does not yet support the new version of Google Sites
+- Per this [note](https://developers.google.com/apps-script/reference/sites/sites-app), Google App Script does not yet support the new version of Google Sites
 - Get the URL to your classic Google Site such as https://sites.google.com/site/code4libdemo/
 - In your Google Script, add this as a Script Property named "siteid"
 - If you cannot create a classic Google Site, skip this step
@@ -375,7 +374,7 @@ Without an API key, Google may throttle your requests
 +++
 ##### Example 3C: Add UI Confirmation to the test() function
 
-Modify the test() function to access the <a target="_blank" href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi()">Spreadsheet UI</a>
+Modify the test() function to access the [Spreadsheet UI](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi())
 
 +++?code=code/3C_test.gs&lang=js
 @[](Modify the **test** function)
