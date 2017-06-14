@@ -94,6 +94,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[3](The date on this line will be converted to a standard date)
 @[4](The leading zeros in the number will be lost)
 +++
+#### Sample Data (for Copy/Paste)
 <pre>
 Col A, Col B, Col C
 One,Preserve date as MM/DD/YYYY,01/01/2017
