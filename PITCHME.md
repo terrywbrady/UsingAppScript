@@ -1,5 +1,5 @@
 ---
-### Building Simple Apps with Google Apps Script
+### Introduction to Google Apps Script 
 
 Terry Brady
 
