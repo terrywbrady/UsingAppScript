@@ -95,6 +95,14 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[4](The leading zeros in the number will be lost)
 
 +++
+### Example 1: Data
+```
+Col A, Col B, Col C
+One,Preserve date as MM/DD/YYYY,01/01/2017
+Two,Preserve date as YYYY-MM-DD,2017-01-01
+Three,Preserve Number with leading zeros,00002222
+```
++++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
 - Load data to CSV
 - Disable auto-correct in all cells
@@ -108,6 +116,9 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Code.gs&lang=js
 @[2-6](Display upload page)
+@[3](Upload Page)
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Index.html&lang=html
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Code.gs&lang=js
 @[14-18](Process uploaded data)
 @[15](Call Create Spreadsheet)
 @[41-47](Generate New Spreadsheet)
@@ -115,6 +126,10 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[50-53](Populate Cells with Validation off)
 @[54-55](Style Header)
 @[56-61](Resize Columns)
+@[16](Display Link to Generated Spreadsheet)
+
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Response.html&lang=html
+
 
 +++
 ##### Example 1: Project Components
