@@ -8,3 +8,8 @@
   width: 120%;
   margin-left: -10%;
 }
+
+.reveal pre code .line:after {
+    content:"\000A";
+    white-space: pre;
+}
