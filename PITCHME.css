@@ -9,6 +9,3 @@
   margin-left: -10%;
 }
 
-.reveal pre code .line:after, .reveal pre code .line:after span {
-    white-space: pre !important;
-}
