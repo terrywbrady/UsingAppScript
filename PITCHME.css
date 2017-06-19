@@ -10,6 +10,5 @@
 }
 
 .reveal pre code .line:after {
-    content:"\000A**";
-    white-space: pre;
+    content:"\000A**" !important;
 }
