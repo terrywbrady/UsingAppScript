@@ -83,6 +83,11 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
  - Perform ISBN Lookup
 
 ---
+### Note About Code Examples
+* Copy/Paste of Code Samples currently works in Chrome and Safari
+* End of Line characters are lost when performing copy/paste from Firefox and IE
+
+---
 ##### Example 1: Web Service to Facilitate Metadata Collaboration
 - Librarians often work with text strings that look like numbers or dates
  - Call numbers, Accession Numbers
@@ -93,7 +98,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[1-4](What will happen to this data if shared with another user)
 @[3](The date on this line will be converted to a standard date)
 @[4](The leading zeros in the number will be lost)
-@[1-4](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/seattleu/code/data.csv)
+
 +++
 #### Sample Data (for Copy/Paste)
 <pre>
