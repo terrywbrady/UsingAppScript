@@ -97,11 +97,6 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 +++
 #### Sample Data (for Copy/Paste)
 <pre>
-+++include=code/data.csv
-</pre>
-+++
-#### Sample Data (for Copy/Paste)
-<pre>
 Col A, Col B, Col C
 One,Preserve date as MM/DD/YYYY,01/01/2017
 Two,Preserve date as YYYY-MM-DD,2017-01-01
