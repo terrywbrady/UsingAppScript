@@ -88,7 +88,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
  - Call numbers, Accession Numbers
 - Consider the data on the next slide
 
-+++?code=code/data.csv
++++?code=code/data.csv&lang=less
 @[1-4](What will happen to this data when opened in Excel or Google Sheets?)
 @[1-4](What will happen to this data if shared with another user)
 @[3](The date on this line will be converted to a standard date)
