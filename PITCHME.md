@@ -93,6 +93,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[1-4](What will happen to this data if shared with another user)
 @[3](The date on this line will be converted to a standard date)
 @[4](The leading zeros in the number will be lost)
+@[1-4](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/seattleu/code/data.csv)
 +++
 #### Sample Data (for Copy/Paste)
 <pre>
