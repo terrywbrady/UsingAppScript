@@ -120,20 +120,19 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[10-11](Call to GoogleAppScript)
 @[14-18](Display results to user)
 @[32-37](Page Header Text)
-@[42-48](Delimiter Select)
+@[42-48](Delimeter Select)
 @[53-54](Text field upload)
 @[56](Upload button)
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Code.gs&lang=js
-@[14-18](Process uploaded data)
-@[15](Call Create Spreadsheet)
-@[41-47](Generate New Spreadsheet)
-@[48-49](Create Data Range for Uploaded Data)
-@[50-53](Populate Cells with Validation off)
-@[54-55](Style Header)
-@[56-61](Resize Columns)
-@[16](Return Link to Generated Spreadsheet as "Response.html")
-
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Response.html&lang=html
+@[38-44](Process uploaded data)
+@[42](Call Create Spreadsheet)\
+@[62](Parse CSV Data)
+@[71-77](Generate New Spreadsheet)
+@[78-79](Create Data Range for Uploaded Data)
+@[80-83](Populate Cells with Validation off)
+@[84-85](Style Header)
+@[86-91](Resize Columns)
+@[93](Return Generated Spreadsheet as JSON)
 
 +++
 ##### Example 1: Run it Yourself
