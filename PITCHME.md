@@ -107,23 +107,23 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 +++
 ##### Example 1: Clone Project for Yourself
-- [Sample Script Project](https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing)
+- [Sample Script Project](https://script.google.com/d/1Gf2qpM5bobbBpIwjOgYhygdMC9BHOC-P_gZF3RkcORgZ2eUNKbJUjZeP/edit?usp=sharing)
 - Select "Make a Copy" to save an editable copy
 - Click "Deploy as Webapp", set the run as parameters as appropriate to you
 - Copy the current web app URL
 
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Code.gs&lang=js
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Code.gs&lang=js
 @[2-6](Display upload page)
-@[3](Upload Page)
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Index.html&lang=none
-@[8-16](JavaScript for handling user action)
-@[10,15](Call to GoogleAppScript)
-@[18-21](Display results to user)
-@[29-30](Page Text)
-@[34-35](File Upload)
-@[45-47](Text field upload)
-@[55](Upload button)
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Code.gs&lang=js
+@[3](Upload Page "Index.html")
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=none
+@[8-12](JavaScript for handling user action)
+@[10-11](Call to GoogleAppScript)
+@[14-18](Display results to user)
+@[32-37](Page Header Text)
+@[42-48](Delimiter Select)
+@[53-54](Text field upload)
+@[56](Upload button)
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Code.gs&lang=js
 @[14-18](Process uploaded data)
 @[15](Call Create Spreadsheet)
 @[41-47](Generate New Spreadsheet)
@@ -131,9 +131,9 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[50-53](Populate Cells with Validation off)
 @[54-55](Style Header)
 @[56-61](Resize Columns)
-@[16](Display Link to Generated Spreadsheet)
+@[16](Return Link to Generated Spreadsheet as "Response.html")
 
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Response.html&lang=html
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Response.html&lang=html
 
 +++
 ##### Example 1: Run it Yourself
@@ -146,7 +146,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 +++
 ##### Example 1: References
-- [Sample Script Project](https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing)
+- [Sample Script Project](https://script.google.com/d/1Gf2qpM5bobbBpIwjOgYhygdMC9BHOC-P_gZF3RkcORgZ2eUNKbJUjZeP/edit?usp=sharing)
 - [Code on Github](https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript)
 - [Sample Screen Shots](https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md)
 
