@@ -115,7 +115,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Code.gs&lang=js
 @[2-6](Display upload page)
 @[3](Upload Page)
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Index.html&lang=html
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Index.html&lang=none
 @[8-16](JavaScript for handling user action)
 @[10,15](Call to GoogleAppScript)
 @[18-21](Display results to user)
