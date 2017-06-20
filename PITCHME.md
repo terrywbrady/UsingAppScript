@@ -96,17 +96,9 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 +++?code=code/data.csv&lang=md
 @[1-4](What will happen to this data when opened in Excel or Google Sheets?)
 @[1-4](What will happen to this data if shared with another user)
-@[3](The date on this line will be converted to a standard date)
+@[3](The date on this line will be converted to a MM/DD/YYYY date)
 @[4](The leading zeros in the number will be lost)
 
-+++
-#### Sample Data (for Copy/Paste)
-<pre>
-Col A, Col B, Col C
-One,Preserve date as MM/DD/YYYY,01/01/2017
-Two,Preserve date as YYYY-MM-DD,2017-01-01
-Three,Preserve Number with leading zeros,00002222
-</pre>
 
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
@@ -124,6 +116,14 @@ Three,Preserve Number with leading zeros,00002222
 @[2-6](Display upload page)
 @[3](Upload Page)
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Index.html&lang=html
+@[8-16](JavaScript for handling user action)
+@[10,15](Call to GoogleAppScript)
+@[18-21](Display results to user)
+@[35-39](Page Text)
+@[66-72](File Upload)
+@[103-104](Text field upload)
+@[93-98](File delimiter)
+@[106](Upload button)
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Code.gs&lang=js
 @[14-18](Process uploaded data)
 @[15](Call Create Spreadsheet)
@@ -135,17 +135,6 @@ Three,Preserve Number with leading zeros,00002222
 @[16](Display Link to Generated Spreadsheet)
 
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/master/Response.html&lang=html
-
-
-+++
-##### Example 1: Project Components
-- **Code.gs**
- - **doGet()** Display upload page (Index.html)
- - **doPost()** 
-   - Process CSV Upload, create Google Sheet
-   - Display a link to the generated Sheet (Response.html)
-- **Index.html**: CSV Upload Page
-- **Response.html**: HTML Fragment to display link to uploaded Sheets
 
 +++
 ##### Example 1: Run it Yourself
