@@ -82,7 +82,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
  - Add client-side JavaScript
  - Perform ISBN Lookup
 
----
++++
 ### Note About Code Examples
 * Copy/Paste of Code Samples currently works in Chrome and Safari
 * End of Line characters are lost when performing copy/paste from Firefox and IE
@@ -210,6 +210,7 @@ Note that the sample page was updated in Nov 2016
 - Select "Make a Copy" to save an editable copy
 - Create a personal Google Site
   - Create a page within the site named "rotasearch"
+- From the Spreadsheet Script Editor 
   - Set a script property named "siteid" with a URL to your new site 
 
 +++
@@ -217,16 +218,11 @@ Note that the sample page was updated in Nov 2016
 - Make an edit
 - Send email
 - Optionally Publish to Google Sites.  
- - See the following [Google Sites example](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
- - This step will currently only work with "Classic" Google Sites
-- Create a trigger to call "sendRota" on a daily basis
-  
+
 +++
 ##### Example 2: Configure Classic Google Sites for Publishing
 - Per this [note](https://developers.google.com/apps-script/reference/sites/sites-app), Google App Script does not yet support the new version of Google Sites
 - Get the URL to your classic Google Site such as https://sites.google.com/site/code4libdemo/
-- In your Google Script, add this as a Script Property named "siteid"
-- If you cannot create a classic Google Site, skip this step
 
 +++
 ##### Example 2: Defining Your Site URL as a Script Property
@@ -292,10 +288,6 @@ Create a Google Sheet with the following data
 
 +++
 ##### Example 3A: Add the following script code
-|ISBN|Google Books Lookup|
-|---|---|
-|9780141977263||
-|9780590328197||
 
 +++?code=code/3A_lookup.gs&lang=js
 @[](Sample Code - Save to "Code.gs")
@@ -469,7 +461,7 @@ Create a function showSidebarTemplate() which passes data to a template
 Add a call to showSidebarTemplate() to the Add On Menu
 
 +++?code=code/3E_open.gs&lang=js
-@[6](Add this line to your onOpen() function)
+@[6](Add this line to your **onOpen** function)
 
 +++
 ##### Example 3E: Screenshot of Menu Option
@@ -498,11 +490,11 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 @[](Zooming into the client JS)
 @[4](jQuery Ready $ function is called on page load)
 @[5](**onBlur** event added to *ISBN*)
-@[6](User enters a value into *ISBN*)
-@[7-8](**onBlur** is called)
+@[5](User enters a value into *ISBN*)
+@[5-9](**onBlur** is called)
 @[6](*BOOKTITLE* is cleared)
 @[8](*ISBN* passed to **isbnLookup**)
-@[6-7](**isbnLookup** is a server-side Google Apps function)
+@[7-8](**isbnLookup** is a server-side Google Apps function)
 @[7](If successful, **showValue** will be invoked)
 @[1-3](**showValue** function)
 @[2](*BOOKTITLE* is updated with the title)
@@ -519,7 +511,7 @@ Create a function showSidebarWithClientJS()
 Add a call to showSidebarWithClientJS() to the Add On Menu
 
 +++?code=code/3F_open.gs&lang=js
-@[7](Add this line to your onOpen() function)
+@[7](Add this line to your **onOpen** function)
 
 +++
 ##### Example 3F: Screenshot of Menu Option
