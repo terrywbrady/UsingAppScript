@@ -126,7 +126,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Code.gs&lang=js
 @[38-44](Process uploaded data)
 @[42](Call Create Spreadsheet)
-@[62](Parse CSV Data)
+@[64](Parse CSV Data)
 @[71-77](Generate New Spreadsheet)
 @[78-79](Create Data Range for Uploaded Data)
 @[80-83](Populate Cells with Validation off)
@@ -146,7 +146,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 +++
 ##### Example 1: References
 - [Sample Script Project](https://script.google.com/d/1Gf2qpM5bobbBpIwjOgYhygdMC9BHOC-P_gZF3RkcORgZ2eUNKbJUjZeP/edit?usp=sharing)
-- [Code on Github](https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript)
+- [Code on Github](https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript/tree/GAS_Demo2)
 - [Sample Screen Shots](https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md)
 
 +++
