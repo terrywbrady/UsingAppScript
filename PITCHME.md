@@ -112,9 +112,15 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 - Click "Deploy as Webapp", set the run as parameters as appropriate to you
 - Copy the current web app URL
 
++++
+## Sample Code
+* Not a full review of the code
+* Highlights of how the Google App Script behaves as a web service
+
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Code.gs&lang=js
 @[2-6](Display upload page)
 @[3](Upload Page "Index.html")
+
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=none
 @[8-12](JavaScript for handling user action)
 @[10-11](Call to GoogleAppScript)
@@ -123,6 +129,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[42-48](Delimeter Select)
 @[53-54](Text field upload)
 @[56](Upload button)
+
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Code.gs&lang=js
 @[38-44](Process uploaded data)
 @[42](Call Create Spreadsheet)
@@ -204,10 +211,17 @@ Note that the sample page was updated in Nov 2016
 
 +++?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg
 
++++
+## Sample Code
+* Not a full review of the code
+* Highlights of some of the API calls to Google Services
+
 +++?code=https://raw.githubusercontent.com/terrywbrady/OnlineRota_GoogleAppsScript/master/Code.gs&lang=js
-@[114-118](Read data from spreadsheet)
+@[114-119](Read data from spreadsheet)
+
 +++?code=https://raw.githubusercontent.com/terrywbrady/OnlineRota_GoogleAppsScript/master/Mail.gs&lang=js
-@[210-229](Build custom menu)
+@[214-221](Build custom menu)
+@[231](Add custom menu)
 @[85-91](Send email containing rota)
 @[131](Publish rota to Google Sites)
 @[147-148](Show confirmation message to user)
