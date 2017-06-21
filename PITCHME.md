@@ -204,6 +204,14 @@ Note that the sample page was updated in Nov 2016
 
 +++?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg
 
++++code=https://raw.githubusercontent.com/terrywbrady/OnlineRota_GoogleAppsScript/master/Code.gs&lang=js
+@[114-118](Read data from spreadsheet)
++++code=https://raw.githubusercontent.com/terrywbrady/OnlineRota_GoogleAppsScript/master/Mail.gs&lang=js
+@[210-229](Build custom menu)
+@[85-91](Send email containing rota)
+@[131](Publish rota to Google Sites)
+@[147-148](Show confirmation message to user)
+
 +++
 #####  Example 2: Clone/Configure for Yourself
 - [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
