@@ -94,11 +94,11 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 - Consider the data on the next slide
 
 +++?code=code/data.csv&lang=md
-@[1-4](What will happen to this data when opened in Excel or Google Sheets?)
 @[1-4](What will happen to this data if shared with another user)
 @[3](The date on this line will be converted to a MM/DD/YYYY date)
 @[4](The leading zeros in the number will be lost)
 
+[-- What will happen to this data when opened in Excel or Google Sheets? --](code/data.csv)
 
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
@@ -121,7 +121,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[2-6](Display upload page)
 @[3](Upload Page "Index.html")
 
-Google App Script for Web App
+-- Google App Script for Web App --
 
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=none
 @[8-12](JavaScript for handling user action)
@@ -132,7 +132,7 @@ Google App Script for Web App
 @[53-54](Text field upload)
 @[56](Upload button)
 
-HTML file to display for web app
+-- HTML file to display for web app --
 
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Code.gs&lang=js
 @[38-44](Process uploaded data)
@@ -145,7 +145,7 @@ HTML file to display for web app
 @[86-91](Resize Columns)
 @[93](Return Generated Spreadsheet as JSON)
 
-Google App Script to process data
+-- Google App Script to process data --
 
 +++
 ##### Example 1: Run it Yourself
@@ -155,6 +155,8 @@ Google App Script to process data
 - Click the link to the generated spreadsheet
 
 +++?code=code/data.csv&lang=md
+
+[Source File](code/data.csv)
 
 +++
 ##### Example 1: References
