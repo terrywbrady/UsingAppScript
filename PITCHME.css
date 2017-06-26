@@ -11,8 +11,8 @@
 
 .red, a:link.red, a:visited.red{
   color: red;
-  border-top: thin solid red;
-  font-size: small;
-  font-style: italic;
+  border-top: thin solid red !important;
+  font-size: smaller !important;
+  font-style: italic !important;
   width: 100%;
 }
