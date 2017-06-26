@@ -98,7 +98,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 @[3](The date on this line will be converted to a MM/DD/YYYY date)
 @[4](The leading zeros in the number will be lost)
 
-[data.csv](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/master/code/data.csv)<!-- .element: class="red" -->
+[code/data.csv](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/master/code/data.csv)<!-- .element: class="red" title="If copying code from IE or Firefox, use this link to preserve end of line characters" -->
 
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
@@ -156,7 +156,7 @@ Google App Script to process data<!-- .element: class="red" -->
 
 +++?code=code/data.csv&lang=md
 
-[data.csv](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/master/code/data.csv)<!-- .element: class="red" -->
+[code/data.csv](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/master/code/data.csv)<!-- .element: class="red"  title="If copying code from IE or Firefox, use this link to preserve end of line characters" -->
 
 +++
 ##### Example 1: References
@@ -227,12 +227,16 @@ Note that the sample page was updated in Nov 2016
 +++?code=https://raw.githubusercontent.com/terrywbrady/OnlineRota_GoogleAppsScript/master/Code.gs&lang=js
 @[114-119](Read data from spreadsheet)
 
+Code to process spreadsheet <!-- .element: class="red" -->
+
 +++?code=https://raw.githubusercontent.com/terrywbrady/OnlineRota_GoogleAppsScript/master/Mail.gs&lang=js
 @[214-221](Build custom menu)
 @[231](Add custom menu)
 @[85-91](Send email containing rota)
 @[131](Publish rota to Google Sites)
 @[147-148](Show confirmation message to user)
+
+Code to publish by email or Google Sites <!-- .element: class="red" -->
 
 +++
 #####  Example 2: Clone/Configure for Yourself
@@ -320,7 +324,9 @@ Create a Google Sheet with the following data
 ##### Example 3A: Add the following script code
 
 +++?code=code/3A_lookup.gs&lang=js
-@[](Sample Code - Save to "Code.gs")
+
+Sample Code - Save to "Code.gs" <!-- .element: class="red" -->
+
 
 +++
 ##### Example 3A: Save the Script Project
@@ -379,6 +385,7 @@ Copy cell B2 into cell B3 to create the following formula
 @[8-10](Verify return object)
 @[12-16](Extract title OR title+subtitle)
 
+Call Google Books API<!-- .element: class="red" -->
 +++
 ##### Example 3B: API Key for Google Books 
 Without an API key, Google may throttle your requests
@@ -405,7 +412,8 @@ Without an API key, Google may throttle your requests
 - Add Menu to Google Sheets
 
 +++?code=code/3C_open.gs&lang=js
-@[](Add this function to you Code.gs file)
+
+Add this function to you Code.gs file <!-- .element: class="red" -->
 
 +++
 ##### Example 3C: Reload to See the New Menu
@@ -417,7 +425,8 @@ Without an API key, Google may throttle your requests
 Modify the test() function to access the [Spreadsheet UI](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi())
 
 +++?code=code/3C_test.gs&lang=js
-@[](Modify the **test** function)
+
+Modify the **test** function<!-- .element: class="red" -->
 
 +++
 ##### Example 3C: Call the test function from the new menu
@@ -433,7 +442,7 @@ Modify the test() function to access the [Spreadsheet UI](https://developers.goo
 In the script IDE, create "Sidebar.html"
 
 +++?code=code/3D_Sidebar.html&lang=html
-@[](Save as "Sidebar.html")
+Save as "Sidebar.html"<!-- .element: class="red" -->
 
 
 +++
@@ -448,6 +457,8 @@ Create a function showSidebar()
 +++?code=code/3D_sidebar.gs&lang=js
 @[5](Add this function to "Code.gs")
 
+Update onOpen() function <!-- .element: class="red" -->
+
 +++
 ##### Example 3D: Add Menu Option
 
@@ -455,6 +466,8 @@ Add showSidebar() to the Add On Menu
 
 +++?code=code/3D_open.gs&lang=js
 @[5](Add this line to your **onOpen** function)
+
+Update onOpen() function <!-- .element: class="red" -->
 
 +++
 ##### Example 3D: Screenshot of Menu Option
@@ -475,7 +488,7 @@ A template can take an interpret values passed to the template.
 - In the script IDE, create "Template.html"
 
 +++?code=code/3E_Template.html&lang=html
-@[](Save this file as "Template.html")
+Save this file as "Template.html" <!-- .element: class="red" -->
 
 +++
 ##### Example 3E: Display Template Function
@@ -483,7 +496,7 @@ A template can take an interpret values passed to the template.
 Create a function showSidebarTemplate() which passes data to a template
 
 +++?code=code/3E_template.gs&lang=js
-@[](Add this function to "Code.gs")
+Add this function to "Code.gs" <!-- .element: class="red" -->
 
 +++
 ##### Example 3E: Add Menu Option
@@ -492,6 +505,8 @@ Add a call to showSidebarTemplate() to the Add On Menu
 
 +++?code=code/3E_open.gs&lang=js
 @[6](Add this line to your **onOpen** function)
+
+Update onOpen() function <!-- .element: class="red" -->
 
 +++
 ##### Example 3E: Screenshot of Menu Option
@@ -516,6 +531,9 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 @[5](Include jQuery)
 @[6-17](Client JS)
 @[19-26](HTML Body -Will be Modified by JS)
+
+Sidebar HTML <!-- .element: class="red" -->
+
 +++?code=code/3F_client.js&lang=js
 @[](Zooming into the client JS)
 @[4](jQuery Ready $ function is called on page load)
@@ -529,12 +547,14 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 @[1-3](**showValue** function)
 @[2](*BOOKTITLE* is updated with the title)
 
+Sidebar HTML, Embedded JS <!-- .element: class="red" -->
+
 +++
 ##### Example 3F: Method to Display Template
 Create a function showSidebarWithClientJS()
 
 +++?code=code/3F_showSidebar.gs&lang=js
-@[](Add this function to "Code.gs")
+Add this function to "Code.gs" <!-- .element: class="red" -->
 
 +++
 ##### Example 3F: Add Menu Item
@@ -542,6 +562,7 @@ Add a call to showSidebarWithClientJS() to the Add On Menu
 
 +++?code=code/3F_open.gs&lang=js
 @[7](Add this line to your **onOpen** function)
+Update onOpen() function <!-- .element: class="red" -->
 
 +++
 ##### Example 3F: Screenshot of Menu Option
