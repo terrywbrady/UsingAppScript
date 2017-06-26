@@ -9,7 +9,10 @@
   margin-left: -10%;
 }
 
-.red a:link.red a:visited.red{
+.red, a:link.red, a:visited.red{
   color: red;
   border-top: thin solid red;
+  font-size: small;
+  font-style: italic;
+  width: 100%;
 }
