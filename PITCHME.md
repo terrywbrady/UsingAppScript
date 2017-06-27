@@ -124,21 +124,13 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 Google App Script for Web App<!-- .element: class="red" -->
 
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=html
-
-HTML file to display for web app<!-- .element: class="red" -->
-
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=js
 @[8-12](JavaScript for handling user action)
 @[10-11](Call to GoogleAppScript)
-
-HTML file to display for web app<!-- .element: class="red" -->
-
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=html
 @[14-18](Display results to user)
-@[32-37](Page Header Text)
-@[42-48](Delimeter Select)
-@[53-54](Text field upload)
-@[56](Upload button)
+@[33-38](Page Header Text)
+@[43-49](Delimeter Select)
+@[54-55](Text field upload)
+@[57](Upload button)
 
 HTML file to display for web app<!-- .element: class="red" -->
 
