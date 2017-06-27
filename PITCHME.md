@@ -123,9 +123,17 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 Google App Script for Web App<!-- .element: class="red" -->
 
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=none
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=html
+
+HTML file to display for web app<!-- .element: class="red" -->
+
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=js
 @[8-12](JavaScript for handling user action)
 @[10-11](Call to GoogleAppScript)
+
+HTML file to display for web app<!-- .element: class="red" -->
+
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=html
 @[14-18](Display results to user)
 @[32-37](Page Header Text)
 @[42-48](Delimeter Select)
@@ -455,9 +463,8 @@ Save as "Sidebar.html"<!-- .element: class="red" -->
 Create a function showSidebar()
 
 +++?code=code/3D_sidebar.gs&lang=js
-@[5](Add this function to "Code.gs")
 
-Update onOpen() function <!-- .element: class="red" -->
+Display sidebar <!-- .element: class="red" -->
 
 +++
 ##### Example 3D: Add Menu Option
@@ -465,9 +472,9 @@ Update onOpen() function <!-- .element: class="red" -->
 Add showSidebar() to the Add On Menu
 
 +++?code=code/3D_open.gs&lang=js
-@[5](Add this line to your **onOpen** function)
+@[5](Add this line to your "onOpen" function)
 
-Update onOpen() function <!-- .element: class="red" -->
+Add the new function to onOpen() <!-- .element: class="red" -->
 
 +++
 ##### Example 3D: Screenshot of Menu Option
@@ -504,9 +511,9 @@ Add this function to "Code.gs" <!-- .element: class="red" -->
 Add a call to showSidebarTemplate() to the Add On Menu
 
 +++?code=code/3E_open.gs&lang=js
-@[6](Add this line to your **onOpen** function)
+@[6](Add this line to your "onOpen" function)
 
-Update onOpen() function <!-- .element: class="red" -->
+Add the new function to onOpen() <!-- .element: class="red" -->
 
 +++
 ##### Example 3E: Screenshot of Menu Option
@@ -561,8 +568,9 @@ Add this function to "Code.gs" <!-- .element: class="red" -->
 Add a call to showSidebarWithClientJS() to the Add On Menu
 
 +++?code=code/3F_open.gs&lang=js
-@[7](Add this line to your **onOpen** function)
-Update onOpen() function <!-- .element: class="red" -->
+@[7](Add this line to your "onOpen" function)
+
+Add the new function to onOpen() <!-- .element: class="red" -->
 
 +++
 ##### Example 3F: Screenshot of Menu Option
