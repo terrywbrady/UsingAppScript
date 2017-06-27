@@ -124,9 +124,31 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 Google App Script for Web App<!-- .element: class="red" -->
 
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=html
-@[8-12](JavaScript for handling user action)
-@[10-11](Call to GoogleAppScript)
-@[14-18](Display results to user)
+
+HTML file to display for web app<!-- .element: class="red" -->
+
++++
+```
+      //Pass CSV content as a string (formObject.data) 
+      function handleFormPost(formObject) {
+        jQuery("input:button").attr("disabled",true);
+        google.script.run.withSuccessHandler(updateOutput)
+          .withFailureHandler(fail).doTextPost(formObject);
+      }
+      //Display the name and URL of the Google Sheet that was created
+      function updateOutput(data) {
+        var resp  = jQuery.parseJSON(data);
+        document.getElementById("output")
+          .innerHTML="<a href='"+resp.url+"'>"+resp.name+"</a> created on Google Drive";
+      }
+```
+@[2-6](JavaScript for handling user action)
+@[4-5](Call to GoogleAppScript)
+@[8-12](Display results to user)
+
+HTML file to display for web app (Embedded JS)<!-- .element: class="red" -->
+
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=html
 @[33-38](Page Header Text)
 @[43-49](Delimeter Select)
 @[54-55](Text field upload)
@@ -154,9 +176,15 @@ Google App Script to process data<!-- .element: class="red" -->
 - Upload CSV data
 - Click the link to the generated spreadsheet
 
-+++?code=code/data.csv&lang=md
++++
+```
+Col A, Col B, Col C
+One,Preserve date as MM/DD/YYYY,01/01/2017
+Two,Preserve date as YYYY-MM-DD,2017-01-01
+Three,Preserve Number with leading zeros,00002222
+```
 
-[code/data.csv](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/master/code/data.csv)<!-- .element: class="red"  title="If copying code from IE or Firefox, use this link to preserve end of line characters" -->
+Data for copy/paste<!-- .element: class="red" -->
 
 +++
 ##### Example 1: References
