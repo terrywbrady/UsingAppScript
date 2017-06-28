@@ -49,13 +49,6 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
  - onOpen()
  - onEdit()
 
-+++
-#### Packaged for the Chrome Store as an Add-On
-- Offered to the Public
-  - For Sale or For Free 
-- Offered to your Google Apps Domain 
-- Offered Privately by URL
-  
 ---
 ### Why Use Google Apps Script?
 - It is available where your users already are |
@@ -73,14 +66,14 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 ---
 ### App Examples
-- App Example 1: Building a Web Service |
+- App Example 1 (Work): Building a Web Service |
  - Saves Results to Google Drive
-- App Example 2: Extending Google Sheets |
+- App Example 2 (Volunteer): Extending Google Sheets |
  - Publish from Sheets to Google Sites and Gmail
-- Code Example 3: Embed Interactive HTML App |
+- Code Example 3 (Demo): Embed Interactive HTML App |
  - Add an HTML Panel to Google Sheets
  - Add client-side JavaScript
- - Perform ISBN Lookup
+ - API Lookup
 
 +++
 ### Note About Code Examples
@@ -143,8 +136,9 @@ HTML file to display for web app<!-- .element: class="red" -->
       }
 ```
 @[2-6](JavaScript for handling user action)
-@[4-5](Call to GoogleAppScript)
-@[8-12](Display results to user)
+@[4-5](Call to GoogleAppScript function "doTextPost")
+@[4](If successful, call "updateOuput")
+@[8-12](Display a link to the generated spreadsheet)
 
 HTML file to display for web app (Embedded JS)<!-- .element: class="red" -->
 
@@ -290,18 +284,6 @@ Code to publish by email or Google Sites <!-- .element: class="red" -->
 ##### Example 2: Defining Your Site URL as a Script Property
 
 +++?image=screenshots/scriptProp.jpg
-
-+++
-##### Example 2: Sceenshot of Trigger Menu
-+++?image=screenshots/trigger1.jpg
-
-+++
-##### Example 2: Screenshot of Create Trigger
-+++?image=screenshots/trigger2.jpg
-
-+++
-##### Example 2: Create Trigger to Publish Automatically
-+++?image=screenshots/trigger3.jpg
 
 +++
 ### Example 2: References
