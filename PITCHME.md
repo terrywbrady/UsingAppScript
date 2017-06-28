@@ -102,7 +102,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
-- Load data to CSV
+- Load data from CSV
 - Disable auto-correct in all cells
 
 +++
@@ -559,7 +559,7 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 @[6-17](Client JS)
 @[19-26](HTML Body -Will be Modified by JS)
 
-Sidebar HTML <!-- .element: class="red" -->
+SidebarWithClientJS.html <!-- .element: class="red" -->
 
 +++?code=code/3F_client.js&lang=js
 @[](Zooming into the client JS)
@@ -574,7 +574,7 @@ Sidebar HTML <!-- .element: class="red" -->
 @[1-3](**showValue** function)
 @[2](*BOOKTITLE* is updated with the title)
 
-Sidebar HTML, Embedded JS <!-- .element: class="red" -->
+SidebarWithClientJS.html, Embedded JS <!-- .element: class="red" -->
 
 +++
 ##### Example 3F: Method to Display Template
@@ -621,6 +621,10 @@ The title field is updated after entering an ISBN.
 - [Creating a Google Doc Add-On Example](https://developers.google.com/apps-script/quickstart/docs)
 - [Templated HTML](https://developers.google.com/apps-script/guides/html/templates)
 - [Calling Server Side Functions from Client JavaScript](https://developers.google.com/apps-script/guides/html/reference/run)
+
+---
+##### Brainstorming
+- Can you imagine any uses of GoogleAppScript for your projects?
 
 ---
 ### Thank You!
