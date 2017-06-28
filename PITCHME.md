@@ -95,9 +95,9 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
-- User loads web page (GET)
-- User uploads comma separated data (POST)
-- Spreadsheet is created (no auto-correct)
+- User loads web page (GET) |
+- User uploads comma separated data (POST) |
+- Spreadsheet is created (no auto-correct) |
 - A link to the spreadsheet is returned
 
 +++
