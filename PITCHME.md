@@ -95,8 +95,10 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
-- Load data from CSV
-- Disable auto-correct in all cells
+- User loads web page (GET)
+- User uploads comma separated data (POST)
+- Spreadsheet is created (no auto-correct)
+- A link to the spreadsheet is returned
 
 +++
 ##### Example 1: Clone Project for Yourself
