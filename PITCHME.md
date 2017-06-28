@@ -98,7 +98,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 - User loads web page (GET) |
 - User uploads comma separated data (POST) |
 - Spreadsheet is created (no auto-correct) |
-- A link to the spreadsheet is returned
+- A link to the spreadsheet is returned |
 
 +++
 ##### Example 1: Clone Project for Yourself
