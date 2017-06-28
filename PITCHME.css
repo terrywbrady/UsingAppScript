@@ -4,11 +4,6 @@
   max-height: 450px !important;
 }
 
-.reveal pre {
-  width: 120%;
-  margin-left: -10%;
-}
-
 .red, a:link.red, a:visited.red{
   color: red;
   font-size: smaller !important;
