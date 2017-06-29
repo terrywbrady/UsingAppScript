@@ -71,9 +71,7 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 - App Example 2 (Volunteer): Extending Google Sheets |
  - Publish from Sheets to Google Sites and Gmail
 - Code Example 3 (Demo): Embed Interactive HTML App |
- - Add an HTML Panel to Google Sheets
- - Add client-side JavaScript
- - API Lookup
+ - Using Google Books API
 
 +++
 ### Note About Code Examples
@@ -135,9 +133,6 @@ Spreadsheet without auto-correct<!-- .element: class="red"-->
 Google App Script for Web App<!-- .element: class="red" -->
 
 +++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=html
-
-HTML file to display for web app<!-- .element: class="red" -->
-
 @[33-38](Page Header Text)
 @[43-49](Delimeter Select)
 @[54-55](Text field upload)
@@ -355,7 +350,7 @@ Click "View Logs" to confirm that the function ran.
 
 +++?image=screenshots/screen3a-3.jpg
 
-+++
+---
 ##### Example 3A: Use the script as a Spreadsheet formula
 
 Modify cell B2 to contain the following formula 
@@ -431,7 +426,7 @@ Modify the test() function to access the [Spreadsheet UI](https://developers.goo
 
 +++?code=code/3C_test.gs&lang=js
 
-Modify the **test** function<!-- .element: class="red" -->
+Modify the test() function<!-- .element: class="red" -->
 
 +++
 ##### Example 3C: Call the test function from the new menu
@@ -601,7 +596,7 @@ The title field is updated after entering an ISBN.
 
 ---
 ##### Brainstorming
-- Can you imagine any uses of GoogleAppScript for your projects?
+- Ideas for using Google App Script?
 
 ---
 ### Thank You!
