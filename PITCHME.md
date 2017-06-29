@@ -138,29 +138,6 @@ Google App Script for Web App<!-- .element: class="red" -->
 
 HTML file to display for web app<!-- .element: class="red" -->
 
-+++
-```
-      //Pass CSV content as a string (formObject.data) 
-      function handleFormPost(formObject) {
-        jQuery("input:button").attr("disabled",true);
-        google.script.run.withSuccessHandler(updateOutput)
-          .withFailureHandler(fail).doTextPost(formObject);
-      }
-      //Display the name and URL of the Google Sheet that was created
-      function updateOutput(data) {
-        var resp  = jQuery.parseJSON(data);
-        document.getElementById("output")
-          .innerHTML="<a href='"+resp.url+"'>"+resp.name+"</a> created on Google Drive";
-      }
-```
-@[2-6](JavaScript for handling user action)
-@[4-5](Call to GoogleAppScript function "doTextPost")
-@[4](If successful, call "updateOuput")
-@[8-12](Display a link to the generated spreadsheet)
-
-HTML file to display for web app (Embedded JS)<!-- .element: class="red" -->
-
-+++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=html
 @[33-38](Page Header Text)
 @[43-49](Delimeter Select)
 @[54-55](Text field upload)
@@ -408,8 +385,8 @@ Copy cell B2 into cell B3 to create the following formula
 
 +++?code=code/3B_google_books.gs&lang=js
 @[1](Replace function contents)
-@[2-3](Prepare call to Google Books API)
-@[5-6](Verify request response)
+@[2-3](URL to Google Books API)
+@[5-6](Call UrlFetchApp)
 @[8-10](Verify return object)
 @[12-16](Extract title OR title+subtitle)
 
