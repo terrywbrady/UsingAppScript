@@ -93,7 +93,9 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 [code/data.csv](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/master/code/data.csv)<!-- .element: class="red" title="If copying code from IE or Firefox, use this link to preserve end of line characters" -->
 
-+++?image=screenshots/screen1-1.png
++++?image=screenshots/screen1-1.png 
+
+Spreadsheet with auto-correct <!-- .element: class="red"-->
 
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
@@ -103,19 +105,16 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 - A link to the spreadsheet is returned |
 
 +++?image=screenshots/screen1-2.png
-GET Web Page
+GET Web Page<!-- .element: class="red"-->
 
 +++?image=screenshots/screen1-3.png
-
-Paste CSV data, Click Upload
+Paste CSV data, Click Upload<!-- .element: class="red"-->
 
 +++?image=screenshots/screen1-4.png
-
-Link to Spreadsheet is returned
+Link to Spreadsheet is returned<!-- .element: class="red"-->
 
 +++?image=screenshots/screen1-5.png
-
-Spreadsheet without auto-correct
+Spreadsheet without auto-correct<!-- .element: class="red"-->
 
 +++
 ##### Example 1: Clone Project for Yourself
