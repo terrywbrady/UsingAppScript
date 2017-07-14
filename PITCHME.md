@@ -1,5 +1,5 @@
 ---
-### Building Simple Apps with Google Apps Script
+### Introduction to Google Apps Script 
 
 Terry Brady
 
@@ -49,13 +49,6 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
  - onOpen()
  - onEdit()
 
-+++
-#### Packaged for the Chrome Store as an Add-On
-- Offered to the Public
-  - For Sale or For Free 
-- Offered to your Google Apps Domain 
-- Offered Privately by URL
-  
 ---
 ### Why Use Google Apps Script?
 - It is available where your users already are |
@@ -73,14 +66,17 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 
 ---
 ### App Examples
-- App Example 1: Building a Web Service |
+- App Example 1 (Work): Building a Web Service |
  - Saves Results to Google Drive
-- App Example 2: Extending Google Sheets |
+- App Example 2 (Volunteer): Extending Google Sheets |
  - Publish from Sheets to Google Sites and Gmail
-- Code Example 3: Embed Interactive HTML App |
- - Add an HTML Panel to Google Sheets
- - Add client-side JavaScript
- - Perform ISBN Lookup
+- Code Example 3 (Demo): Embed Interactive HTML App |
+ - Using Google Books API
+
++++
+### Note About Code Examples
+* Copy/Paste of Code Samples currently works in Chrome and Safari
+* End of Line characters are lost when performing copy/paste from Firefox and IE
 
 ---
 ##### Example 1: Web Service to Facilitate Metadata Collaboration
@@ -88,33 +84,74 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
  - Call numbers, Accession Numbers
 - Consider the data on the next slide
 
-+++?code=code/data.csv
-@[](What will happen to this data when opened in Excel or Google Sheets?)
-@[](What will happen to this data if shared with another user)
-@[3](The date on this line will be converted to a standard date)
++++?code=code/data.csv&lang=md
+@[1-4](What will happen to this data if shared with another user)
+@[3](The date on this line will be converted to a MM/DD/YYYY date)
 @[4](The leading zeros in the number will be lost)
+
+[code/data.csv](https://raw.githubusercontent.com/terrywbrady/UsingAppScript/master/code/data.csv)<!-- .element: class="red" title="If copying code from IE or Firefox, use this link to preserve end of line characters" -->
+
++++?image=screenshots/screen1-1.png 
+
+Spreadsheet with auto-correct <!-- .element: class="red"-->
 
 +++
 ##### Example 1: A Web Service to Upload a CSV to Google Sheets
-- Load data to CSV
-- Disable auto-correct in all cells
+- User loads web page (GET) |
+- User uploads comma separated data (POST) |
+- Spreadsheet is created (no auto-correct) |
+- A link to the spreadsheet is returned |
+
++++?image=screenshots/screen1-2.png
+GET Web Page<!-- .element: class="red"-->
+
++++?image=screenshots/screen1-3.png
+Paste CSV data, Click Upload<!-- .element: class="red"-->
+
++++?image=screenshots/screen1-4.png
+Link to Spreadsheet is returned<!-- .element: class="red"-->
+
++++?image=screenshots/screen1-5.png
+Spreadsheet without auto-correct<!-- .element: class="red"-->
 
 +++
 ##### Example 1: Clone Project for Yourself
-- [Sample Script Project](https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing)
+- [Sample Script Project](https://script.google.com/d/1Gf2qpM5bobbBpIwjOgYhygdMC9BHOC-P_gZF3RkcORgZ2eUNKbJUjZeP/edit?usp=sharing)
 - Select "Make a Copy" to save an editable copy
 - Click "Deploy as Webapp", set the run as parameters as appropriate to you
 - Copy the current web app URL
 
 +++
-##### Example 1: Project Components
-- **Code.gs**
- - **doGet()** Display upload page (Index.html)
- - **doPost()** 
-   - Process CSV Upload, create Google Sheet
-   - Display a link to the generated Sheet (Response.html)
-- **Index.html**: CSV Upload Page
-- **Response.html**: HTML Fragment to display link to uploaded Sheets
+## Sample Code
+* Not a full review of the code
+* Highlights of how the Google App Script behaves as a web service
+
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Code.gs&lang=js
+@[2-6](Display upload page)
+@[3](Upload Page "Index.html")
+
+Google App Script for Web App<!-- .element: class="red" -->
+
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Index.html&lang=html
+@[33-38](Page Header Text)
+@[43-49](Delimeter Select)
+@[54-55](Text field upload)
+@[57](Upload button)
+
+HTML file to display for web app<!-- .element: class="red" -->
+
++++?code=https://raw.githubusercontent.com/terrywbrady/PlainTextCSV_GoogleAppsScript/GAS_Demo2/Code.gs&lang=js
+@[38-44](Process uploaded data)
+@[42](Call Create Spreadsheet)
+@[64](Parse CSV Data)
+@[71-77](Generate New Spreadsheet)
+@[78-79](Create Data Range for Uploaded Data)
+@[80-83](Populate Cells with Validation off)
+@[84-85](Style Header)
+@[86-91](Resize Columns)
+@[93](Return Generated Spreadsheet as JSON)
+
+Google App Script to process data<!-- .element: class="red" -->
 
 +++
 ##### Example 1: Run it Yourself
@@ -123,12 +160,20 @@ Google Apps Script is a server-side implementation of JavaScript with access to 
 - Upload CSV data
 - Click the link to the generated spreadsheet
 
-+++?code=code/data.csv
++++
+```
+Col A, Col B, Col C
+One,Preserve date as MM/DD/YYYY,01/01/2017
+Two,Preserve date as YYYY-MM-DD,2017-01-01
+Three,Preserve Number with leading zeros,00002222
+```
+
+Data for copy/paste<!-- .element: class="red" -->
 
 +++
 ##### Example 1: References
-- [Sample Script Project](https://script.google.com/d/13HcFhMle_oIBTfhuZEya_zQHAokJjgZEdqTEoOTeEfrpx5UpTmNUh_pB/edit?usp=sharing)
-- [Code on Github](https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript)
+- [Sample Script Project](https://script.google.com/d/1Gf2qpM5bobbBpIwjOgYhygdMC9BHOC-P_gZF3RkcORgZ2eUNKbJUjZeP/edit?usp=sharing)
+- [Code on Github](https://github.com/terrywbrady/PlainTextCSV_GoogleAppsScript/tree/GAS_Demo2)
 - [Sample Screen Shots](https://github.com/Georgetown-University-Libraries/PlainTextCSV_GoogleAppsScript/blob/master/README.md)
 
 +++
@@ -187,11 +232,31 @@ Note that the sample page was updated in Nov 2016
 +++?image=https://github.com/terrywbrady/OnlineRota_GoogleAppsScript/raw/master/screenshots/sites.jpg
 
 +++
+## Sample Code
+* Not a full review of the code
+* Highlights of some of the API calls to Google Services
+
++++?code=https://raw.githubusercontent.com/terrywbrady/OnlineRota_GoogleAppsScript/master/Code.gs&lang=js
+@[114-119](Read data from spreadsheet)
+
+Code to process spreadsheet <!-- .element: class="red" -->
+
++++?code=https://raw.githubusercontent.com/terrywbrady/OnlineRota_GoogleAppsScript/master/Mail.gs&lang=js
+@[214-221](Build custom menu)
+@[231](Add custom menu)
+@[85-91](Send email containing rota)
+@[131](Publish rota to Google Sites)
+@[147-148](Show confirmation message to user)
+
+Code to publish by email or Google Sites <!-- .element: class="red" -->
+
++++
 #####  Example 2: Clone/Configure for Yourself
 - [Sample Spreadsheet](https://docs.google.com/spreadsheets/d/1T_AnSoz893QY1IL9uH9L8mH220Wp6WE_Weaq3VkxOX4/edit#gid=0)
 - Select "Make a Copy" to save an editable copy
 - Create a personal Google Site
   - Create a page within the site named "rotasearch"
+- From the Spreadsheet Script Editor 
   - Set a script property named "siteid" with a URL to your new site 
 
 +++
@@ -199,33 +264,16 @@ Note that the sample page was updated in Nov 2016
 - Make an edit
 - Send email
 - Optionally Publish to Google Sites.  
- - See the following [Google Sites example](https://sites.google.com/a/georgetown.edu/examples/rotasearch)
- - This step will currently only work with "Classic" Google Sites
-- Create a trigger to call "sendRota" on a daily basis
-  
+
 +++
 ##### Example 2: Configure Classic Google Sites for Publishing
 - Per this [note](https://developers.google.com/apps-script/reference/sites/sites-app), Google App Script does not yet support the new version of Google Sites
 - Get the URL to your classic Google Site such as https://sites.google.com/site/code4libdemo/
-- In your Google Script, add this as a Script Property named "siteid"
-- If you cannot create a classic Google Site, skip this step
 
 +++
 ##### Example 2: Defining Your Site URL as a Script Property
 
 +++?image=screenshots/scriptProp.jpg
-
-+++
-##### Example 2: Sceenshot of Trigger Menu
-+++?image=screenshots/trigger1.jpg
-
-+++
-##### Example 2: Screenshot of Create Trigger
-+++?image=screenshots/trigger2.jpg
-
-+++
-##### Example 2: Create Trigger to Publish Automatically
-+++?image=screenshots/trigger3.jpg
 
 +++
 ### Example 2: References
@@ -274,13 +322,11 @@ Create a Google Sheet with the following data
 
 +++
 ##### Example 3A: Add the following script code
-|ISBN|Google Books Lookup|
-|---|---|
-|9780141977263||
-|9780590328197||
 
 +++?code=code/3A_lookup.gs&lang=js
-@[](Sample Code - Save to "Code.gs")
+
+Sample Code - Save to "Code.gs" <!-- .element: class="red" -->
+
 
 +++
 ##### Example 3A: Save the Script Project
@@ -304,7 +350,7 @@ Click "View Logs" to confirm that the function ran.
 
 +++?image=screenshots/screen3a-3.jpg
 
-+++
+---
 ##### Example 3A: Use the script as a Spreadsheet formula
 
 Modify cell B2 to contain the following formula 
@@ -334,11 +380,12 @@ Copy cell B2 into cell B3 to create the following formula
 
 +++?code=code/3B_google_books.gs&lang=js
 @[1](Replace function contents)
-@[2-3](Prepare call to Google Books API)
-@[5-6](Verify request response)
+@[2-3](URL to Google Books API)
+@[5-6](Call UrlFetchApp)
 @[8-10](Verify return object)
 @[12-16](Extract title OR title+subtitle)
 
+Call Google Books API<!-- .element: class="red" -->
 +++
 ##### Example 3B: API Key for Google Books 
 Without an API key, Google may throttle your requests
@@ -365,7 +412,8 @@ Without an API key, Google may throttle your requests
 - Add Menu to Google Sheets
 
 +++?code=code/3C_open.gs&lang=js
-@[](Add this function to you Code.gs file)
+
+Add this function to you Code.gs file <!-- .element: class="red" -->
 
 +++
 ##### Example 3C: Reload to See the New Menu
@@ -377,7 +425,8 @@ Without an API key, Google may throttle your requests
 Modify the test() function to access the [Spreadsheet UI](https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#getUi())
 
 +++?code=code/3C_test.gs&lang=js
-@[](Modify the **test** function)
+
+Modify the test() function<!-- .element: class="red" -->
 
 +++
 ##### Example 3C: Call the test function from the new menu
@@ -393,7 +442,7 @@ Modify the test() function to access the [Spreadsheet UI](https://developers.goo
 In the script IDE, create "Sidebar.html"
 
 +++?code=code/3D_Sidebar.html&lang=html
-@[](Save as "Sidebar.html")
+Save as "Sidebar.html"<!-- .element: class="red" -->
 
 
 +++
@@ -406,7 +455,8 @@ In the script IDE, create "Sidebar.html"
 Create a function showSidebar()
 
 +++?code=code/3D_sidebar.gs&lang=js
-@[5](Add this function to "Code.gs")
+
+Display sidebar <!-- .element: class="red" -->
 
 +++
 ##### Example 3D: Add Menu Option
@@ -414,7 +464,9 @@ Create a function showSidebar()
 Add showSidebar() to the Add On Menu
 
 +++?code=code/3D_open.gs&lang=js
-@[5](Add this line to your **onOpen** function)
+@[5](Add this line to your "onOpen" function)
+
+Add the new function to onOpen() <!-- .element: class="red" -->
 
 +++
 ##### Example 3D: Screenshot of Menu Option
@@ -435,7 +487,7 @@ A template can take an interpret values passed to the template.
 - In the script IDE, create "Template.html"
 
 +++?code=code/3E_Template.html&lang=html
-@[](Save this file as "Template.html")
+Save this file as "Template.html" <!-- .element: class="red" -->
 
 +++
 ##### Example 3E: Display Template Function
@@ -443,7 +495,7 @@ A template can take an interpret values passed to the template.
 Create a function showSidebarTemplate() which passes data to a template
 
 +++?code=code/3E_template.gs&lang=js
-@[](Add this function to "Code.gs")
+Add this function to "Code.gs" <!-- .element: class="red" -->
 
 +++
 ##### Example 3E: Add Menu Option
@@ -451,7 +503,9 @@ Create a function showSidebarTemplate() which passes data to a template
 Add a call to showSidebarTemplate() to the Add On Menu
 
 +++?code=code/3E_open.gs&lang=js
-@[6](Add this line to your onOpen() function)
+@[6](Add this line to your "onOpen" function)
+
+Add the new function to onOpen() <!-- .element: class="red" -->
 
 +++
 ##### Example 3E: Screenshot of Menu Option
@@ -476,32 +530,39 @@ Your client JavaScript can invoke server-side methods using *google.script.run*
 @[5](Include jQuery)
 @[6-17](Client JS)
 @[19-26](HTML Body -Will be Modified by JS)
+
+SidebarWithClientJS.html <!-- .element: class="red" -->
+
 +++?code=code/3F_client.js&lang=js
 @[](Zooming into the client JS)
 @[4](jQuery Ready $ function is called on page load)
 @[5](**onBlur** event added to *ISBN*)
-@[6](User enters a value into *ISBN*)
-@[7-8](**onBlur** is called)
+@[5](User enters a value into *ISBN*)
+@[5-9](**onBlur** is called)
 @[6](*BOOKTITLE* is cleared)
 @[8](*ISBN* passed to **isbnLookup**)
-@[6-7](**isbnLookup** is a server-side Google Apps function)
+@[7-8](**isbnLookup** is a server-side Google Apps function)
 @[7](If successful, **showValue** will be invoked)
 @[1-3](**showValue** function)
 @[2](*BOOKTITLE* is updated with the title)
+
+SidebarWithClientJS.html, Embedded JS <!-- .element: class="red" -->
 
 +++
 ##### Example 3F: Method to Display Template
 Create a function showSidebarWithClientJS()
 
 +++?code=code/3F_showSidebar.gs&lang=js
-@[](Add this function to "Code.gs")
+Add this function to "Code.gs" <!-- .element: class="red" -->
 
 +++
 ##### Example 3F: Add Menu Item
 Add a call to showSidebarWithClientJS() to the Add On Menu
 
 +++?code=code/3F_open.gs&lang=js
-@[7](Add this line to your onOpen() function)
+@[7](Add this line to your "onOpen" function)
+
+Add the new function to onOpen() <!-- .element: class="red" -->
 
 +++
 ##### Example 3F: Screenshot of Menu Option
@@ -532,6 +593,10 @@ The title field is updated after entering an ISBN.
 - [Creating a Google Doc Add-On Example](https://developers.google.com/apps-script/quickstart/docs)
 - [Templated HTML](https://developers.google.com/apps-script/guides/html/templates)
 - [Calling Server Side Functions from Client JavaScript](https://developers.google.com/apps-script/guides/html/reference/run)
+
+---
+##### Brainstorming
+- Ideas for using Google App Script?
 
 ---
 ### Thank You!

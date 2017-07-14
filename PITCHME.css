@@ -1,10 +1,16 @@
 .reveal pre code {
   font-size: 1.2em;
   line-height: 1.1;
-  max-height: 500px !important;
+  max-height: 450px !important;
 }
 
 .reveal pre {
-  width: 120%;
-  margin-left: -10%;
+  width: 100%;
 }
+
+.red, a:link.red, a:visited.red{
+  color: red;
+  font-size: smaller !important;
+  font-style: italic !important;
+}
+
